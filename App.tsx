@@ -7,14 +7,12 @@
 
 import React from 'react';
 // eslint-disable-next-line prettier/prettier
-import { SafeAreaView, Text } from 'react-native';
+import SplashScreen from './src/screens/SplashScreen';
 
 function App(): React.JSX.Element {
   return (
     <>
-      <SafeAreaView>
-        <Text>Hello World</Text>
-      </SafeAreaView>
+      <SplashScreen />
     </>
   );
 }

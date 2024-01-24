@@ -7,16 +7,22 @@
 
 import React from 'react';
 // eslint-disable-next-line prettier/prettier
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, Text } from 'react-native';
 
 function App(): React.JSX.Element {
   return (
     <>
-      <SafeAreaView>
+      <SafeAreaView style={styles.fontFamilyApp}>
         <Text>Hello World</Text>
       </SafeAreaView>
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  fontFamilyApp: {
+    fontFamily: 'Poppins-Regular'
+  },
+});
 
 export default App;

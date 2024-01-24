@@ -7,11 +7,11 @@
 
 import React from 'react';
 // eslint-disable-next-line prettier/prettier
-import { Image, SafeAreaView, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
-function App(): React.JSX.Element {
+const SplashScreen = (): React.JSX.Element => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.splashScreen}>
       <View style={styles.logoContainer}>
         <Image
           source={require('./assets/Icon/iconWelcome.png')}
@@ -21,12 +21,20 @@ function App(): React.JSX.Element {
           }}
         />
       </View>
-    </SafeAreaView>
+    </View>
+  );
+};
+
+function App(): React.JSX.Element {
+  return (
+    <>
+      <SplashScreen />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  splashScreen: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

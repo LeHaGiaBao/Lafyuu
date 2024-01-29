@@ -66,7 +66,7 @@ function RegisterScreen({ navigation }: any): React.JSX.Element {
                     />
                 </View>
                 {/* <Text style={styles.wrongText}> Oops! Your Password Is Not Correct </Text> */}
-                <TouchableOpacity style={styles.registerButton} onPress={() => { }}>
+                <TouchableOpacity style={styles.registerButton} onPress={() => navigation.navigate('AppScreen')}>
                     <Text style={styles.buttonText}>Sign Up</Text>
                 </TouchableOpacity>
             </View>

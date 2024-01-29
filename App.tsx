@@ -36,7 +36,7 @@ function App(): React.JSX.Element {
     <>
       <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
-          {/* <Stack.Screen
+          <Stack.Screen
             name="LoginScreen"
             component={LoginScreen}
             options={{ headerShown: false }}
@@ -45,7 +45,7 @@ function App(): React.JSX.Element {
             name="RegisterScreen"
             component={RegisterScreen}
             options={{ headerShown: false }}
-          /> */}
+          />
           <Stack.Screen
             name="AppScreen"
             component={AppScreen}

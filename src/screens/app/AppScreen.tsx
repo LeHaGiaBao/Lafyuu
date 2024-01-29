@@ -1,14 +1,14 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Feather from 'react-native-vector-icons/Feather'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+
 import HomeScreen from './HomeScreen';
 import ExploreScreen from './ExploreScreen';
 import CartScreen from './CartScreen';
 import OfferScreen from './OfferScreen';
 import AccountScreen from './AccountScreen';
-
-import Feather from 'react-native-vector-icons/Feather'
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Tab = createBottomTabNavigator();
 

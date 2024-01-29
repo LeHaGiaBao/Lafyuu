@@ -1,18 +1,52 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useEffect, useState } from 'react';
+import SplashScreen from './src/screens/welcome/SplashScreen';
+import LoginScreen from './src/screens/auth/Login/LoginScreen';
+import RegisterScreen from './src/screens/auth/Register/RegisterScreen';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import React from 'react';
-// eslint-disable-next-line prettier/prettier
-import SplashScreen from './src/screens/SplashScreen';
+const Stack = createNativeStackNavigator();
+
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: 'white', // Set the background color to white
+  },
+};
 
 function App(): React.JSX.Element {
+  const [showInitialView, setShowInitialView] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowInitialView(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [])
+
+  if (showInitialView) {
+    return (
+      <SplashScreen />
+    )
+  }
   return (
     <>
-      <SplashScreen />
+      <NavigationContainer theme={MyTheme}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="LoginScreen"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RegisterScreen"
+            component={RegisterScreen}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 }

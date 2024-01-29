@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line prettier/prettier
 import { Image, StyleSheet, View } from 'react-native';
 
 function SplashScreen(): React.JSX.Element {
@@ -7,7 +6,7 @@ function SplashScreen(): React.JSX.Element {
         <View style={styles.splashScreen}>
             <View style={styles.logoContainer}>
                 <Image
-                    source={require('../../../assets/Icon/iconWelcome.png')}
+                    source={require('../../../../assets/Icon/iconWelcome.png')}
                     style={{
                         height: 32,
                         width: 32,

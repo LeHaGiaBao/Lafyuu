@@ -44,7 +44,7 @@ function LoginScreen({ navigation }: any): React.JSX.Element {
                     />
                 </View>
                 {/* <Text style={styles.wrongText}> Oops! Your Password Is Not Correct </Text> */}
-                <TouchableOpacity style={styles.loginButton} onPress={() => { }}>
+                <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('AppScreen')}>
                     <Text style={styles.buttonText}>Sign In</Text>
                 </TouchableOpacity>
             </View>

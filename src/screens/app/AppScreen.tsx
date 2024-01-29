@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -13,6 +13,8 @@ import AccountScreen from './AccountScreen';
 const Tab = createBottomTabNavigator();
 
 function AppScreen(): React.JSX.Element {
+    const [badgeCount, setBadgeCount] = useState(2);
+
     return (
         <Tab.Navigator
             screenOptions={{
@@ -60,6 +62,13 @@ function AppScreen(): React.JSX.Element {
                     tabBarIcon: ({ color }) => (
                         <Feather name="shopping-cart" color={color} size={26} />
                     ),
+                    tabBarBadge: badgeCount > 0 ? badgeCount.toString() : undefined,
+                    tabBarBadgeStyle: {
+                        backgroundColor: '#FB7181',
+                        color: '#FFF',
+                        fontFamily: 'Poppins-Bold',
+                        fontSize: 10,
+                    }
                 }}
             />
             <Tab.Screen

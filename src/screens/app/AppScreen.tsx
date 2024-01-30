@@ -22,9 +22,10 @@ function AppScreen(): React.JSX.Element {
                 tabBarStyle: {
                     borderTopColor: '#EBF0FF',
                     marginBottom: 20,
+                    paddingTop: 16,
                     backgroundColor: '#FFF',
                     borderTopWidth: 1,
-                    height: 93,
+                    height: 100,
                 },
                 tabBarActiveTintColor: '#40BFFF',
                 tabBarInactiveTintColor: '#9098B1',

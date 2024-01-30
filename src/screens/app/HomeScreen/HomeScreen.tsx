@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import HomeHeader from '../../../containers/app/HomeScreen/HomeHeader';
+import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
+import CategoryTitle from '../../../containers/app/HomeScreen/CategoryTitle';
 
 function HomeScreen() {
     return (
@@ -8,9 +10,10 @@ function HomeScreen() {
             <View style={styles.homeHeader}>
                 <HomeHeader />
             </View>
-            <View style={styles.homeScreenContainer}>
-
-            </View>
+            <ScrollView style={styles.scrollView}>
+                <ImageContainer />
+                <CategoryTitle title="Category" subTitle="More Category" />
+            </ScrollView>
         </View>
     );
 }
@@ -33,10 +36,10 @@ const styles = StyleSheet.create({
         borderRightColor: '#FFF',
         borderWidth: 1,
     },
-    homeScreenContainer: {
-        marginLeft: 16,
-        marginRight: 16,
-    }
+    scrollView: {
+        width: '100%',
+        marginHorizontal: 20,
+    },
 })
 
 export default HomeScreen;

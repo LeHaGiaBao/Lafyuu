@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import HomeHeader from '../../../containers/app/HomeScreen/HomeHeader';
 import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
 import CategoryTitle from '../../../containers/app/HomeScreen/CategoryTitle';
+import CategoryList from '../../../containers/app/HomeScreen/CategoryList';
 
 function HomeScreen() {
     return (
@@ -13,6 +14,9 @@ function HomeScreen() {
             <ScrollView style={styles.scrollView}>
                 <ImageContainer />
                 <CategoryTitle title="Category" subTitle="More Category" />
+                <CategoryList />
+                <CategoryTitle title="Flash Sale" subTitle="See More" />
+                <CategoryTitle title="Mega Sale" subTitle="See More" />
             </ScrollView>
         </View>
     );

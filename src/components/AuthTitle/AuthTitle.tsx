@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 
 function AuthTitle({ title, subTitle }: any) {
     return (
-        <View>
+        <View style={styles.authContainer}>
             <Text style={styles.welcomeText}>{title}</Text>
             <Text style={styles.welcomeSubText}>{subTitle}</Text>
         </View>
@@ -12,6 +12,9 @@ function AuthTitle({ title, subTitle }: any) {
 }
 
 const styles = StyleSheet.create({
+    authContainer: {
+        alignItems: 'center',
+    },
     welcomeText: {
         marginTop: 16,
         fontFamily: 'Poppins-Bold',

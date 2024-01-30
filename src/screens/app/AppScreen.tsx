@@ -92,7 +92,7 @@ function AppScreen(): React.JSX.Element {
                 }}
             />
         </Tab.Navigator>
-    );
+    )
 }
 
 export default AppScreen;

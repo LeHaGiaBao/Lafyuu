@@ -4,6 +4,10 @@ import HomeHeader from '../../../containers/app/HomeScreen/HomeHeader';
 import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
 import CategoryTitle from '../../../containers/app/HomeScreen/CategoryTitle';
 import CategoryList from '../../../containers/app/HomeScreen/CategoryList';
+import FlashShoe from '../../../containers/app/HomeScreen/FlashSale';
+import MegaSale from '../../../containers/app/HomeScreen/MegaSale';
+import ImageRecommend from '../../../containers/app/HomeScreen/ImageRecommend';
+import ProductList from '../../../containers/app/HomeScreen/ProductList';
 
 function HomeScreen() {
     return (
@@ -16,7 +20,11 @@ function HomeScreen() {
                 <CategoryTitle title="Category" subTitle="More Category" />
                 <CategoryList />
                 <CategoryTitle title="Flash Sale" subTitle="See More" />
+                <FlashShoe />
                 <CategoryTitle title="Mega Sale" subTitle="See More" />
+                <MegaSale />
+                <ImageRecommend />
+                <ProductList />
             </ScrollView>
         </View>
     );

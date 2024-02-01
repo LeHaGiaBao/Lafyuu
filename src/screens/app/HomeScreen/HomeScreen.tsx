@@ -1,11 +1,57 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import HomeHeader from '../../../containers/app/HomeScreen/HomeHeader';
+import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
+import CategoryTitle from '../../../containers/app/HomeScreen/CategoryTitle';
+import CategoryList from '../../../containers/app/HomeScreen/CategoryList';
+import FlashShoe from '../../../containers/app/HomeScreen/FlashSale';
+import MegaSale from '../../../containers/app/HomeScreen/MegaSale';
+import ImageRecommend from '../../../containers/app/HomeScreen/ImageRecommend';
+import ProductList from '../../../containers/app/HomeScreen/ProductList';
 
 function HomeScreen() {
     return (
-        <View>
+        <View style={styles.homeScreen}>
+            <View style={styles.homeHeader}>
+                <HomeHeader />
+            </View>
+            <ScrollView style={styles.scrollView}>
+                <ImageContainer />
+                <CategoryTitle title="Category" subTitle="More Category" />
+                <CategoryList />
+                <CategoryTitle title="Flash Sale" subTitle="See More" />
+                <FlashShoe />
+                <CategoryTitle title="Mega Sale" subTitle="See More" />
+                <MegaSale />
+                <ImageRecommend />
+                <ProductList />
+            </ScrollView>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    homeScreen: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginTop: 60,
+    },
+    homeHeader: {
+        width: '100%',
+        paddingLeft: 16,
+        paddingRight: 16,
+        paddingBottom: 16,
+        borderBottomColor: '#EBF0FF',
+        borderTopColor: '#FFF',
+        borderLeftColor: '#FFF',
+        borderRightColor: '#FFF',
+        borderWidth: 1,
+    },
+    scrollView: {
+        width: '100%',
+        marginHorizontal: 20,
+    },
+})
 
 export default HomeScreen;

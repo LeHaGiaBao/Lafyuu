@@ -1,10 +1,10 @@
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const FlashSaleItem = [
     {
-        id: 1,
+        key: 1,
         image: require('../../../../../assets/FlashSale/shoes.png'),
         title: 'FS - Nike Air Max 270 React...',
         price: '299,43',
@@ -12,7 +12,7 @@ const FlashSaleItem = [
         saleOff: '24',
     },
     {
-        id: 2,
+        key: 2,
         image: require('../../../../../assets/FlashSale/bag.png'),
         title: 'FS - QUILTED MAXI CROS...',
         price: '299,43',
@@ -20,9 +20,17 @@ const FlashSaleItem = [
         saleOff: '24',
     },
     {
-        id: 3,
+        key: 3,
         image: require('../../../../../assets/FlashSale/nike.png'),
-        title: 'FS - Nike Air Max 270 React...',
+        title: 'FS - QUILTED MAXI CROS...',
+        price: '299,43',
+        discount: '534,33',
+        saleOff: '24',
+    },
+    {
+        key: 4,
+        image: require('../../../../../assets/FlashSale/product7.png'),
+        title: 'FS - QUILTED MAXI CROS...',
         price: '299,43',
         discount: '534,33',
         saleOff: '24',
@@ -32,27 +40,35 @@ const FlashSaleItem = [
 function ProductList() {
     return (
         <>
-            <ScrollView style={styles.scrollView} showsHorizontalScrollIndicator={false}>
-                {
-                    FlashSaleItem.map(({ id, image, title, price, discount, saleOff }) => {
-                        return <FlashSaleItemContainer key={id} title={title} image={image} price={price} discount={discount} saleOff={saleOff} />
-                    })
-                }
-            </ScrollView>
+            <View style={styles.container}>
+                <FlatList
+                    data={FlashSaleItem}
+                    renderItem={FlashSaleItemContainer}
+                    keyExtractor={(item) => item.key.toString()}
+                    numColumns={2}
+                />
+            </View>
         </>
     );
 }
 
-const FlashSaleItemContainer = ({ image, title, price, discount, saleOff }: any) => {
+const FlashSaleItemContainer = ({ item }: any) => {
     return (
         <>
             <View style={styles.flashSaleContainer}>
-                <Image source={image} style={styles.flashSaleImage} />
-                <Text style={styles.flashSaleTitle}>{title}</Text>
-                <Text style={styles.flashSalePrice}>${price}</Text>
+                <Image source={item.image} style={styles.flashSaleImage} />
+                <Text style={styles.flashSaleTitle}>{item.title}</Text>
+                <View style={styles.listStar}>
+                    <FontAwesome name='star' style={styles.vote} />
+                    <FontAwesome name='star' style={styles.vote} />
+                    <FontAwesome name='star' style={styles.vote} />
+                    <FontAwesome name='star' style={styles.vote} />
+                    <FontAwesome name='star' style={styles.unVote} />
+                </View>
+                <Text style={styles.flashSalePrice}>${item.price}</Text>
                 <View style={styles.discount}>
-                    <Text style={styles.discountText}>${discount}</Text>
-                    <Text style={styles.saleOffText}>${saleOff}% Off</Text>
+                    <Text style={styles.discountText}>${item.discount}</Text>
+                    <Text style={styles.saleOffText}>${item.saleOff}% Off</Text>
                 </View>
             </View>
         </>
@@ -60,27 +76,27 @@ const FlashSaleItemContainer = ({ image, title, price, discount, saleOff }: any)
 }
 
 const styles = StyleSheet.create({
-    scrollView: {
-        marginTop: 12,
-        marginLeft: 16,
-        marginRight: 16,
-        width: '100%',
-        marginHorizontal: 20,
+    container: {
+        flex: 1,
+        marginTop: 16,
+        marginLeft: 8,
+        marginRight: 8,
     },
     flashSaleContainer: {
-        marginRight: 16,
-        display: 'flex',
-        flexDirection: 'column',
-        width: 145,
-        height: 240,
+        flex: 1,
+        width: '100%',
+        marginLeft: 8,
+        marginRight: 8,
+        marginBottom: 16,
+        height: 282,
         borderWidth: 1,
         borderColor: '#EBF0FF',
         borderRadius: 5,
         padding: 16,
     },
     flashSaleImage: {
-        width: 109,
-        height: 109,
+        width: '100%',
+        height: 140,
     },
     flashSaleTitle: {
         marginTop: 8,
@@ -113,6 +129,23 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins-Bold',
         fontSize: 10,
         color: '#FB7181',
+    },
+    listStar: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        gap: 4,
+        marginTop: 5,
+    },
+    vote: {
+        height: 12,
+        width: 12,
+        color: '#FFC833',
+    },
+    unVote: {
+        height: 12,
+        width: 12,
+        color: '#EBF0FF',
     }
 })
 

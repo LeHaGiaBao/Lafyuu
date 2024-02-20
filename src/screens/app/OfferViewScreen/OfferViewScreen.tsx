@@ -1,19 +1,18 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import CuponContainer from '../../../containers/app/OfferScreen/CuponContainer';
-import ImageContainerOffer from '../../../containers/app/OfferScreen/ImageContainerOffer';
-import ImageRecommendOffer from '../../../containers/app/OfferScreen/ImageRecommendOffer';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import OfferHeader from '../../../containers/app/HomeScreen/OfferHeader';
+import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
+import ProductList from '../../../containers/app/HomeScreen/ProductList';
 
-function OfferScreen() {
+function OfferViewScreen() {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.homeHeader}>
-                <Text style={styles.title}>Offer</Text>
+                <OfferHeader />
             </View>
             <ScrollView style={styles.scrollView}>
-                <CuponContainer />
-                <ImageContainerOffer />
-                <ImageRecommendOffer />
+                <ImageContainer />
+                <ProductList />
             </ScrollView>
         </View>
     );
@@ -41,11 +40,6 @@ const styles = StyleSheet.create({
         width: '100%',
         marginHorizontal: 20,
     },
-    title: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#223263',
-    }
 })
 
-export default OfferScreen;
+export default OfferViewScreen;

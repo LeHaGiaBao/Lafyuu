@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import ImageContainerOffer from '../../../containers/app/HomeScreen/ImageContainerOffer';
-import ImageRecommendOffer from '../../../containers/app/HomeScreen/ImageRecommendOffer';
-import CuponContainer from '../../../containers/app/HomeScreen/CuponContainer';
+import CuponContainer from '../../../containers/app/OfferScreen/CuponContainer';
+import ImageContainerOffer from '../../../containers/app/OfferScreen/ImageContainerOffer';
+import ImageRecommendOffer from '../../../containers/app/OfferScreen/ImageRecommendOffer';
 
 function OfferScreen() {
     return (

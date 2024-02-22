@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import HomeHeader from '../../../containers/app/HomeScreen/HomeHeader';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import HomeHeader from '../../../layouts/HomeHeader';
 import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
 import CategoryTitle from '../../../containers/app/HomeScreen/CategoryTitle';
 import CategoryList from '../../../containers/app/HomeScreen/CategoryList';

@@ -6,6 +6,12 @@ import LoginScreen from './src/screens/auth/Login/LoginScreen';
 import RegisterScreen from './src/screens/auth/Register/RegisterScreen';
 import AppScreen from './src/screens/app/AppScreen';
 import OfferScreen from './src/screens/app/OfferScreen';
+import OfferViewScreen from './src/screens/app/OfferViewScreen';
+import FavoriteProductScreen from './src/screens/app/FavoriteProductScreen';
+import NotificationScreen from './src/screens/app/NotificationScreen';
+import NotificationOfferScreen from './src/screens/app/NotificationOfferScreen';
+import NotificationFeedScreen from './src/screens/app/NotificationFeedScreen';
+import NotificationActivityScreen from './src/screens/app/NotificationActivityScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +61,36 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="OfferScreen"
             component={OfferScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="OfferViewScreen"
+            component={OfferViewScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="FavoriteScreen"
+            component={FavoriteProductScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NotificationScreen"
+            component={NotificationScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NotificationOffer"
+            component={NotificationOfferScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NotificationFeed"
+            component={NotificationFeedScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NotificationActivity"
+            component={NotificationActivityScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

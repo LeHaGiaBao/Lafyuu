@@ -1,30 +1,32 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import AccountList from '../../../containers/app/AccountScreen/AccountList';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import FavoriteHeader from '../../../containers/app/FavoriteScreen/FavoriteHeader';
+import FavoriteList from '../../../containers/app/FavoriteScreen/FavoriteList';
 
-function AccountScreen({ navigation }: any) {
+function FavoriteProductScreen({ navigation }: any) {
     return (
-        <View style={styles.homeScreen}>
-            <View style={styles.homeHeader}>
-                <Text style={styles.title}>Account</Text>
+        <View style={styles.favoriteScreen}>
+            <View style={styles.favoriteHeader}>
+                <FavoriteHeader navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <AccountList navigation={navigation} />
+                <FavoriteList />
             </ScrollView>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    homeScreen: {
+    favoriteScreen: {
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
+        marginBottom: 60,
     },
-    homeHeader: {
-        marginLeft: 16,
+    favoriteHeader: {
         width: '100%',
+        paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
         borderBottomColor: '#EBF0FF',
@@ -37,11 +39,6 @@ const styles = StyleSheet.create({
         width: '100%',
         marginHorizontal: 20,
     },
-    title: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#223263',
-    }
 })
 
-export default AccountScreen;
+export default FavoriteProductScreen;

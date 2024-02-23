@@ -1,32 +1,31 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import OfferHeader from '../../../containers/app/HomeScreen/OfferHeader';
-import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
-import ProductList from '../../../containers/app/HomeScreen/ProductList';
+import NotificationHeader from '../../../containers/app/NotificationScreen/NotificationHeader';
+import NotificationListFeed from '../../../containers/app/NotificationScreen/NotificationListFeed';
 
-function OfferViewScreen({ navigation }: any) {
+function NotificationFeedScreen({ navigation }: any) {
     return (
-        <View style={styles.homeScreen}>
-            <View style={styles.homeHeader}>
-                <OfferHeader navigation={navigation} />
+        <View style={styles.notificationScreen}>
+            <View style={styles.notificationHeader}>
+                <NotificationHeader title="Feed" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <ImageContainer />
-                <ProductList />
+                <NotificationListFeed navigation={navigation} />
             </ScrollView>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    homeScreen: {
+    notificationScreen: {
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
-        marginBottom: 60,
+        marginLeft: 16,
+        marginRight: 16,
     },
-    homeHeader: {
+    notificationHeader: {
         width: '100%',
         paddingLeft: 16,
         paddingRight: 16,
@@ -43,4 +42,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default OfferViewScreen;
+export default NotificationFeedScreen;

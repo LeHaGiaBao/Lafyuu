@@ -22,10 +22,10 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
-        marginLeft: 16,
-        marginRight: 16,
     },
     notificationHeader: {
+        marginLeft: 16,
+        marginRight: 16,
         width: '100%',
         paddingLeft: 16,
         paddingRight: 16,

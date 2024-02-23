@@ -1,13 +1,14 @@
 import React, { useRef } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Feather from 'react-native-vector-icons/Feather'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
-function NotificationList({ navigation }: any) {
+function AccountList({ navigation }: any) {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
+    const ref4 = useRef(null);
 
     const handlePressIn = (ref: any) => {
         ref.current.setNativeProps({
@@ -29,14 +30,10 @@ function NotificationList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref1)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('NotificationOffer')}
             >
                 <View style={styles.listContent}>
-                    <AntDesign name='tago' size={24} style={styles.contentIcon} />
-                    <Text style={styles.contentText}>Offer</Text>
-                </View>
-                <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>3</Text>
+                    <MaterialCommunityIcons name='account-outline' size={24} style={styles.contentIcon} />
+                    <Text style={styles.contentText}>Profile</Text>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity
@@ -45,14 +42,10 @@ function NotificationList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref2)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('NotificationFeed')}
             >
                 <View style={styles.listContent}>
-                    <MaterialCommunityIcons name='text-box-outline' size={24} style={styles.contentIcon} />
-                    <Text style={styles.contentText}>Feed</Text>
-                </View>
-                <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>3</Text>
+                    <Feather name='shopping-bag' size={24} style={styles.contentIcon} />
+                    <Text style={styles.contentText}>Order</Text>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity
@@ -61,14 +54,22 @@ function NotificationList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref3)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('NotificationActivity')}
             >
                 <View style={styles.listContent}>
-                    <Feather name='bell' size={24} style={styles.contentIcon} />
-                    <Text style={styles.contentText}>Activity</Text>
+                    <Ionicons name='location-outline' size={24} style={styles.contentIcon} />
+                    <Text style={styles.contentText}>Address</Text>
                 </View>
-                <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>3</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                ref={ref4}
+                onPressIn={() => handlePressIn(ref4)}
+                onPressOut={() => handlePressOut(ref4)}
+                activeOpacity={0.8}
+                style={styles.listItem}
+            >
+                <View style={styles.listContent}>
+                    <Feather name='credit-card' size={24} style={styles.contentIcon} />
+                    <Text style={styles.contentText}>Payment</Text>
                 </View>
             </TouchableOpacity>
         </View>
@@ -82,12 +83,11 @@ const styles = StyleSheet.create({
     },
     listItem: {
         paddingLeft: 16,
-        paddingRight: 16,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: 56,
+        height: 55,
     },
     listContent: {
         display: 'flex',
@@ -105,19 +105,6 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: '#223263',
     },
-    notificationCount: {
-        justifyContent: 'center',
-        height: 20,
-        width: 20,
-        backgroundColor: '#FB7181',
-        borderRadius: 100,
-    },
-    notificationCountText: {
-        textAlign: 'center',
-        color: '#FFF',
-        fontFamily: 'Poppins-Bold',
-        fontSize: 10,
-    }
 })
 
-export default NotificationList;
+export default AccountList;

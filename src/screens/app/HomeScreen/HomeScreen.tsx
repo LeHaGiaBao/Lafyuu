@@ -17,7 +17,12 @@ function HomeScreen({ navigation }: any) {
             </View>
             <ScrollView style={styles.scrollView}>
                 <ImageContainer />
-                <CategoryTitle title="Category" subTitle="More Category" />
+                <CategoryTitle
+                    title="Category"
+                    subTitle="More Category"
+                    navigation={navigation}
+                    screen="ExploreScreen"
+                />
                 <CategoryList />
                 <CategoryTitle
                     title="Flash Sale"

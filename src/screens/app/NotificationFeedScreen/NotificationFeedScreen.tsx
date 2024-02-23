@@ -1,13 +1,13 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import NotificationMainHeader from '../../../containers/app/NotificationScreen/NotificationMainHeader';
 import NotificationList from '../../../containers/app/NotificationScreen/NotificationList';
+import NotificationHeader from '../../../containers/app/NotificationScreen/NotificationHeader';
 
-function NotificationScreen({ navigation }: any) {
+function NotificationFeedScreen({ navigation }: any) {
     return (
         <View style={styles.notificationScreen}>
             <View style={styles.notificationHeader}>
-                <NotificationMainHeader navigation={navigation} />
+                <NotificationHeader title="Feed" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <NotificationList navigation={navigation} />
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default NotificationScreen;
+export default NotificationFeedScreen;

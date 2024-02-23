@@ -1,39 +1,48 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Feather from 'react-native-vector-icons/Feather'
 
-function NotificationList() {
+function NotificationList({ navigation }: any) {
     return (
         <View style={styles.listContainer}>
-            <View style={styles.listItem}>
+            <TouchableOpacity
+                style={styles.listItem}
+                onPress={() => navigation.navigate('NotificationOffer')}
+            >
                 <View style={styles.listContent}>
                     <AntDesign name='tago' size={24} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Offer</Text>
                 </View>
                 <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>2</Text>
+                    <Text style={styles.notificationCountText}>3</Text>
                 </View>
-            </View>
-            <View style={styles.listItem}>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.listItem}
+                onPress={() => navigation.navigate('NotificationFeed')}
+            >
                 <View style={styles.listContent}>
                     <MaterialCommunityIcons name='text-box-outline' size={24} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Feed</Text>
                 </View>
                 <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>2</Text>
+                    <Text style={styles.notificationCountText}>3</Text>
                 </View>
-            </View>
-            <View style={styles.listItem}>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.listItem}
+                onPress={() => navigation.navigate('NotificationActivity')}
+            >
                 <View style={styles.listContent}>
                     <Feather name='bell' size={24} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Activity</Text>
                 </View>
                 <View style={styles.notificationCount}>
-                    <Text style={styles.notificationCountText}>2</Text>
+                    <Text style={styles.notificationCountText}>3</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 }

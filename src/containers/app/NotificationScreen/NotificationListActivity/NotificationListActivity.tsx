@@ -1,29 +1,29 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign'
+import Octicons from 'react-native-vector-icons/Octicons'
 
 const NotificationListItem = [
     {
         id: 1,
-        title: 'The Best Title',
+        title: 'Transaction Nike Air Zoom Product',
         content: 'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
         time: 'April 30, 2014 1:01 PM'
     },
     {
         id: 2,
-        title: 'SUMMER OFFER 98% Cashback',
+        title: 'Transaction Nike Air Zoom Pegasus 36 Miami',
         content: 'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor',
         time: 'April 30, 2014 1:01 PM'
     },
     {
         id: 3,
-        title: 'Special Offer 25% OFF',
+        title: 'Transaction Nike Air Max',
         content: 'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
         time: 'April 30, 2014 1:01 PM'
     },
 ]
 
-function NotificationListOffer({ navigation }: any) {
+function NotificationListActivity({ navigation }: any) {
     return (
         <View style={styles.listContainer}>
             {
@@ -40,7 +40,7 @@ const ItemRender = ({ title, content, time }: any) => {
         <View style={styles.item}>
             <View style={styles.listItem}>
                 <View style={styles.listContent}>
-                    <AntDesign name='tago' size={24} style={styles.contentIcon} />
+                    <Octicons name='arrow-switch' size={24} style={styles.contentIcon} />
                     <Text style={styles.contentText}>{title}</Text>
                 </View>
             </View>
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
         height: 24,
         width: 24,
         color: '#40BFFF',
+        transform: [{ rotate: '135deg' }],
     },
     contentText: {
         fontFamily: 'Poppins-Bold',
@@ -98,4 +99,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default NotificationListOffer;
+export default NotificationListActivity;

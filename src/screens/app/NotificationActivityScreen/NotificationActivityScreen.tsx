@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import NotificationList from '../../../containers/app/NotificationScreen/NotificationList';
 import NotificationHeader from '../../../containers/app/NotificationScreen/NotificationHeader';
+import NotificationListActivity from '../../../containers/app/NotificationScreen/NotificationListActivity';
 
 function NotificationActivityScreen({ navigation }: any) {
     return (
@@ -10,7 +10,7 @@ function NotificationActivityScreen({ navigation }: any) {
                 <NotificationHeader title="Activity" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <NotificationList navigation={navigation} />
+                <NotificationListActivity navigation={navigation} />
             </ScrollView>
         </View>
     );

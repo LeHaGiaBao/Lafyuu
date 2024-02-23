@@ -5,7 +5,7 @@ import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Badge } from 'react-native-paper';
 
-function HomeHeader() {
+function HomeHeader({ navigation }: any) {
     const [searchFocus, setSearchFocus] = useState(false)
     const [badgeCount, setBadgeCount] = useState(1)
 
@@ -23,7 +23,12 @@ function HomeHeader() {
                     />
                 </View>
                 <View style={styles.iconHeader}>
-                    <AntDesign name="hearto" size={24} style={styles.iconHeart} />
+                    <AntDesign
+                        name="hearto"
+                        size={24}
+                        style={styles.iconHeart}
+                        onPress={() => navigation.navigate('FavoriteScreen')}
+                    />
                     <View>
                         <Feather name="bell" size={24} style={styles.iconBell} />
                         {

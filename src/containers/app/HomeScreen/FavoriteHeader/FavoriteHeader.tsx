@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Feather from 'react-native-vector-icons/Feather'
 
-function OfferHeader({ navigation }: any) {
+function FavoriteHeader({ navigation }: any) {
     return (
         <>
             <View style={styles.headerContainer}>
@@ -14,9 +14,9 @@ function OfferHeader({ navigation }: any) {
                         style={styles.iconStyle}
                         onPress={() => navigation.goBack()}
                     />
-                    <Text style={styles.title}>Super Flash Sale</Text>
+                    <Text style={styles.title}>Favorite Product</Text>
                 </View>
-                <Feather name='search' size={24} style={styles.iconStyle} />
+                {/* <Feather name='search' size={24} style={styles.iconStyle} /> */}
             </View>
         </>
     );
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default OfferHeader;
+export default FavoriteHeader;

@@ -7,6 +7,7 @@ import RegisterScreen from './src/screens/auth/Register/RegisterScreen';
 import AppScreen from './src/screens/app/AppScreen';
 import OfferScreen from './src/screens/app/OfferScreen';
 import OfferViewScreen from './src/screens/app/OfferViewScreen';
+import FavoriteProductScreen from './src/screens/app/FavoriteProductScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -61,6 +62,11 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="OfferViewScreen"
             component={OfferViewScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="FavoriteScreen"
+            component={FavoriteProductScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

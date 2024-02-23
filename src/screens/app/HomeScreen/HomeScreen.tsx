@@ -13,7 +13,7 @@ function HomeScreen({ navigation }: any) {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.homeHeader}>
-                <HomeHeader />
+                <HomeHeader navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <ImageContainer />

@@ -1,30 +1,31 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import FavoriteHeader from '../../../containers/app/FavoriteScreen/FavoriteHeader';
-import FavoriteList from '../../../containers/app/FavoriteScreen/FavoriteList';
+import NotificationHeader from '../../../containers/app/NotificationScreen/NotificationHeader';
+import NotificationList from '../../../containers/app/NotificationScreen/NotificationList';
 
-function FavoriteProductScreen({ navigation }: any) {
+function NotificationScreen({ navigation }: any) {
     return (
-        <View style={styles.favoriteScreen}>
-            <View style={styles.favoriteHeader}>
-                <FavoriteHeader navigation={navigation} />
+        <View style={styles.notificationScreen}>
+            <View style={styles.notificationHeader}>
+                <NotificationHeader navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <FavoriteList />
+                <NotificationList />
             </ScrollView>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    favoriteScreen: {
+    notificationScreen: {
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
-        marginBottom: 60,
+        marginLeft: 16,
+        marginRight: 16,
     },
-    favoriteHeader: {
+    notificationHeader: {
         width: '100%',
         paddingLeft: 16,
         paddingRight: 16,
@@ -41,4 +42,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default FavoriteProductScreen;
+export default NotificationScreen;

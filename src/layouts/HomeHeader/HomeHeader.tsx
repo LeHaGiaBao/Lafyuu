@@ -30,7 +30,12 @@ function HomeHeader({ navigation }: any) {
                         onPress={() => navigation.navigate('FavoriteScreen')}
                     />
                     <View>
-                        <Feather name="bell" size={24} style={styles.iconBell} />
+                        <Feather
+                            name="bell"
+                            size={24}
+                            style={styles.iconBell}
+                            onPress={() => navigation.navigate('NotificationScreen')}
+                        />
                         {
                             badgeCount > 0 && (
                                 <Badge

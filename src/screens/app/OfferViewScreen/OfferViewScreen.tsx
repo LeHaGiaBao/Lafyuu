@@ -4,11 +4,11 @@ import OfferHeader from '../../../containers/app/HomeScreen/OfferHeader';
 import ImageContainer from '../../../containers/app/HomeScreen/ImageContainer';
 import ProductList from '../../../containers/app/HomeScreen/ProductList';
 
-function OfferViewScreen() {
+function OfferViewScreen({ navigation }: any) {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.homeHeader}>
-                <OfferHeader />
+                <OfferHeader navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <ImageContainer />
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
+        marginBottom: 60,
     },
     homeHeader: {
         width: '100%',

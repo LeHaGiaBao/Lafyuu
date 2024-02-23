@@ -1,11 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-function CategoryTitle({ title, subTitle }: any) {
+function CategoryTitle({ title, subTitle, navigation, screen }: any) {
     return (
         <View style={styles.category}>
             <Text style={styles.title}>{title}</Text>
-            <Text style={styles.seeAll}>{subTitle}</Text>
+            <Text
+                style={styles.seeAll}
+                onPress={() => navigation.navigate(`${screen}`)}
+            >
+                {subTitle}
+            </Text>
         </View>
     );
 }

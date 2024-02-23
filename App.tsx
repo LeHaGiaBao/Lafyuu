@@ -6,6 +6,7 @@ import LoginScreen from './src/screens/auth/Login/LoginScreen';
 import RegisterScreen from './src/screens/auth/Register/RegisterScreen';
 import AppScreen from './src/screens/app/AppScreen';
 import OfferScreen from './src/screens/app/OfferScreen';
+import OfferViewScreen from './src/screens/app/OfferViewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +56,11 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="OfferScreen"
             component={OfferScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="OfferViewScreen"
+            component={OfferViewScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

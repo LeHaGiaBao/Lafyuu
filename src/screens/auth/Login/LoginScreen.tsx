@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import LogoContainer from '../../../components/LogoContainer';
 import AuthTitle from '../../../components/AuthTitle';

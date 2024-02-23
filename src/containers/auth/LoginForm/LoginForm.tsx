@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 function LoginForm({ navigation }: any) {
     const [emailFocus, setEmailFocus] = useState(false)

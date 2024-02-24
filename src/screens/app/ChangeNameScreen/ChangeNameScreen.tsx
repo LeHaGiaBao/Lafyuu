@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import AccountHeader from '../../../containers/app/AccountScreen/AccountHeader';
 
 function ChangeNameScreen({ navigation }: any) {
@@ -36,6 +36,11 @@ function ChangeNameScreen({ navigation }: any) {
                     </View>
                 </View>
             </ScrollView>
+            <View style={styles.buttonView}>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Save</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -112,6 +117,27 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5,
         borderColor: '#40BFFF',
+    },
+    buttonView: {
+        paddingLeft: 16,
+        paddingRight: 16,
+        width: '100%',
+    },
+    button: {
+        alignItems: 'center',
+        backgroundColor: '#40BFFF',
+        borderRadius: 5,
+        paddingTop: 16,
+        paddingBottom: 16,
+        shadowColor: 'rgba(64, 191, 255, 0.24)',
+        shadowOffset: { width: 0, height: 10 },
+        shadowOpacity: 1,
+        shadowRadius: 30,
+    },
+    buttonText: {
+        fontFamily: 'Poppins-Bold',
+        fontSize: 14,
+        color: 'white',
     },
 })
 

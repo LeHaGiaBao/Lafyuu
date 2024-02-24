@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AccountHeader from '../../../containers/app/AccountScreen/AccountHeader';
 import ProfileList from '../../../containers/app/AccountScreen/ProfileList';
 
@@ -11,13 +11,13 @@ function ProfileScreen({ navigation }: any) {
                 <AccountHeader title="Profile" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <View style={styles.profileContent}>
+                <TouchableOpacity style={styles.profileContent} onPress={() => navigation.navigate('ChangeName')}>
                     <Image source={require('../../../../assets/Profile/Profile.png')} style={styles.avatar} />
                     <View style={styles.profile}>
                         <Text style={styles.profileName}>Maximus Gold</Text>
                         <Text style={styles.profileUserName}>@derlaxy</Text>
                     </View>
-                </View>
+                </TouchableOpacity>
                 <View style={styles.profileList}>
                     <ProfileList navigation={navigation} />
                 </View>

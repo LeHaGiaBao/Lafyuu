@@ -34,7 +34,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref1)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('ChangeName')}
+                onPress={() => navigation.navigate('ChangeGender')}
             >
                 <View style={styles.listContent}>
                     <MaterialCommunityIcons name={`${gender === 'Male' ? 'gender-female' : 'gender-male'}`} size={24} style={styles.contentIcon} />
@@ -62,26 +62,6 @@ function ProfileList({ navigation }: any) {
                 </View>
                 <View style={styles.listContentData}>
                     <Text style={styles.contentData}>12-12-2000</Text>
-                    <MaterialIcons
-                        name='arrow-forward-ios'
-                        size={24}
-                        style={styles.iconStyle}
-                    />
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-                ref={ref3}
-                onPressIn={() => handlePressIn(ref3)}
-                onPressOut={() => handlePressOut(ref3)}
-                activeOpacity={0.8}
-                style={styles.listItem}
-            >
-                <View style={styles.listContent}>
-                    <Feather name="mail" size={24} style={styles.contentIcon} />
-                    <Text style={styles.contentText}>Email</Text>
-                </View>
-                <View style={styles.listContentData}>
-                    <Text style={styles.contentData}>Derlaxy@yahoo.com</Text>
                     <MaterialIcons
                         name='arrow-forward-ios'
                         size={24}

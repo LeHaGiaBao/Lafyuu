@@ -6,7 +6,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
 
 function ChangeBirthdayScreen({ navigation }: any) {
-    const [selected, setSelected] = useState('');
+    const [selected, setSelected] = useState('12/12/2020');
     const [dropdownFocus, setDropdownFocus] = useState(false)
     const [visible, setVisible] = useState(false);
 

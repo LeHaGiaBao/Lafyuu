@@ -16,6 +16,7 @@ import ProfileScreen from './src/screens/app/ProfileScreen';
 import ChangeGenderScreen from './src/screens/app/ChangeGenderScreen';
 import ChangeNameScreen from './src/screens/app/ChangeNameScreen';
 import ChangeBirthdayScreen from './src/screens/app/ChangeBirthdayScreen';
+import ChangeEmailScreen from './src/screens/app/ChangeEmailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -115,6 +116,11 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="ChangeBirthday"
             component={ChangeBirthdayScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeEmail"
+            component={ChangeEmailScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

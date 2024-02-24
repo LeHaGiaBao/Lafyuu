@@ -76,6 +76,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref3)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ChangeEmail')}
             >
                 <View style={styles.listContent}>
                     <Feather name="mail" size={24} style={styles.contentIcon} />

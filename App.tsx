@@ -12,6 +12,7 @@ import NotificationScreen from './src/screens/app/NotificationScreen';
 import NotificationOfferScreen from './src/screens/app/NotificationOfferScreen';
 import NotificationFeedScreen from './src/screens/app/NotificationFeedScreen';
 import NotificationActivityScreen from './src/screens/app/NotificationActivityScreen';
+import ProfileScreen from './src/screens/app/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -91,6 +92,11 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="NotificationActivity"
             component={NotificationActivityScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

@@ -30,6 +30,7 @@ function AccountList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref1)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ProfileScreen')}
             >
                 <View style={styles.listContent}>
                     <MaterialCommunityIcons name='account-outline' size={24} style={styles.contentIcon} />

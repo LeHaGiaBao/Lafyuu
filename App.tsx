@@ -12,6 +12,14 @@ import NotificationScreen from './src/screens/app/NotificationScreen';
 import NotificationOfferScreen from './src/screens/app/NotificationOfferScreen';
 import NotificationFeedScreen from './src/screens/app/NotificationFeedScreen';
 import NotificationActivityScreen from './src/screens/app/NotificationActivityScreen';
+import ProfileScreen from './src/screens/app/ProfileScreen';
+import ChangeGenderScreen from './src/screens/app/ChangeGenderScreen';
+import ChangeNameScreen from './src/screens/app/ChangeNameScreen';
+import ChangeBirthdayScreen from './src/screens/app/ChangeBirthdayScreen';
+import ChangeEmailScreen from './src/screens/app/ChangeEmailScreen';
+import ChangePhoneScreen from './src/screens/app/ChangePhoneScreen';
+import ChangePasswordScreen from './src/screens/app/ChangePasswordScreen';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -91,6 +99,41 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="NotificationActivity"
             component={NotificationActivityScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeName"
+            component={ChangeNameScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeGender"
+            component={ChangeGenderScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeBirthday"
+            component={ChangeBirthdayScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeEmail"
+            component={ChangeEmailScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangePhone"
+            component={ChangePhoneScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangePassword"
+            component={ChangePasswordScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

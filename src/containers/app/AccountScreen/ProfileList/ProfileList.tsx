@@ -34,6 +34,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref1)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ChangeName')}
             >
                 <View style={styles.listContent}>
                     <MaterialCommunityIcons name={`${gender === 'Male' ? 'gender-female' : 'gender-male'}`} size={24} style={styles.contentIcon} />

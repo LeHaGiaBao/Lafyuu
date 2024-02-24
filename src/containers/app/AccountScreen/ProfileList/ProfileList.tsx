@@ -118,6 +118,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref5)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ChangePassword')}
             >
                 <View style={styles.listContent}>
                     <Feather name="lock" size={24} style={styles.contentIcon} />

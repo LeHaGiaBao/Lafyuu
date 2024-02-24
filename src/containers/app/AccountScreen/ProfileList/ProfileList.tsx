@@ -97,6 +97,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref4)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ChangePhone')}
             >
                 <View style={styles.listContent}>
                     <Feather name="smartphone" size={24} style={styles.contentIcon} />

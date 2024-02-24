@@ -4,8 +4,8 @@ import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 
 import AccountHeader from '../../../containers/app/AccountScreen/AccountHeader';
 import Feather from 'react-native-vector-icons/Feather';
 
-function ChangeEmailScreen({ navigation }: any) {
-    const [emailFocus, setEmailFocus] = useState(false)
+function ChangePhoneScreen({ navigation }: any) {
+    const [phoneFocus, setPhoneFocus] = useState(false)
     const [active, setActive] = useState(false)
 
     const toggleActive = () => {
@@ -13,35 +13,35 @@ function ChangeEmailScreen({ navigation }: any) {
     }
 
     return (
-        <View style={styles.changeEmailScreen}>
-            <View style={styles.changeEmailHeader}>
-                <AccountHeader title="Email" navigation={navigation} />
+        <View style={styles.changePhoneScreen}>
+            <View style={styles.changePhoneHeader}>
+                <AccountHeader title="Phone Number" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <View style={styles.flexView}>
                     <View style={styles.changeData}>
-                        <Text style={styles.nameTitle}>Change Email</Text>
-                        <View style={emailFocus ? styles.inputContainerFocus : styles.inputContainer}>
-                            <Feather name="mail" size={24} style={emailFocus ? styles.iconStylesFocus : styles.iconStyles} />
+                        <Text style={styles.nameTitle}>Phone Number</Text>
+                        <View style={phoneFocus ? styles.inputContainerFocus : styles.inputContainer}>
+                            <Feather name="smartphone" size={24} style={phoneFocus ? styles.iconStylesFocus : styles.iconStyles} />
                             <TextInput
-                                placeholder='Derlaxy@yahoo.com'
+                                placeholder='(307) 555-0133'
                                 autoCapitalize="none"
                                 style={styles.inputBox}
-                                onFocus={() => setEmailFocus(true)}
-                                onBlur={() => setEmailFocus(false)}
+                                onFocus={() => setPhoneFocus(true)}
+                                onBlur={() => setPhoneFocus(false)}
                             />
                         </View>
                     </View>
                 </View>
-                {
+                {/* {
                     active && (
                         <Text style={styles.notiSendText}>We Will Send verification to your New Email</Text>
                     )
-                }
+                } */}
             </ScrollView>
             <View style={styles.buttonView}>
                 <TouchableOpacity style={styles.button} onPress={toggleActive}>
-                    <Text style={styles.buttonText}>Change Email</Text>
+                    <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -49,14 +49,14 @@ function ChangeEmailScreen({ navigation }: any) {
 }
 
 const styles = StyleSheet.create({
-    changeEmailScreen: {
+    changePhoneScreen: {
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 60,
         marginBottom: 60,
     },
-    changeEmailHeader: {
+    changePhoneHeader: {
         width: '100%',
         paddingLeft: 16,
         paddingRight: 16,
@@ -158,4 +158,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default ChangeEmailScreen;
+export default ChangePhoneScreen;

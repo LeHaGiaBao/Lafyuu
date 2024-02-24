@@ -55,6 +55,7 @@ function ProfileList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref2)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('ChangeBirthday')}
             >
                 <View style={styles.listContent}>
                     <FontAwesome name="calendar-o" size={24} style={styles.contentIcon} />

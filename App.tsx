@@ -15,6 +15,7 @@ import NotificationActivityScreen from './src/screens/app/NotificationActivitySc
 import ProfileScreen from './src/screens/app/ProfileScreen';
 import ChangeGenderScreen from './src/screens/app/ChangeGenderScreen';
 import ChangeNameScreen from './src/screens/app/ChangeNameScreen';
+import ChangeBirthdayScreen from './src/screens/app/ChangeBirthdayScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -109,6 +110,11 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="ChangeGender"
             component={ChangeGenderScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChangeBirthday"
+            component={ChangeBirthdayScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

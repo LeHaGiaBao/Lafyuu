@@ -43,6 +43,7 @@ function AccountList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref2)}
                 activeOpacity={0.8}
                 style={styles.listItem}
+                onPress={() => navigation.navigate('OrderScreen')}
             >
                 <View style={styles.listContent}>
                     <Feather name='shopping-bag' size={24} style={styles.contentIcon} />

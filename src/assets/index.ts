@@ -30,4 +30,41 @@ const socialIcon = {
   facebookIcon: require('./appIcon/Social/Facebook.png'),
 };
 
-export {icon};
+const homeIcon = {
+  homeIcon: require('./appIcon/Navigation/Home/Home.png'),
+  homeIconFocus: require('./appIcon/Navigation/Home/HomeFocus.png'),
+};
+
+const exploreIcon = {
+  exploreIcon: require('./appIcon/Navigation/Explore/Search.png'),
+  exploreIconFocus: require('./appIcon/Navigation/Explore/SearchFocus.png'),
+};
+
+const cartIcon = {
+  cartIcon: require('./appIcon/Navigation/Cart/Cart.png'),
+  cartIconFocus: require('./appIcon/Navigation/Cart/CartFocus.png'),
+};
+
+const offerIcon = {
+  offerIcon: require('./appIcon/Navigation/Offer/Offer.png'),
+  offerIconFocus: require('./appIcon/Navigation/Offer/OfferFocus.png'),
+};
+
+const accountIcon = {
+  accountIcon: require('./appIcon/Navigation/Account/User.png'),
+  accountIconFocus: require('./appIcon/Navigation/Account/UserFocus.png'),
+};
+
+export {
+  icon,
+  mailIcon,
+  lockIcon,
+  userIcon,
+  searchIcon,
+  socialIcon,
+  homeIcon,
+  exploreIcon,
+  cartIcon,
+  offerIcon,
+  accountIcon,
+};

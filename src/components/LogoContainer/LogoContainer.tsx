@@ -1,11 +1,13 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+import { icon } from '../../assets';
+import { PrimaryColor } from '../../constants/colors';
 
 function LogoContainer() {
     return (
         <View style={styles.logoContainer}>
             <Image
-                source={require('../../../assets/Icon/iconWhite.png')}
+                source={icon.whiteIcon}
                 style={{
                     height: 32,
                     width: 32,
@@ -17,7 +19,7 @@ function LogoContainer() {
 
 const styles = StyleSheet.create({
     logoContainer: {
-        backgroundColor: '#40BFFF',
+        backgroundColor: PrimaryColor.BlueColor,
         height: 72,
         width: 72,
         justifyContent: 'center',

@@ -6,16 +6,18 @@ const FontFamily = {
 };
 
 const FontSize = {
-  FontSize32: PixelRatio.getPixelSizeForLayoutSize(32),
-  FontSize24: PixelRatio.getPixelSizeForLayoutSize(24),
-  FontSize20: PixelRatio.getPixelSizeForLayoutSize(20),
-  FontSize16: PixelRatio.getPixelSizeForLayoutSize(16),
-  FontSize14: PixelRatio.getPixelSizeForLayoutSize(14),
-  FontSize10: PixelRatio.getPixelSizeForLayoutSize(10),
+  FontSize32: 32,
+  FontSize24: 24,
+  FontSize20: 20,
+  FontSize18: 18,
+  FontSize16: 16,
+  FontSize14: 14,
+  FontSize12: 12,
+  FontSize10: 10,
 };
 
 const FontLineHight = {
-  LineHeighText: PixelRatio.getPixelSizeForLayoutSize(0.5),
+  LineHeighText: 0.5,
 };
 
 const FontHeight = {

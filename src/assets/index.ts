@@ -1,0 +1,70 @@
+const icon = {
+  welcomeIcon: require('./icons/iconWelcome.png'),
+  whiteIcon: require('./icons/iconWhite.png'),
+};
+
+const mailIcon = {
+  mailIcon: require('./appIcon/Mail/Message.png'),
+  mailIconFocus: require('./appIcon/Mail/MessageFocus.png'),
+  mailIconError: require('./appIcon/Mail/MessageError.png'),
+};
+
+const lockIcon = {
+  lockIcon: require('./appIcon/Lock/Password.png'),
+  lockIconFocus: require('./appIcon/Lock/PasswordFocus.png'),
+  lockIconError: require('./appIcon/Lock/PasswordError.png'),
+};
+
+const userIcon = {
+  userIcon: require('./appIcon/User/User.png'),
+  userIconFocus: require('./appIcon/User/UserFocus.png'),
+};
+
+const searchIcon = {
+  searchIcon: require('./appIcon/Search/Search.png'),
+  searchIconFocus: require('./appIcon/Search/SearchFocus.png'),
+};
+
+const socialIcon = {
+  googleIcon: require('./appIcon/Social/Google.png'),
+  facebookIcon: require('./appIcon/Social/Facebook.png'),
+};
+
+const homeIcon = {
+  homeIcon: require('./appIcon/Navigation/Home/Home.png'),
+  homeIconFocus: require('./appIcon/Navigation/Home/HomeFocus.png'),
+};
+
+const exploreIcon = {
+  exploreIcon: require('./appIcon/Navigation/Explore/Search.png'),
+  exploreIconFocus: require('./appIcon/Navigation/Explore/SearchFocus.png'),
+};
+
+const cartIcon = {
+  cartIcon: require('./appIcon/Navigation/Cart/Cart.png'),
+  cartIconFocus: require('./appIcon/Navigation/Cart/CartFocus.png'),
+};
+
+const offerIcon = {
+  offerIcon: require('./appIcon/Navigation/Offer/Offer.png'),
+  offerIconFocus: require('./appIcon/Navigation/Offer/OfferFocus.png'),
+};
+
+const accountIcon = {
+  accountIcon: require('./appIcon/Navigation/Account/User.png'),
+  accountIconFocus: require('./appIcon/Navigation/Account/UserFocus.png'),
+};
+
+export {
+  icon,
+  mailIcon,
+  lockIcon,
+  userIcon,
+  searchIcon,
+  socialIcon,
+  homeIcon,
+  exploreIcon,
+  cartIcon,
+  offerIcon,
+  accountIcon,
+};

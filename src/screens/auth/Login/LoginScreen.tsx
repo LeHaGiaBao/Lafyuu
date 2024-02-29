@@ -19,7 +19,7 @@ function LoginScreen({ navigation }: any): React.JSX.Element {
                 <View style={styles.divideLine}></View>
             </View>
             <SocialAuth />
-            <TouchableOpacity style={styles.forgotPassword} onPress={() => { }}>
+            <TouchableOpacity style={styles.forgotPassword} onPress={() => navigation.navigate('ForgotPasswordScreen')}>
                 <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
             </TouchableOpacity>
             <Text style={styles.register}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 import LogoContainer from '../../../components/LogoContainer';
 import AuthTitle from '../../../components/AuthTitle';
 import LoginForm from '../../../containers/auth/LoginForm';

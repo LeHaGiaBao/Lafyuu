@@ -1,12 +1,14 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+import { BackgroundColor, PrimaryColor } from '../../../constants/colors';
+import { icon } from '../../../assets';
 
 function SplashScreen(): React.JSX.Element {
     return (
         <View style={styles.splashScreen}>
             <View style={styles.logoContainer}>
                 <Image
-                    source={require('../../../../assets/Icon/iconWelcome.png')}
+                    source={icon.welcomeIcon}
                     style={{
                         height: 32,
                         width: 32,
@@ -22,10 +24,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#40BFFF',
+        backgroundColor: PrimaryColor.BlueColor
     },
     logoContainer: {
-        backgroundColor: '#FFF',
+        backgroundColor: BackgroundColor.WhiteColor,
         height: 72,
         width: 72,
         justifyContent: 'center',

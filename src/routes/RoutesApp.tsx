@@ -6,6 +6,7 @@ import { BackgroundColor } from '../constants/colors';
 import SplashScreen from '../screens/auth/SplashScreen';
 import LoginScreen from '../screens/auth/Login';
 import RegisterScreen from '../screens/auth/Register';
+import ForgotPassword from '../screens/auth/ForgotPassword';
 import AppScreen from '../screens/app/AppScreen';
 import OfferScreen from '../screens/app/OfferScreen';
 import OfferViewScreen from '../screens/app/OfferViewScreen';
@@ -60,6 +61,11 @@ function RoutesApp() {
                 <Stack.Screen
                     name="RegisterScreen"
                     component={RegisterScreen}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="ForgotPasswordScreen"
+                    component={ForgotPassword}
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen

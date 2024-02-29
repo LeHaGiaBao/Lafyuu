@@ -4,6 +4,8 @@ import LogoContainer from '../../../components/LogoContainer';
 import AuthTitle from '../../../components/AuthTitle';
 import LoginForm from '../../../containers/auth/LoginForm';
 import SocialAuth from '../../../containers/auth/SocialAuth';
+import { NeutralColor, PrimaryColor } from '../../../constants/colors';
+import { FontFamily, FontSize } from '../../../constants/fonts';
 
 function LoginScreen({ navigation }: any): React.JSX.Element {
     return (
@@ -53,12 +55,12 @@ const styles = StyleSheet.create({
         marginTop: 10,
         width: 150,
         height: 1,
-        backgroundColor: '#EBF0FF'
+        backgroundColor: NeutralColor.LightColor,
     },
     divideText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#9098B1',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: NeutralColor.GreyColor,
         marginLeft: 28,
         marginRight: 28,
     },
@@ -66,22 +68,22 @@ const styles = StyleSheet.create({
         marginTop: 16,
     },
     forgotPasswordText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#40BFFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize12,
+        color: PrimaryColor.BlueColor,
         textAlign: 'center',
     },
     register: {
         marginTop: 8,
-        fontFamily: 'Poppins-Regular',
-        fontSize: 12,
-        color: '#9098B1',
+        fontFamily: FontFamily.FontRegular,
+        fontSize: FontSize.FontSize12,
+        color: NeutralColor.GreyColor,
         textAlign: 'center',
     },
     registerText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#40BFFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize12,
+        color: PrimaryColor.BlueColor,
         textAlign: 'center',
     },
 })

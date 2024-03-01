@@ -3,6 +3,7 @@ import { Image, StyleSheet, TextInput, View } from 'react-native';
 import { FontFamily, FontSize } from '../../../constants/fonts';
 import { NeutralColor, PrimaryColor } from '../../../constants/colors';
 import { lockIcon, mailIcon, userIcon } from '../../../assets';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 interface AuthInputProps {
     placeholder: string
@@ -12,6 +13,7 @@ interface AuthInputProps {
 }
 
 function AuthInput({ placeholder, icon, error, security }: AuthInputProps) {
+    const [securityState, setSecurityState] = useState(security)
     const [focus, setFocus] = useState(false)
     let borderStyles
     let iconName
@@ -66,10 +68,20 @@ function AuthInput({ placeholder, icon, error, security }: AuthInputProps) {
                 placeholder={placeholder}
                 autoCapitalize="none"
                 style={styles.inputBox}
-                secureTextEntry={security}
+                secureTextEntry={securityState}
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
             />
+            {
+                icon === 'password' && (
+                    <MaterialCommunityIcons
+                        name={securityState ? 'eye-outline' : `eye-off-outline`}
+                        size={24}
+                        style={styles.eyeIcon}
+                        onPress={() => setSecurityState(!securityState)}
+                    />
+                )
+            }
         </View>
     );
 }
@@ -100,11 +112,15 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     inputBox: {
-        width: '90%',
+        marginLeft: 10,
+        width: '82%',
         fontFamily: FontFamily.FontRegular,
         fontSize: FontSize.FontSize12,
         color: NeutralColor.GreyColor,
     },
+    eyeIcon: {
+        color: NeutralColor.GreyColor,
+    }
 })
 
 export default AuthInput;

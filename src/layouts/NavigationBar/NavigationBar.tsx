@@ -1,11 +1,11 @@
 import React from 'react';
 import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../../screens/app/HomeScreen';
-import ExploreScreen from '../../screens/app/ExploreScreen';
-import CartScreen from '../../screens/app/CartScreen';
-import OfferScreen from '../../screens/app/OfferScreen';
-import AccountScreen from '../../screens/app/AccountScreen';
+import HomeScreen from '../../screens/app/tab/HomeScreen';
+import ExploreScreen from '../../screens/app/tab/ExploreScreen';
+import CartScreen from '../../screens/app/tab/CartScreen';
+import OfferScreen from '../../screens/app/tab/OfferScreen';
+import AccountScreen from '../../screens/app/tab/AccountScreen';
 import { accountIcon, cartIcon, exploreIcon, homeIcon, offerIcon } from '../../assets';
 
 const Tab = createBottomTabNavigator();

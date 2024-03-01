@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeHeader from '../../../../layouts/HomeHeader';
+import TopNavigation from '../../../../layouts/TopNavigation';
 import ManFashionList from '../../../../containers/app/ExploreScreen/ManFashionList';
 import WomanFashionList from '../../../../containers/app/ExploreScreen/WomanFashionList';
 
-function ExploreScreen() {
+function ExploreScreen({ navigation }: any) {
     return (
         <View style={styles.exploreScreen}>
             <View style={styles.homeHeader}>
-                <HomeHeader />
+                <TopNavigation navigation={navigation} />
             </View>
             <Text style={styles.exploreTitle}>Man Fashion</Text>
             <View style={styles.listContainer}>

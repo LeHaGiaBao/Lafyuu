@@ -55,6 +55,14 @@ const accountIcon = {
   accountIconFocus: require('./appIcon/Navigation/Account/UserFocus.png'),
 };
 
+const heartIcon = {
+  heartIcon: require('./appIcon/Heart/heart.png'),
+};
+
+const notificationIcon = {
+  notificationIcon: require('./appIcon/Notification/Notification.png'),
+};
+
 export {
   icon,
   mailIcon,
@@ -67,4 +75,6 @@ export {
   cartIcon,
   offerIcon,
   accountIcon,
+  heartIcon,
+  notificationIcon,
 };

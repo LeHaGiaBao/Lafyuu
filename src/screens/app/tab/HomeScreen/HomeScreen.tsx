@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import HomeHeader from '../../../../layouts/HomeHeader';
+import TopNavigation from '../../../../layouts/TopNavigation';
 import ImageContainer from '../../../../containers/app/HomeScreen/ImageContainer';
 import CategoryTitle from '../../../../containers/app/HomeScreen/CategoryTitle';
 import CategoryList from '../../../../containers/app/HomeScreen/CategoryList';
@@ -13,7 +13,7 @@ function HomeScreen({ navigation }: any) {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.homeHeader}>
-                <HomeHeader navigation={navigation} />
+                <TopNavigation navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <ImageContainer />

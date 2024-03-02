@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image } from 'react-native';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { FontFamily, FontSize } from '../../../../constants/fonts';
+import { BackgroundColor, NeutralColor, PrimaryColor } from '../../../../constants/colors';
 
 function ImageContainer() {
     return (
@@ -60,9 +61,9 @@ const styles = StyleSheet.create({
     imageTitle: {
         marginTop: 32,
         marginLeft: 24,
-        fontFamily: 'Poppins-Bold',
-        fontSize: 24,
-        color: '#FFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize24,
+        color: BackgroundColor.WhiteColor,
     },
     timeCountDownContainer: {
         marginTop: 29,
@@ -76,12 +77,12 @@ const styles = StyleSheet.create({
         width: 45,
         height: 45,
         borderRadius: 5,
-        backgroundColor: '#FFF',
+        backgroundColor: BackgroundColor.WhiteColor,
     },
     timeText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize16,
+        color: NeutralColor.DarkColor,
     },
     dotsContainer: {
         alignItems: 'center',
@@ -90,9 +91,9 @@ const styles = StyleSheet.create({
         marginRight: 4,
     },
     dots: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#FFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize16,
+        color: BackgroundColor.WhiteColor,
     },
     dotCarouselContainer: {
         marginTop: 16,
@@ -104,13 +105,13 @@ const styles = StyleSheet.create({
     dotInactive: {
         height: 8,
         width: 8,
-        backgroundColor: '#EBF0FF',
+        backgroundColor: NeutralColor.LightColor,
         borderRadius: 100,
     },
     dotActive: {
         height: 8,
         width: 8,
-        backgroundColor: '#40BFFF',
+        backgroundColor: PrimaryColor.BlueColor,
         borderRadius: 100,
     }
 })

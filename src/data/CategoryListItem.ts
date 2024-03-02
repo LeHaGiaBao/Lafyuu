@@ -1,34 +1,34 @@
-import {categoryItem} from '../assets';
+import {categoryIcon} from '../assets';
 
 const CategoryHomeListItem = [
   {
     id: 1,
-    image: categoryItem.shirtIcon,
+    image: categoryIcon.shirtIcon,
     title: 'Man Shirt',
   },
   {
     id: 2,
-    image: categoryItem.dressIcon,
+    image: categoryIcon.dressIcon,
     title: 'Dress',
   },
   {
     id: 3,
-    image: categoryItem.manbagIcon,
+    image: categoryIcon.manbagIcon,
     title: 'Man Work Equipment',
   },
   {
     id: 4,
-    image: categoryItem.womanbagIcon,
+    image: categoryIcon.womanbagIcon,
     title: 'Woman Bag',
   },
   {
     id: 5,
-    image: categoryItem.manshoesIcon,
+    image: categoryIcon.manshoesIcon,
     title: 'Man Shoes',
   },
   {
     id: 6,
-    image: categoryItem.womanshoesIcon,
+    image: categoryIcon.womanshoesIcon,
     title: 'High Heels',
   },
 ];

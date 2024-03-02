@@ -63,7 +63,7 @@ const notificationIcon = {
   notificationIcon: require('./appIcon/Notification/Notification.png'),
 };
 
-const categoryItem = {
+const categoryIcon = {
   bikiniIcon: require('./appIcon/Category/bikini.png'),
   dressIcon: require('./appIcon/Category/dress.png'),
   manbagIcon: require('./appIcon/Category/manbag.png'),
@@ -77,6 +77,11 @@ const categoryItem = {
   womanpantsIcon: require('./appIcon/Category/womanpants.png'),
   womanshoesIcon: require('./appIcon/Category/womanshoes.png'),
   womanshirtIcon: require('./appIcon/Category/womantshirt.png'),
+};
+
+const starIcon = {
+  yellowStarIcon: require('./appIcon/Star/yellowStar.png'),
+  grayStarIcon: require('./appIcon/Star/grayStar.png'),
 };
 
 export {
@@ -93,5 +98,6 @@ export {
   accountIcon,
   heartIcon,
   notificationIcon,
-  categoryItem,
+  categoryIcon,
+  starIcon,
 };

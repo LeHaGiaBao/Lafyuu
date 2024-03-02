@@ -31,16 +31,14 @@ const FlashSaleItem = [
 
 function FlashSale() {
     return (
-        <>
-            <FlatList
-                style={styles.scrollView}
-                data={FlashSaleItem}
-                renderItem={({ item }) => <HomeSaleItem key={item.id} image={item.image} title={item.title} price={item.price} discount={item.price} saleOff={item.saleOff} />}
-                keyExtractor={(item) => item.id.toString()}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-            />
-        </>
+        <FlatList
+            style={styles.scrollView}
+            data={FlashSaleItem}
+            renderItem={({ item }) => <HomeSaleItem key={item.id} image={item.image} title={item.title} price={item.price} discount={item.price} saleOff={item.saleOff} />}
+            keyExtractor={(item) => item.id.toString()}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+        />
     );
 }
 

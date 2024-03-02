@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { FontFamily, FontSize } from '../../../../constants/fonts';
+import { NeutralColor, PrimaryColor } from '../../../../constants/colors';
 
 function CategoryTitle({ title, subTitle, navigation, screen }: any) {
     return (
@@ -25,14 +27,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     title: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: NeutralColor.DarkColor,
     },
     seeAll: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#40BFFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: PrimaryColor.BlueColor,
     }
 })
 

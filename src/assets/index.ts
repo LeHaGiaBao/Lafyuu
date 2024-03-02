@@ -63,6 +63,27 @@ const notificationIcon = {
   notificationIcon: require('./appIcon/Notification/Notification.png'),
 };
 
+const categoryIcon = {
+  bikiniIcon: require('./appIcon/Category/bikini.png'),
+  dressIcon: require('./appIcon/Category/dress.png'),
+  manbagIcon: require('./appIcon/Category/manbag.png'),
+  manpantsIcon: require('./appIcon/Category/manpants.png'),
+  manshoesIcon: require('./appIcon/Category/manshoes.png'),
+  manunderwearIcon: require('./appIcon/Category/manunderwear.png'),
+  shirtIcon: require('./appIcon/Category/shirt.png'),
+  skirtIcon: require('./appIcon/Category/skirt.png'),
+  tshirtIcon: require('./appIcon/Category/tshirt.png'),
+  womanbagIcon: require('./appIcon/Category/womanbag.png'),
+  womanpantsIcon: require('./appIcon/Category/womanpants.png'),
+  womanshoesIcon: require('./appIcon/Category/womanshoes.png'),
+  womanshirtIcon: require('./appIcon/Category/womantshirt.png'),
+};
+
+const starIcon = {
+  yellowStarIcon: require('./appIcon/Star/yellowStar.png'),
+  grayStarIcon: require('./appIcon/Star/grayStar.png'),
+};
+
 export {
   icon,
   mailIcon,
@@ -77,4 +98,6 @@ export {
   accountIcon,
   heartIcon,
   notificationIcon,
+  categoryIcon,
+  starIcon,
 };

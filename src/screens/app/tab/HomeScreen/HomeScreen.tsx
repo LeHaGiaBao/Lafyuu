@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
+import { BackgroundColor, NeutralColor } from '../../../../constants/colors';
 import TopNavigation from '../../../../layouts/TopNavigation';
 import ImageContainer from '../../../../containers/app/HomeScreen/ImageContainer';
 import CategoryTitle from '../../../../containers/app/HomeScreen/CategoryTitle';
@@ -21,7 +22,7 @@ function HomeScreen({ navigation }: any) {
                     title="Category"
                     subTitle="More Category"
                     navigation={navigation}
-                    screen="ExploreScreen"
+                    screen="Explore"
                 />
                 <CategoryList />
                 <CategoryTitle
@@ -57,10 +58,10 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {

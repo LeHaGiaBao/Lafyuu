@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
+import HomeSaleItem from '../../../../components/ProductItem/HomeSaleItem';
 
 const FlashSaleItem = [
     {
@@ -31,31 +32,16 @@ const FlashSaleItem = [
 function FlashSale() {
     return (
         <>
-            <ScrollView style={styles.scrollView} horizontal showsHorizontalScrollIndicator={false}>
-                {
-                    FlashSaleItem.map(({ id, image, title, price, discount, saleOff }) => {
-                        return <FlashSaleItemContainer key={id} title={title} image={image} price={price} discount={discount} saleOff={saleOff} />
-                    })
-                }
-            </ScrollView>
+            <FlatList
+                style={styles.scrollView}
+                data={FlashSaleItem}
+                renderItem={({ item }) => <HomeSaleItem key={item.id} image={item.image} title={item.title} price={item.price} discount={item.price} saleOff={item.saleOff} />}
+                keyExtractor={(item) => item.id.toString()}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+            />
         </>
     );
-}
-
-const FlashSaleItemContainer = ({ image, title, price, discount, saleOff }: any) => {
-    return (
-        <>
-            <View style={styles.flashSaleContainer}>
-                <Image source={image} style={styles.flashSaleImage} />
-                <Text style={styles.flashSaleTitle}>{title}</Text>
-                <Text style={styles.flashSalePrice}>${price}</Text>
-                <View style={styles.discount}>
-                    <Text style={styles.discountText}>${discount}</Text>
-                    <Text style={styles.saleOffText}>${saleOff}% Off</Text>
-                </View>
-            </View>
-        </>
-    )
 }
 
 const styles = StyleSheet.create({
@@ -63,56 +49,10 @@ const styles = StyleSheet.create({
         marginTop: 12,
         marginLeft: 16,
         marginRight: 16,
-        width: '100%',
-        marginHorizontal: 20,
-    },
-    flashSaleContainer: {
-        marginRight: 16,
         display: 'flex',
-        flexDirection: 'column',
-        width: 145,
-        height: 240,
-        borderWidth: 1,
-        borderColor: '#EBF0FF',
-        borderRadius: 5,
-        padding: 16,
+        gap: 16,
     },
-    flashSaleImage: {
-        width: 109,
-        height: 109,
-    },
-    flashSaleTitle: {
-        marginTop: 8,
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#223263',
-    },
-    flashSalePrice: {
-        marginTop: 8,
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#40BFFF',
-    },
-    discount: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        gap: 8,
-    },
-    discountText: {
-        marginTop: 8,
-        fontFamily: 'Poppins-Regular',
-        fontSize: 10,
-        color: '#9098B1',
-        textDecorationLine: 'line-through',
-        textDecorationStyle: 'solid',
-    },
-    saleOffText: {
-        marginTop: 8,
-        fontFamily: 'Poppins-Bold',
-        fontSize: 10,
-        color: '#FB7181',
-    }
+
 })
 
 export default FlashSale;

@@ -1,6 +1,8 @@
 const icon = {
   welcomeIcon: require('./icons/iconWelcome.png'),
   whiteIcon: require('./icons/iconWhite.png'),
+  moreIcon: require('./appIcon/Arrow/More.png'),
+  leftIcon: require('./appIcon/Arrow/Left.png'),
 };
 
 const mailIcon = {

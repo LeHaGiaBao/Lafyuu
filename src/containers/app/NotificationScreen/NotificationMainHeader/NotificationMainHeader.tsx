@@ -1,36 +1,26 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import Feather from 'react-native-vector-icons/Feather'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { NeutralColor } from '../../../../constants/colors';
+import { FontFamily, FontSize } from '../../../../constants/fonts';
+import { icon, searchIcon } from '../../../../assets';
 
 function NotificationMainHeader({ navigation }: any) {
     return (
-        <>
-            <View style={styles.headerContainer}>
-                <View style={styles.gridColumn}>
-                    <MaterialIcons
-                        name='arrow-back-ios'
-                        size={24}
-                        style={styles.iconStyle}
-                        onPress={() => navigation.goBack()}
+        <View style={styles.headerContainer}>
+            <View style={styles.gridColumn} >
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Image
+                        source={icon.leftIcon}
+                        style={styles.iconArrowStyle}
                     />
-                    <Text style={styles.title}>Notification</Text>
-                </View>
-                <View style={styles.gridColumnIcon}>
-                    <Feather
-                        name='search'
-                        size={24}
-                        style={styles.iconStyle}
-                    />
-                    <MaterialCommunityIcons
-                        name='dots-vertical'
-                        size={24}
-                        style={styles.iconStyle}
-                    />
-                </View>
+                </TouchableOpacity>
+                <Text style={styles.title}>Notification</Text>
             </View>
-        </>
+            <View style={styles.gridColumnIcon}>
+                <Image source={searchIcon.searchIcon} style={styles.iconSearch} />
+                <Image source={icon.moreIcon} />
+            </View>
+        </View>
     );
 }
 
@@ -47,13 +37,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
     },
-    iconStyle: {
-        color: '#9098B1',
+    iconArrowStyle: {
+        marginRight: 10,
     },
     title: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize16,
+        color: NeutralColor.DarkColor,
     },
     gridColumnIcon: {
         display: 'flex',
@@ -62,6 +52,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
         gap: 16,
+    },
+    iconSearch: {
+        height: 24,
+        width: 24,
     }
 })
 

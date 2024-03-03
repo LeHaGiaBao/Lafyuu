@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import TopNavigation from '../../../../layouts/TopNavigation';
 import ManFashionList from '../../../../containers/app/ExploreScreen/ManFashionList';
 import WomanFashionList from '../../../../containers/app/ExploreScreen/WomanFashionList';
+import { BackgroundColor, NeutralColor } from '../../../../constants/colors';
+import { FontFamily, FontSize } from '../../../../constants/fonts';
 
 function ExploreScreen({ navigation }: any) {
     return (
@@ -36,18 +38,18 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     exploreTitle: {
         marginTop: 24,
         marginBottom: 12,
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: NeutralColor.DarkColor
     },
     listContainer: {
         height: 265,

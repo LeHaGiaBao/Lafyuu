@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import NotificationMainHeader from '../../../../containers/app/NotificationScreen/NotificationMainHeader';
 import NotificationList from '../../../../containers/app/NotificationScreen/NotificationList';
+import { BackgroundColor, NeutralColor } from '../../../../constants/colors';
 
 function NotificationScreen({ navigation }: any) {
     return (
@@ -30,10 +31,10 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {

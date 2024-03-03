@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import Feather from 'react-native-vector-icons/Feather'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { BackgroundColor, NeutralColor, PrimaryColor } from '../../../../constants/colors';
+import { FontFamily, FontSize } from '../../../../constants/fonts';
+import { listNotificationIcon } from '../../../../assets';
 
 function NotificationList({ navigation }: any) {
     const ref1 = useRef(null);
@@ -32,7 +32,7 @@ function NotificationList({ navigation }: any) {
                 onPress={() => navigation.navigate('NotificationOffer')}
             >
                 <View style={styles.listContent}>
-                    <AntDesign name='tago' size={24} style={styles.contentIcon} />
+                    <Image source={listNotificationIcon.offerIcon} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Offer</Text>
                 </View>
                 <View style={styles.notificationCount}>
@@ -48,7 +48,7 @@ function NotificationList({ navigation }: any) {
                 onPress={() => navigation.navigate('NotificationFeed')}
             >
                 <View style={styles.listContent}>
-                    <MaterialCommunityIcons name='text-box-outline' size={24} style={styles.contentIcon} />
+                    <Image source={listNotificationIcon.feedIcon} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Feed</Text>
                 </View>
                 <View style={styles.notificationCount}>
@@ -64,7 +64,7 @@ function NotificationList({ navigation }: any) {
                 onPress={() => navigation.navigate('NotificationActivity')}
             >
                 <View style={styles.listContent}>
-                    <Feather name='bell' size={24} style={styles.contentIcon} />
+                    <Image source={listNotificationIcon.bellIcon} style={styles.contentIcon} />
                     <Text style={styles.contentText}>Activity</Text>
                 </View>
                 <View style={styles.notificationCount}>
@@ -98,25 +98,25 @@ const styles = StyleSheet.create({
         marginRight: 16,
         height: 24,
         width: 24,
-        color: '#40BFFF',
+        color: PrimaryColor.BlueColor
     },
     contentText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize12,
+        color: NeutralColor.DarkColor,
     },
     notificationCount: {
         justifyContent: 'center',
         height: 20,
         width: 20,
-        backgroundColor: '#FB7181',
+        backgroundColor: PrimaryColor.RedColor,
         borderRadius: 100,
     },
     notificationCountText: {
         textAlign: 'center',
-        color: '#FFF',
-        fontFamily: 'Poppins-Bold',
-        fontSize: 10,
+        color: BackgroundColor.WhiteColor,
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize10,
     }
 })
 

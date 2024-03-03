@@ -84,6 +84,13 @@ const starIcon = {
   grayStarIcon: require('./appIcon/Star/grayStar.png'),
 };
 
+const listNotificationIcon = {
+  offerIcon: require('./appIcon/Offer/Offer.png'),
+  feedIcon: require('./appIcon/Feed/List.png'),
+  bellIcon: require('./appIcon/Bell/Notification.png'),
+  transactionIcon: require('./appIcon/Arrow/Transaction.png'),
+};
+
 export {
   icon,
   mailIcon,
@@ -100,4 +107,5 @@ export {
   notificationIcon,
   categoryIcon,
   starIcon,
+  listNotificationIcon,
 };

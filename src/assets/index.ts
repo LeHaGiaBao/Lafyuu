@@ -3,6 +3,7 @@ const icon = {
     whiteIcon: require('./icons/iconWhite.png'),
     moreIcon: require('./appIcon/Arrow/More.png'),
     leftIcon: require('./appIcon/Arrow/Left.png'),
+    rightIcon: require('./appIcon/Arrow/Right.png'),
 };
 
 const mailIcon = {
@@ -100,6 +101,14 @@ const accountScreenIcon = {
     paymentIcon: require('./appIcon/Card/Card.png'),
 };
 
+const profileScreenIcon = {
+    genderIcon: require('./appIcon/profileIcon/Gender.png'),
+    dateIcon: require('./appIcon/profileIcon/Date.png'),
+    emailIcon: require('./appIcon/profileIcon/Message.png'),
+    phoneIcon: require('./appIcon/profileIcon/Phone.png'),
+    passwordIcon: require('./appIcon/profileIcon/Password.png'),
+};
+
 export {
     icon,
     mailIcon,
@@ -118,4 +127,5 @@ export {
     starIcon,
     listNotificationIcon,
     accountScreenIcon,
+    profileScreenIcon,
 };

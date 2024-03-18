@@ -1,8 +1,10 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import AccountList from '../../../../containers/app/AccountScreen/AccountList';
+import {BackgroundColor, NeutralColor} from '../../../../constants/colors';
+import {FontFamily} from '../../../../constants/fonts';
 
-function AccountScreen({ navigation }: any) {
+function AccountScreen({navigation}: any) {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.homeHeader}>
@@ -27,10 +29,10 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {
@@ -38,10 +40,10 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     title: {
-        fontFamily: 'Poppins-Bold',
+        fontFamily: FontFamily.FontBold,
         fontSize: 16,
-        color: '#223263',
-    }
-})
+        color: NeutralColor.DarkColor,
+    },
+});
 
 export default AccountScreen;

@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import Feather from 'react-native-vector-icons/Feather'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import React, {useRef} from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {NeutralColor, PrimaryColor} from '../../../../constants/colors';
+import {FontFamily} from '../../../../constants/fonts';
+import {accountScreenIcon} from '../../../../assets';
 
-function AccountList({ navigation }: any) {
+function AccountList({navigation}: any) {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
@@ -12,13 +12,13 @@ function AccountList({ navigation }: any) {
 
     const handlePressIn = (ref: any) => {
         ref.current.setNativeProps({
-            style: { backgroundColor: '#EBF0FF' }
+            style: {backgroundColor: NeutralColor.LightColor},
         });
     };
 
     const handlePressOut = (ref: any) => {
         ref.current.setNativeProps({
-            style: { backgroundColor: 'transparent' }
+            style: {backgroundColor: 'transparent'},
         });
     };
 
@@ -30,10 +30,12 @@ function AccountList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref1)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('ProfileScreen')}
-            >
+                onPress={() => navigation.navigate('ProfileScreen')}>
                 <View style={styles.listContent}>
-                    <MaterialCommunityIcons name='account-outline' size={24} style={styles.contentIcon} />
+                    <Image
+                        source={accountScreenIcon.profileIcon}
+                        style={styles.contentIcon}
+                    />
                     <Text style={styles.contentText}>Profile</Text>
                 </View>
             </TouchableOpacity>
@@ -43,10 +45,12 @@ function AccountList({ navigation }: any) {
                 onPressOut={() => handlePressOut(ref2)}
                 activeOpacity={0.8}
                 style={styles.listItem}
-                onPress={() => navigation.navigate('OrderScreen')}
-            >
+                onPress={() => navigation.navigate('OrderScreen')}>
                 <View style={styles.listContent}>
-                    <Feather name='shopping-bag' size={24} style={styles.contentIcon} />
+                    <Image
+                        source={accountScreenIcon.orderIcon}
+                        style={styles.contentIcon}
+                    />
                     <Text style={styles.contentText}>Order</Text>
                 </View>
             </TouchableOpacity>
@@ -55,10 +59,12 @@ function AccountList({ navigation }: any) {
                 onPressIn={() => handlePressIn(ref3)}
                 onPressOut={() => handlePressOut(ref3)}
                 activeOpacity={0.8}
-                style={styles.listItem}
-            >
+                style={styles.listItem}>
                 <View style={styles.listContent}>
-                    <Ionicons name='location-outline' size={24} style={styles.contentIcon} />
+                    <Image
+                        source={accountScreenIcon.addressIcon}
+                        style={styles.contentIcon}
+                    />
                     <Text style={styles.contentText}>Address</Text>
                 </View>
             </TouchableOpacity>
@@ -67,10 +73,12 @@ function AccountList({ navigation }: any) {
                 onPressIn={() => handlePressIn(ref4)}
                 onPressOut={() => handlePressOut(ref4)}
                 activeOpacity={0.8}
-                style={styles.listItem}
-            >
+                style={styles.listItem}>
                 <View style={styles.listContent}>
-                    <Feather name='credit-card' size={24} style={styles.contentIcon} />
+                    <Image
+                        source={accountScreenIcon.paymentIcon}
+                        style={styles.contentIcon}
+                    />
                     <Text style={styles.contentText}>Payment</Text>
                 </View>
             </TouchableOpacity>
@@ -100,13 +108,13 @@ const styles = StyleSheet.create({
         marginRight: 16,
         height: 24,
         width: 24,
-        color: '#40BFFF',
+        color: PrimaryColor.BlueColor,
     },
     contentText: {
-        fontFamily: 'Poppins-Bold',
+        fontFamily: FontFamily.FontBold,
         fontSize: 12,
-        color: '#223263',
+        color: NeutralColor.DarkColor,
     },
-})
+});
 
 export default AccountList;

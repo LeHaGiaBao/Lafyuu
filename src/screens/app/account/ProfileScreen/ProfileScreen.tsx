@@ -1,18 +1,31 @@
-
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 import AccountHeader from '../../../../containers/app/AccountScreen/AccountHeader';
 import ProfileList from '../../../../containers/app/AccountScreen/ProfileList';
+import {BackgroundColor, NeutralColor} from '../../../../constants/colors';
+import {FontFamily, FontSize} from '../../../../constants/fonts';
 
-function ProfileScreen({ navigation }: any) {
+function ProfileScreen({navigation}: any) {
     return (
         <View style={styles.profileScreen}>
             <View style={styles.profileHeader}>
                 <AccountHeader title="Profile" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
-                <TouchableOpacity style={styles.profileContent} onPress={() => navigation.navigate('ChangeName')}>
-                    <Image source={require('../../../../../assets/Profile/Profile.png')} style={styles.avatar} />
+                <TouchableOpacity
+                    style={styles.profileContent}
+                    onPress={() => navigation.navigate('ChangeName')}>
+                    <Image
+                        source={require('../../../../../assets/Profile/Profile.png')}
+                        style={styles.avatar}
+                    />
                     <View style={styles.profile}>
                         <Text style={styles.profileName}>Maximus Gold</Text>
                         <Text style={styles.profileUserName}>@derlaxy</Text>
@@ -39,10 +52,10 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {
@@ -69,18 +82,18 @@ const styles = StyleSheet.create({
         gap: 4,
     },
     profileName: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize16,
+        color: NeutralColor.DarkColor,
     },
     profileUserName: {
-        fontFamily: 'Poppins-Regular',
-        fontSize: 12,
-        color: '#9098B1',
+        fontFamily: FontFamily.FontRegular,
+        fontSize: FontSize.FontSize12,
+        color: NeutralColor.GreyColor,
     },
     profileList: {
         marginTop: 32,
-    }
-})
+    },
+});
 
 export default ProfileScreen;

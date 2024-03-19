@@ -1,45 +1,30 @@
+import React from 'react';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import HeaderNavigation from '../../../../layouts/HeaderNavigation';
+import {BackgroundColor, NeutralColor} from '../../../../constants/colors';
+import InputBox from '../../../../components/Input/InputBox';
+import ButtonBlue from '../../../../components/Button/ButtonBlue';
 
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import AccountHeader from '../../../../containers/app/AccountScreen/AccountHeader';
-
-function ChangeNameScreen({ navigation }: any) {
-    const [firstNameFocus, setFirstNameFocus] = useState(false)
-    const [lastNameFocus, setLastNameFocus] = useState(false)
-
+function ChangeNameScreen({navigation}: any) {
     return (
         <View style={styles.changeNameScreen}>
             <View style={styles.changeNameHeader}>
-                <AccountHeader title="Name" navigation={navigation} />
+                <HeaderNavigation title="Name" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <View style={styles.flexView}>
                     <View style={styles.changeData}>
                         <Text style={styles.nameTitle}>FirstName</Text>
-                        <TextInput
-                            placeholder='Maximus'
-                            autoCapitalize="none"
-                            style={firstNameFocus ? styles.inputContainerFocus : styles.inputContainer}
-                            onFocus={() => setFirstNameFocus(true)}
-                            onBlur={() => setFirstNameFocus(false)}
-                        />
+                        <InputBox placeholder="Maximus" />
                     </View>
                     <View style={styles.changeData}>
                         <Text style={styles.nameTitle}>LastName</Text>
-                        <TextInput
-                            placeholder='Gold'
-                            autoCapitalize="none"
-                            style={lastNameFocus ? styles.inputContainerFocus : styles.inputContainer}
-                            onFocus={() => setLastNameFocus(true)}
-                            onBlur={() => setLastNameFocus(false)}
-                        />
+                        <InputBox placeholder="Gold" />
                     </View>
                 </View>
             </ScrollView>
             <View style={styles.buttonView}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Save</Text>
-                </TouchableOpacity>
+                <ButtonBlue title="Save" />
             </View>
         </View>
     );
@@ -58,10 +43,10 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {
@@ -86,59 +71,11 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#223263',
     },
-    inputContainer: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#9098B1',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        width: '100%',
-        height: 48,
-        paddingTop: 12,
-        paddingBottom: 12,
-        paddingLeft: 16,
-        paddingRight: 16,
-        borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#EBF0FF',
-    },
-    inputContainerFocus: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#9098B1',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        width: '100%',
-        height: 48,
-        paddingTop: 12,
-        paddingBottom: 12,
-        paddingLeft: 16,
-        paddingRight: 16,
-        borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#40BFFF',
-    },
     buttonView: {
         paddingLeft: 16,
         paddingRight: 16,
         width: '100%',
     },
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#40BFFF',
-        borderRadius: 5,
-        paddingTop: 16,
-        paddingBottom: 16,
-        shadowColor: 'rgba(64, 191, 255, 0.24)',
-        shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 1,
-        shadowRadius: 30,
-    },
-    buttonText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: 'white',
-    },
-})
+});
 
 export default ChangeNameScreen;

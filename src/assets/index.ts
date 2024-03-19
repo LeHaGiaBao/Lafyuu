@@ -4,6 +4,7 @@ const icon = {
     moreIcon: require('./appIcon/Arrow/More.png'),
     leftIcon: require('./appIcon/Arrow/Left.png'),
     rightIcon: require('./appIcon/Arrow/Right.png'),
+    bottomIcon: require('./appIcon/Arrow/bottom.png'),
 };
 
 const mailIcon = {

@@ -1,69 +1,103 @@
+import React, {useState} from 'react';
+import {
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from 'react-native';
+import HeaderNavigation from '../../../../layouts/HeaderNavigation';
+import {icon} from '../../../../assets';
+import {
+    BackgroundColor,
+    NeutralColor,
+    PrimaryColor,
+} from '../../../../constants/colors';
+import {FontFamily, FontSize} from '../../../../constants/fonts';
 
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import AccountHeader from '../../../../containers/app/AccountScreen/AccountHeader';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-
-function ChangeGenderScreen({ navigation }: any) {
-    const [data, setData] = useState('Male')
-    const [dropdownFocus, setDropdownFocus] = useState(false)
+function ChangeGenderScreen({navigation}: any) {
+    const [data, setData] = useState('Male');
+    const [dropdownFocus, setDropdownFocus] = useState(false);
     const [visible, setVisible] = useState(false);
 
     const toggleDropdown = () => {
-        setDropdownFocus(!dropdownFocus)
+        setDropdownFocus(!dropdownFocus);
         setVisible(!visible);
     };
 
     return (
         <View style={styles.changeNameScreen}>
             <View style={styles.changeNameHeader}>
-                <AccountHeader title="Gender" navigation={navigation} />
+                <HeaderNavigation title="Gender" navigation={navigation} />
             </View>
             <ScrollView style={styles.scrollView}>
                 <View style={styles.flexView}>
                     <View style={styles.changeData}>
                         <Text style={styles.nameTitle}>Choose Gender</Text>
                         <TouchableOpacity
-                            style={dropdownFocus ? styles.inputContainerFocus : styles.inputContainer}
-                            onPress={toggleDropdown}
-                        >
+                            style={
+                                dropdownFocus
+                                    ? styles.inputContainerFocus
+                                    : styles.inputContainer
+                            }
+                            onPress={toggleDropdown}>
                             <Text style={styles.boxText}>{data}</Text>
-                            <MaterialIcons name='keyboard-arrow-down' size={24} style={styles.iconStyle} />
+                            <Image
+                                source={icon.bottomIcon}
+                                style={!visible ? null : styles.iconStyle}
+                            />
                         </TouchableOpacity>
                     </View>
-                    {
-                        visible && (
-                            <View style={styles.dropdown}>
-                                <TouchableOpacity
-                                    style={styles.dropDownText}
-                                    onPress={() => {
-                                        setData('Male')
-                                        setVisible(!visible);
-                                    }}
-                                >
-                                    <Text style={data === 'Male' ? styles.dropDownTextStyleChoose : styles.dropDownTextStyle}>Male</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity
-                                    style={styles.dropDownText}
-                                    onPress={() => {
-                                        setData('Female')
-                                        setVisible(!visible);
-                                    }}
-                                >
-                                    <Text style={data === 'Female' ? styles.dropDownTextStyleChoose : styles.dropDownTextStyle}>Female</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity
-                                    style={styles.dropDownText}
-                                    onPress={() => {
-                                        setData('Other')
-                                        setVisible(!visible);
-                                    }}
-                                >
-                                    <Text style={data === 'Other' ? styles.dropDownTextStyleChoose : styles.dropDownTextStyle}>Other</Text>
-                                </TouchableOpacity>
-                            </View>
-                        )
-                    }
+                    {visible && (
+                        <View style={styles.dropdown}>
+                            <TouchableOpacity
+                                style={styles.dropDownText}
+                                onPress={() => {
+                                    setData('Male');
+                                    setVisible(!visible);
+                                }}>
+                                <Text
+                                    style={
+                                        data === 'Male'
+                                            ? styles.dropDownTextStyleChoose
+                                            : styles.dropDownTextStyle
+                                    }>
+                                    Male
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.dropDownText}
+                                onPress={() => {
+                                    setData('Female');
+                                    setVisible(!visible);
+                                }}>
+                                <Text
+                                    style={
+                                        data === 'Female'
+                                            ? styles.dropDownTextStyleChoose
+                                            : styles.dropDownTextStyle
+                                    }>
+                                    Female
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.dropDownText}
+                                onPress={() => {
+                                    setData('Other');
+                                    setVisible(!visible);
+                                }}>
+                                <Text
+                                    style={
+                                        data === 'Other'
+                                            ? styles.dropDownTextStyleChoose
+                                            : styles.dropDownTextStyle
+                                    }>
+                                    Other
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    )}
                 </View>
             </ScrollView>
             <View style={styles.buttonView}>
@@ -88,10 +122,10 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        borderBottomColor: '#EBF0FF',
-        borderTopColor: '#FFF',
-        borderLeftColor: '#FFF',
-        borderRightColor: '#FFF',
+        borderBottomColor: NeutralColor.LightColor,
+        borderTopColor: BackgroundColor.WhiteColor,
+        borderLeftColor: BackgroundColor.WhiteColor,
+        borderRightColor: BackgroundColor.WhiteColor,
         borderWidth: 1,
     },
     scrollView: {
@@ -112,15 +146,15 @@ const styles = StyleSheet.create({
         gap: 12,
     },
     nameTitle: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#223263',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: NeutralColor.DarkColor,
     },
     inputContainer: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderColor: '#EBF0FF',
+        borderColor: NeutralColor.LightColor,
         borderWidth: 1,
         borderRadius: 5,
         width: '100%',
@@ -134,7 +168,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderColor: '#40BFFF',
+        borderColor: PrimaryColor.BlueColor,
         borderWidth: 1,
         borderRadius: 5,
         width: '100%',
@@ -145,16 +179,16 @@ const styles = StyleSheet.create({
         paddingRight: 16,
     },
     boxText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: '#9098B1',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: NeutralColor.GreyColor,
     },
     iconStyle: {
-        color: '#9098B1',
+        transform: [{rotate: '180deg'}],
     },
     dropdown: {
         width: '100%',
-        borderColor: '#EBF0FF',
+        borderColor: NeutralColor.LightColor,
         borderWidth: 1,
         borderRadius: 5,
     },
@@ -166,14 +200,14 @@ const styles = StyleSheet.create({
         height: 48,
     },
     dropDownTextStyle: {
-        fontFamily: 'Poppins-Regular',
-        fontSize: 12,
-        color: '#9098B1',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize12,
+        color: NeutralColor.GreyColor,
     },
     dropDownTextStyleChoose: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 12,
-        color: '#40BFFF',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize12,
+        color: PrimaryColor.BlueColor,
     },
     buttonView: {
         paddingLeft: 16,
@@ -182,20 +216,20 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        backgroundColor: '#40BFFF',
+        backgroundColor: PrimaryColor.BlueColor,
         borderRadius: 5,
         paddingTop: 16,
         paddingBottom: 16,
         shadowColor: 'rgba(64, 191, 255, 0.24)',
-        shadowOffset: { width: 0, height: 10 },
+        shadowOffset: {width: 0, height: 10},
         shadowOpacity: 1,
         shadowRadius: 30,
     },
     buttonText: {
-        fontFamily: 'Poppins-Bold',
-        fontSize: 14,
-        color: 'white',
+        fontFamily: FontFamily.FontBold,
+        fontSize: FontSize.FontSize14,
+        color: BackgroundColor.WhiteColor,
     },
-})
+});
 
 export default ChangeGenderScreen;

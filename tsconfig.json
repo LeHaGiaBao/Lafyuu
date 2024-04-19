@@ -1,14 +1,18 @@
 {
     "extends": "@react-native/typescript-config/tsconfig.json",
-    "paths": {
-        "*": ["src"],
-        "@assets": ["src/assets"],
-        "@components": ["src/components"],
-        "@constants": ["src/constants"],
-        "@/containers": ["src/containers"],
-        "@/data": ["src/data"],
-        "@/layouts": ["src/layouts"],
-        "@/routes": ["src/routes"],
-        "@/screens": ["src/screens"]
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["src"],
+            "@assets": ["src/assets"],
+            "@components": ["src/components"],
+            "@constants": ["src/constants"],
+            "@/containers": ["src/containers"],
+            "@/data": ["src/data"],
+            "@/layouts": ["src/layouts"],
+            "@/routes": ["src/routes"],
+            "@/screens": ["src/screens"]
+        }
     }
 }

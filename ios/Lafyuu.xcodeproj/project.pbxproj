@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		22CF972C3FB243B1AB89D19F /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B500D9F865BE41A48861FD00 /* Poppins-LightItalic.ttf */; };
+		2EE3320A2BD2D008007A9D64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EE332092BD2D008007A9D64 /* GoogleService-Info.plist */; };
 		2EEEC0A57B974DD2A64C63C2 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BC1686B2F94C4FA1C8A90D /* Poppins-ThinItalic.ttf */; };
 		318BAB1D79424293808E0217 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE70922A4ADC4C6589F87D28 /* Poppins-Thin.ttf */; };
 		3CAD76B6662048BD8BB3BD4D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 431DB0D2BA644D0E88FB4F13 /* Poppins-Regular.ttf */; };
@@ -70,6 +71,7 @@
 		2E1867B32B67F5720041FBF0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		2E1867B42B67F5720041FBF0 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		2E1867B52B67F5720041FBF0 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		2EE332092BD2D008007A9D64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Lafyuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.debug.xcconfig"; sourceTree = "<group>"; };
 		3E96536131C84E8C86375525 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../assets/Fonts/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		431DB0D2BA644D0E88FB4F13 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/Fonts/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				2EE332092BD2D008007A9D64 /* GoogleService-Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -316,6 +319,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				2EE3320B2BD2D123007A9D64 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +363,7 @@
 				C3F33D705BE34B748C1E3A1E /* Poppins-SemiBold.ttf in Resources */,
 				DC983A5FB67442C296664E8A /* Poppins-SemiBoldItalic.ttf in Resources */,
 				318BAB1D79424293808E0217 /* Poppins-Thin.ttf in Resources */,
+				2EE3320A2BD2D008007A9D64 /* GoogleService-Info.plist in Resources */,
 				2EEEC0A57B974DD2A64C63C2 /* Poppins-ThinItalic.ttf in Resources */,
 				5F036B8A71B14C7D9A8EB4CF /* OFL.txt in Resources */,
 			);
@@ -811,6 +818,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EE3320B2BD2D123007A9D64 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {enableFreeze} from 'react-native-screens';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import {BackgroundColor} from './src/constants';
 
 enableFreeze(true);
 
 function App(): React.JSX.Element {
     return (
-        <View>
+        <View style={styles.backgroundAppColor}>
             <Text>ABCD</Text>
         </View>
     );
 }
 
-export default App;
+const styles = StyleSheet.create({
+    backgroundAppColor: {
+        backgroundColor: BackgroundColor.WhiteColor,
+    },
+});
+
+export default memo(App);

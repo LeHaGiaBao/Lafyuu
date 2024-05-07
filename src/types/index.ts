@@ -45,3 +45,15 @@ export interface LabelButtonProps extends ButtonProps {
     isActive: boolean;
     icon: boolean;
 }
+
+export interface InputProps {
+    placeholder: string;
+    error?: boolean;
+}
+
+export interface AuthInputProps extends InputProps {
+    icon: 'Email' | 'Password' | 'User';
+    security: boolean;
+}
+
+export interface TextAreaFormProps extends InputProps {}

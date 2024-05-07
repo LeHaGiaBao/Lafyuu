@@ -2,7 +2,6 @@ import React, {memo} from 'react';
 import {enableFreeze} from 'react-native-screens';
 import {StyleSheet, Text, View} from 'react-native';
 import {BackgroundColor} from '@constants/colors';
-import {InputNumberButton} from '@components';
 
 enableFreeze(true);
 
@@ -12,9 +11,6 @@ function App(): React.JSX.Element {
             <Text>ABCD</Text>
             <Text>ABCD</Text>
             <Text>ABCD</Text>
-            <Text>ABCD</Text>
-            <View />
-            <InputNumberButton />
         </View>
     );
 }

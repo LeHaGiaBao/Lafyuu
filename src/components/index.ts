@@ -10,3 +10,8 @@ export {default as DefaultButton} from './Button/DefaultButton';
 export {default as SocialButton} from './Button/SocialButton';
 export {default as AddPhoto} from './Button/AddPhoto';
 export {default as InputNumberButton} from './Button/InputNumberButton';
+
+//Form
+export {default as DefaultInput} from './Form/DefaultInput';
+export {default as AuthInput} from './Form/AuthInput';
+export {default as TextAreaForm} from './Form/TextAreaForm';

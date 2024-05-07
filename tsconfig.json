@@ -2,19 +2,35 @@
     "extends": "@react-native/typescript-config/tsconfig.json",
     "compilerOptions": {
         "strict": true,
-        // "baseUrl": "."
-        // "paths": {
-        //     "*": ["src"],
-        //     "@types": ["./src/@types/*"],
-        //     "@assets": ["./src/assets/*"],
-        //     "@components": ["./src/components/*"],
-        //     "@constants": ["./src/constants"],
-        //     "@constants/*": ["./src/constants/*"],
-        //     "@/containers": ["./src/containers/*"],
-        //     "@/data": ["./src/data/*"],
-        //     "@/layouts": ["./src/layouts/*"],
-        //     "@/routes": ["./src/routes/*"],
-        //     "@/screens": ["./src/screens/*"]
-        // }
+        "baseUrl": ".",
+        "paths": {
+            "*": ["src"],
+            "@assets": ["src/assets"],
+            "@assets/*": ["src/assets/*"],
+            "@components": ["src/components"],
+            "@components/*": ["src/components/*"],
+            "@constants": ["src/constants"],
+            "@constants/*": ["src/constants/*"],
+            "@containers": ["src/containers"],
+            "@containers/*": ["src/containers/*"],
+            "@context": ["src/context"],
+            "@context/*": ["src/context/*"],
+            "@database": ["src/database"],
+            "@database/*": ["src/database/*"],
+            "@hooks": ["src/hooks"],
+            "@hooks/*": ["src/hooks/*"],
+            "@layouts": ["src/layouts"],
+            "@layouts/*": ["src/layouts/*"],
+            "@routes": ["src/routes"],
+            "@routes/*": ["src/routes/*"],
+            "@screens": ["src/screens"],
+            "@screens/*": ["src/screens/*"],
+            "@translation": ["src/translation"],
+            "@translation/*": ["src/translation/*"],
+            "@types": ["src/types"],
+            "@types/*": ["src/types/*"],
+            "@utils": ["src/utils"],
+            "@utils/*": ["src/utils/*"],
+        }
     }
 }

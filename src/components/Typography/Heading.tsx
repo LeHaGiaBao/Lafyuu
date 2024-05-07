@@ -1,9 +1,7 @@
-/* eslint-disable prettier/prettier */
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {HeadingProps} from '../../@types';
-import {FontFamily, FontSize} from '../../constants/fonts';
-import {NeutralColor, PrimaryColor} from '../../constants';
+import {HeadingProps} from '@types';
+import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '@constants';
 
 function Heading1(props: HeadingProps) {
     let headingSize = FontSize.FontSize32;
@@ -57,7 +55,11 @@ function Heading1(props: HeadingProps) {
             break;
     }
 
-    return <Text style={(styles.headingTextStyles, {fontSize: headingSize, color: headingColor})}>{props.text}</Text>;
+    return (
+        <Text style={(styles.headingTextStyles, {fontSize: headingSize, color: headingColor})}>
+            {props.text}
+        </Text>
+    );
 }
 
 const styles = StyleSheet.create({

@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {enableFreeze} from 'react-native-screens';
 import {StyleSheet, Text, View} from 'react-native';
-import {BackgroundColor} from './src/constants';
+import {BackgroundColor} from '@constants/colors';
 
 enableFreeze(true);
 

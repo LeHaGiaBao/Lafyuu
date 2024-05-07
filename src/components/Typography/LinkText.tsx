@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import React, {memo} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {LinkTextProps} from '../../@types';
-import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '../../constants';
+import {LinkTextProps} from '@types';
+import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '@constants';
 
 function LinkText(props: LinkTextProps) {
     let textFamily = FontFamily.FontBold;
@@ -47,7 +46,14 @@ function LinkText(props: LinkTextProps) {
 
     return (
         <TouchableOpacity onPress={() => props.onPress}>
-            <Text style={(styles.captionTextStyle, {fontFamily: textFamily, fontSize: textSize, color: textColor})}>{props.text}</Text>;
+            <Text
+                style={
+                    (styles.captionTextStyle,
+                    {fontFamily: textFamily, fontSize: textSize, color: textColor})
+                }>
+                {props.text}
+            </Text>
+            ;
         </TouchableOpacity>
     );
 }

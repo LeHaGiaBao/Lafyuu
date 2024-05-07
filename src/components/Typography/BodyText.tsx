@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {BodyTextProps} from '../../@types';
-import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '../../constants';
+import {BodyTextProps} from '@types';
+import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '@constants';
 
 function BodyText(props: BodyTextProps) {
     let textFamily = FontFamily.FontBold;
@@ -57,7 +56,15 @@ function BodyText(props: BodyTextProps) {
             break;
     }
 
-    return <Text style={(styles.bodyTextStyle, {fontFamily: textFamily, fontSize: textSize, color: textColor})}>{props.text}</Text>;
+    return (
+        <Text
+            style={
+                (styles.bodyTextStyle,
+                {fontFamily: textFamily, fontSize: textSize, color: textColor})
+            }>
+            {props.text}
+        </Text>
+    );
 }
 
 const styles = StyleSheet.create({

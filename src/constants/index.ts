@@ -1,4 +1,2 @@
-import {PrimaryColor, NeutralColor, BackgroundColor} from './colors';
-import {FontFamily, FontSize} from './fonts';
-
-export {PrimaryColor, NeutralColor, BackgroundColor, FontFamily, FontSize};
+export {PrimaryColor, NeutralColor, BackgroundColor} from './colors';
+export {FontFamily, FontSize} from './fonts';

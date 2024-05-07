@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {CaptionTextProps} from '../../@types';
-import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '../../constants';
+import {CaptionTextProps} from '@types';
+import {FontFamily, FontSize, NeutralColor, PrimaryColor} from '@constants';
 
 function CaptionText(props: CaptionTextProps) {
     let textFamily = FontFamily.FontBold;
@@ -54,7 +53,15 @@ function CaptionText(props: CaptionTextProps) {
             break;
     }
 
-    return <Text style={(styles.captionTextStyle, {fontFamily: textFamily, fontSize: textSize, color: textColor})}>{props.text}</Text>;
+    return (
+        <Text
+            style={
+                (styles.captionTextStyle,
+                {fontFamily: textFamily, fontSize: textSize, color: textColor})
+            }>
+            {props.text}
+        </Text>
+    );
 }
 
 const styles = StyleSheet.create({

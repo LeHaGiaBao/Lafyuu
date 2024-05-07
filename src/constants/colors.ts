@@ -1,4 +1,4 @@
-const PrimaryColor = {
+export const PrimaryColor = {
     BlueColor: '#40BFFF',
     RedColor: '#FB7181',
     YellowColor: '#FFC833',
@@ -6,14 +6,12 @@ const PrimaryColor = {
     PurpleColor: '#5C61F4',
 };
 
-const NeutralColor = {
+export const NeutralColor = {
     DarkColor: '#223263',
     GreyColor: '#9098B1',
     LightColor: '#EBF0FF',
 };
 
-const BackgroundColor = {
+export const BackgroundColor = {
     WhiteColor: '#FFFFFF',
 };
-
-export {PrimaryColor, NeutralColor, BackgroundColor};

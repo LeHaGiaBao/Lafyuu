@@ -1,9 +1,9 @@
-const FontFamily = {
+export const FontFamily = {
     FontBold: 'Poppins-Bold',
     FontRegular: 'Poppins-Regular',
 };
 
-const FontSize = {
+export const FontSize = {
     FontSize32: 32,
     FontSize24: 24,
     FontSize20: 20,
@@ -13,5 +13,3 @@ const FontSize = {
     FontSize12: 12,
     FontSize10: 10,
 };
-
-export {FontFamily, FontSize};

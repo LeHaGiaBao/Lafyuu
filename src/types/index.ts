@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export interface HeadingProps {
     text: string;
     color: 'Blue' | 'Red' | 'Yellow' | 'Green' | 'Purple' | 'Dark' | 'Grey' | 'Light';
@@ -30,4 +29,19 @@ export interface LinkTextProps {
     color: 'Blue' | 'Red' | 'Yellow' | 'Green' | 'Purple' | 'Dark' | 'Grey' | 'Light';
     size: 'Normal' | 'Small';
     onPress: void;
+}
+
+export interface ButtonProps {
+    text: string;
+    onPress?: () => void;
+    onLongPress?: () => void;
+}
+
+export interface SocialButtonProps extends ButtonProps {
+    icon: 'Facebook' | 'Google';
+}
+
+export interface LabelButtonProps extends ButtonProps {
+    isActive: boolean;
+    icon: boolean;
 }

@@ -57,3 +57,7 @@ export interface AuthInputProps extends InputProps {
 }
 
 export interface TextAreaFormProps extends InputProps {}
+
+export interface SelectFormProps {
+    genderChoose: boolean;
+}

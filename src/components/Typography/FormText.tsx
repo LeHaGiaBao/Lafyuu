@@ -9,10 +9,10 @@ function FormText(props: FormTextProps) {
     let textColor = PrimaryColor.BlueColor;
 
     switch (props.family) {
-        case 'Normal':
+        case 'Fill':
             textFamily = FontFamily.FontBold;
             break;
-        case 'Fill':
+        case 'Normal':
             textFamily = FontFamily.FontRegular;
             break;
     }

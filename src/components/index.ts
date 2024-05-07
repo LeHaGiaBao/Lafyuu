@@ -15,3 +15,4 @@ export {default as InputNumberButton} from './Button/InputNumberButton';
 export {default as DefaultInput} from './Form/DefaultInput';
 export {default as AuthInput} from './Form/AuthInput';
 export {default as TextAreaForm} from './Form/TextAreaForm';
+export {default as SelectGenderForm} from './Form/SelectGenderForm';

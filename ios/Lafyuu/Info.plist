@@ -33,50 +33,21 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Poppins-Black.ttf</string>
-		<string>Poppins-BlackItalic.ttf</string>
-		<string>Poppins-Bold.ttf</string>
-		<string>Poppins-BoldItalic.ttf</string>
-		<string>Poppins-ExtraBold.ttf</string>
-		<string>Poppins-ExtraBoldItalic.ttf</string>
-		<string>Poppins-ExtraLight.ttf</string>
-		<string>Poppins-ExtraLightItalic.ttf</string>
-		<string>Poppins-Italic.ttf</string>
-		<string>Poppins-Light.ttf</string>
-		<string>Poppins-LightItalic.ttf</string>
-		<string>Poppins-Medium.ttf</string>
-		<string>Poppins-MediumItalic.ttf</string>
-		<string>Poppins-Regular.ttf</string>
-		<string>Poppins-SemiBold.ttf</string>
-		<string>Poppins-SemiBoldItalic.ttf</string>
-		<string>Poppins-Thin.ttf</string>
-		<string>Poppins-ThinItalic.ttf</string>
-		<string>AntDesign.ttf</string>
-		<string>Entypo.ttf</string>
-		<string>Evillcons.ttf</string>
-		<string>Feather.ttf</string>
-		<string>FontAwesome.ttf</string>
-		<string>FontAwesome5_Brands.ttf</string>
-		<string>Fontisto.ttf</string>
-		<string>Foundation.ttf</string>
-		<string>Ionicons.ttf</string>
-		<string>MaterialCommunityIcons.ttf</string>
-		<string>MaterialIcons.ttf</string>
-		<string>Octicons.ttf</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>LaunchScreen.storyboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>armv64</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

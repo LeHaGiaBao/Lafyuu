@@ -1,27 +1,22 @@
-import React, {memo} from 'react';
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {enableFreeze} from 'react-native-screens';
-import {StyleSheet, Text, View} from 'react-native';
-import {BackgroundColor} from '@constants/colors';
-import {SelectGenderForm} from '@components';
 
 enableFreeze(true);
 
-function App(): React.JSX.Element {
-    return (
-        <View style={styles.backgroundAppColor}>
-            <Text>ABCD</Text>
-            <Text>ABCD</Text>
-            <Text>ABCD</Text>
-            <SelectGenderForm />
-        </View>
-    );
+function App() {
+  return (
+    <GestureHandlerRootView style={styles.appContainer}>
+      <View />
+    </GestureHandlerRootView>
+  );
 }
 
 const styles = StyleSheet.create({
-    backgroundAppColor: {
-        margin: 16,
-        backgroundColor: BackgroundColor.WhiteColor,
-    },
+  appContainer: {
+    flex: 1,
+  },
 });
 
-export default memo(App);
+export default App;

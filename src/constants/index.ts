@@ -1,2 +1,2 @@
 export {PrimaryColor, NeutralColor, BackgroundColor} from './colors';
-export {FontFamily, FontSize} from './fonts';
+export {FontFamily, FontSize, LineHeight} from './fonts';

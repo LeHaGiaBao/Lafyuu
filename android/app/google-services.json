@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "595910972832",
+    "project_id": "lafyuu-b3a62",
+    "storage_bucket": "lafyuu-b3a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595910972832:android:cddfa36890ba27b12a40c5",
+        "android_client_info": {
+          "package_name": "com.lafyuu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnGR-cmxE6JEZSSwjeEN9aRVUWC_8hn4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,7 +6,7 @@
       "@/*": ["./src/*"]
     },
     "allowImportingTsExtensions": false,
-    "module": "esnext",
+    "module": "esnext"
   },
   "include": [
     "./src/**/*",
@@ -16,5 +16,5 @@
     "jest.config.js",
     "babel.config.js",
     "index.js"
-  ],
+  ]
 }

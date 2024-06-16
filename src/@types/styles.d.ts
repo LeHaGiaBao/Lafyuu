@@ -24,6 +24,29 @@ export interface TypographyProps {
     | 'Grey'
     | 'Light'
     | 'White';
-  text: string;
+  text: any;
   onPress?: () => void;
+}
+
+export interface ButtonProps {
+  title: string;
+  size: 'Large' | 'Small';
+  type: 'Primary' | 'Secondary';
+  icon?: string;
+  onPress?: () => void;
+  onLongPress?: () => void;
+}
+
+export interface ButtonCheckProps {
+  title: string;
+  icon?: string;
+}
+
+export interface InputProps {
+  placeholder: string;
+  type?: 'Text' | 'Email' | 'Password' | 'Account' | 'Phone';
+}
+
+export interface SearchInputProps extends InputProps {
+  isActive: boolean;
 }

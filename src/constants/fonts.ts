@@ -13,3 +13,8 @@ export const FontSize = {
   FontSize12: 12,
   FontSize10: 10,
 };
+
+export const LineHeight = {
+  LineHeight180: 1.8,
+  LineHeight150: 1.5,
+};

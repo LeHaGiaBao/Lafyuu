@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {memo} from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {TypographyProps} from '@/@types/styles';
 import {
   BackgroundColor,
@@ -9,7 +10,6 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@/constants';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 function Typography(props: TypographyProps) {
   let textFamily = FontFamily.FontBold;

@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2332D04B73FBFBF7FFB90D63 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 2663B9320B07F8F09A3E47A5 /* PrivacyInfo.xcprivacy */; };
+		2EACCC942C1ECF0100A4621D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EACCC932C1ECF0100A4621D /* GoogleService-Info.plist */; };
 		7699B88040F8A987B510C191 /* libPods-Lafyuu-LafyuuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Lafyuu-LafyuuTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -39,7 +40,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Lafyuu/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Lafyuu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Lafyuu-LafyuuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu-LafyuuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2663B9320B07F8F09A3E47A5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Lafyuu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2663B9320B07F8F09A3E47A5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Lafyuu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2EACCC932C1ECF0100A4621D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Lafyuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Lafyuu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Lafyuu-LafyuuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuTests.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuTests/Pods-Lafyuu-LafyuuTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2EACCC932C1ECF0100A4621D /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* Lafyuu */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LafyuuTests */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				2EACCC942C1ECF0100A4621D /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				2332D04B73FBFBF7FFB90D63 /* PrivacyInfo.xcprivacy in Resources */,
 			);

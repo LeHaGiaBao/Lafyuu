@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "620439069366",
-    "project_id": "lafyuu-cae23",
-    "storage_bucket": "lafyuu-cae23.appspot.com"
+    "project_number": "595910972832",
+    "project_id": "lafyuu-b3a62",
+    "storage_bucket": "lafyuu-b3a62.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620439069366:android:033e276a427958774bfc17",
+        "mobilesdk_app_id": "1:595910972832:android:cddfa36890ba27b12a40c5",
         "android_client_info": {
           "package_name": "com.lafyuu"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "620439069366-s09hashb4s6c6vr1lcvgufr6niap3gu5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCHDQMS8YHlIMckKFEWcUc1wGo4P1edHSs"
+          "current_key": "AIzaSyAnGR-cmxE6JEZSSwjeEN9aRVUWC_8hn4c"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "620439069366-s09hashb4s6c6vr1lcvgufr6niap3gu5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -41,14 +41,14 @@ function Input(props: InputProps) {
       if (focus) {
         icon = 'user-b';
       } else {
-        icon = '"user';
+        icon = 'user';
       }
       break;
     case 'Phone':
       if (focus) {
         icon = 'phone-b';
       } else {
-        icon = '"phone';
+        icon = 'phone';
       }
       break;
     case 'Text':
@@ -77,15 +77,15 @@ function Input(props: InputProps) {
           secureTextEntry={props.type === 'Password' ?? true}
         />
       </View>
-      <View style={styles.error}>
+      {!props.errorText && (
         <Typography
-          text="Oops! Your Email Is Not Correct"
+          text={props.errorText}
           fontFamily="Bold"
           size="Large"
           type="Caption"
           color="Red"
         />
-      </View>
+      )}
     </>
   );
 }
@@ -111,9 +111,6 @@ const styles = StyleSheet.create({
     color: NeutralColor.GreyColor,
     letterSpacing: 0.5,
     lineHeight: FontSize.FontSize12 * LineHeight.LineHeight180,
-  },
-  error: {
-    marginTop: 8,
   },
 });
 

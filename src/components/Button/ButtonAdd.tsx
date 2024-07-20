@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from '../Icon/Icon';
 import {BackgroundColor, NeutralColor} from '@/constants';
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ButtonAdd;
+export default memo(ButtonAdd);

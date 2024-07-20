@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
 import {SearchInputProps} from '@/@types/styles';
 import {
@@ -113,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchInput;
+export default memo(SearchInput);

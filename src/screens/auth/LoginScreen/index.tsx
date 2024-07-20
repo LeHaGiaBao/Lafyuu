@@ -3,8 +3,20 @@ import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
 import {Button, Icon, Input, Typography} from '@/components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@/constants';
 import translate from '@/translation/i18n';
+import {useNavigator} from '@/hooks/core';
+import {Routes} from '@/routes/routes';
 
 function LoginScreen() {
+  const nav = useNavigator();
+
+  const handleLogin = () => {
+    nav.navigate(Routes.appScreen);
+  };
+
+  const handleRegister = () => {
+    nav.navigate(Routes.registerScreen);
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -45,6 +57,7 @@ function LoginScreen() {
           title={translate('resources:sign_in')}
           type="Primary"
           size="Large"
+          onPress={handleLogin}
         />
       </View>
       <View style={styles.orContainer}>
@@ -94,6 +107,7 @@ function LoginScreen() {
             size="Normal"
             fontFamily="Bold"
             color="Blue"
+            onPress={handleRegister}
           />
         </View>
       </View>

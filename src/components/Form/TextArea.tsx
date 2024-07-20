@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 import {InputProps} from '@/@types/styles';
 import {
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TextArea;
+export default memo(TextArea);

@@ -1,6 +1,6 @@
-import {BackgroundColor} from '@/constants';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {BackgroundColor} from '@/constants';
 
 function HomeScreen() {
   return <View style={styles.homeContainer} />;

@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
-import {ButtonCheckProps} from '@/@types/styles';
 import {memo, useState} from 'react';
+import {ButtonCheckProps} from '@/@types/styles';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import Typography from '../Typography/Typography';
 import {BackgroundColor, NeutralColor} from '@/constants';

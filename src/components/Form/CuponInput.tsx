@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
 import {InputProps} from '@/@types/styles';
 import Typography from '../Typography/Typography';
@@ -95,4 +95,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CuponInput;
+export default memo(CuponInput);

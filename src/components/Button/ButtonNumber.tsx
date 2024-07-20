@@ -1,5 +1,5 @@
+import React, {memo, useState} from 'react';
 import {BackgroundColor, NeutralColor} from '@/constants';
-import React, {useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Icon from '../Icon/Icon';
 import Typography from '../Typography/Typography';
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ButtonNumber;
+export default memo(ButtonNumber);

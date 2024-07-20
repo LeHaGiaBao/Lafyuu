@@ -3,8 +3,20 @@ import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
 import {Button, Icon, Input, Typography} from '@/components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@/constants';
 import translate from '@/translation/i18n';
+import {useNavigator} from '@/hooks/core';
+import {Routes} from '@/routes/routes';
 
 function RegisterScreen() {
+  const nav = useNavigator();
+
+  const handleRegister = () => {
+    nav.navigate(Routes.homeScreen);
+  };
+
+  const handleLogin = () => {
+    nav.navigate(Routes.loginScreen);
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -55,6 +67,7 @@ function RegisterScreen() {
           title={translate('resources:sign_up')}
           type="Primary"
           size="Large"
+          onPress={handleRegister}
         />
       </View>
       <View style={styles.title}>
@@ -72,6 +85,7 @@ function RegisterScreen() {
             size="Normal"
             fontFamily="Bold"
             color="Blue"
+            onPress={handleLogin}
           />
         </View>
       </View>

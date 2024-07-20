@@ -10,6 +10,7 @@ import Explore from '@/screens/tabs/Explore';
 import Cart from '@/screens/tabs/Cart';
 import Offer from '@/screens/tabs/Offer';
 import Account from '@/screens/tabs/Account';
+import AppScreen from './AppScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,11 @@ function RoutesApp() {
           <Stack.Screen
             name={Routes.registerScreen}
             component={RegisterScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name={Routes.appScreen}
+            component={AppScreen}
             options={{headerShown: false}}
           />
           <Stack.Screen

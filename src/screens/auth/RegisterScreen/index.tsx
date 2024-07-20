@@ -10,7 +10,7 @@ function RegisterScreen() {
   const nav = useNavigator();
 
   const handleRegister = () => {
-    nav.navigate(Routes.homeScreen);
+    nav.navigate(Routes.appScreen);
   };
 
   const handleLogin = () => {

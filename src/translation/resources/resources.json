@@ -18,6 +18,7 @@
     "full_name_placeholder": "Full Name",
     "password_again_placeholder": "Password Again",
     "sign_up": "Sign Up",
-    "have_account": "have a account? "
+    "have_account": "have a account? ",
+    "search_product": "Search Product"
   }
 }

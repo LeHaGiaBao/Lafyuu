@@ -4,6 +4,6 @@ import {
   useNavigation,
 } from '@react-navigation/native';
 
-export const useNavigator = () => {
+export const useCustomNavigation = () => {
   return useNavigation<NavigationProp<ParamListBase, string, undefined>>();
 };

@@ -51,6 +51,9 @@ function Input(props: InputProps) {
         icon = 'phone';
       }
       break;
+    case 'Search':
+      icon = 'search-b';
+      break;
     case 'Text':
     default:
       break;

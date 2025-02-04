@@ -3,11 +3,11 @@ import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
 import {Button, Icon, Input, Typography} from '@/components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@/constants';
 import translate from '@/translation/i18n';
-import {useNavigator} from '@/hooks/core';
+import {useCustomNavigation} from '@/hooks/core';
 import {Routes} from '@/routes/routes';
 
 function LoginScreen() {
-  const nav = useNavigator();
+  const nav = useCustomNavigation();
 
   const handleLogin = () => {
     nav.navigate(Routes.appScreen);

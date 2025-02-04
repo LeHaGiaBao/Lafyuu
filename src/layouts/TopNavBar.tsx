@@ -1,6 +1,6 @@
 import {Icon, Typography} from '@/components';
 import {NeutralColor} from '@/constants';
-import {useNavigator} from '@/hooks/core';
+import {useCustomNavigation} from '@/hooks/core';
 import {Routes} from '@/routes/routes';
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
@@ -13,7 +13,7 @@ interface TopNavBarProps {
 }
 
 function TopNavBar(props: TopNavBarProps) {
-  const nav = useNavigator();
+  const nav = useCustomNavigation();
 
   const goBack = () => {
     nav.goBack();

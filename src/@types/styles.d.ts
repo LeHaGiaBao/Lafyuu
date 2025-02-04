@@ -44,7 +44,7 @@ export interface ButtonCheckProps {
 
 export interface InputProps {
   placeholder: string;
-  type?: 'Text' | 'Email' | 'Password' | 'Account' | 'Phone';
+  type?: 'Text' | 'Email' | 'Password' | 'Account' | 'Phone' | 'Search';
   errorText?: string;
 }
 

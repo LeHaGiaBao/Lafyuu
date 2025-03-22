@@ -37,11 +37,12 @@ const styles = StyleSheet.create({
     width: '75%',
   },
   iconContainer: {
+    top: -7,
     width: '25%',
     display: 'flex',
     justifyContent: 'flex-end',
     flexDirection: 'row',
-    gap: 16,
+    gap: 24,
   },
 });
 

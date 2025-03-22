@@ -77,7 +77,7 @@ function Input(props: InputProps) {
           placeholder={props.placeholder}
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
-          secureTextEntry={props.type === 'Password' ?? true}
+          secureTextEntry={props.type === 'Password' && true}
         />
       </View>
       {!props.errorText && (

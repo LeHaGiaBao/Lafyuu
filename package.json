@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",
@@ -21,6 +22,7 @@
     "@react-native-camera-roll/camera-roll": "^7.9.0",
     "@react-native-clipboard/clipboard": "^1.16.1",
     "@react-native-community/blur": "^4.4.1",
+    "@react-native-community/cli-platform-android": "3.0.3",
     "@react-native-community/datetimepicker": "^8.3.0",
     "@react-native-community/hooks": "^3.0.0",
     "@react-native-community/netinfo": "^11.4.1",
@@ -35,6 +37,7 @@
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.5.2",
+    "patch-package": "^8.0.0",
     "react": "18.2.0",
     "react-hook-form": "^7.51.5",
     "react-i18next": "14.0.0",

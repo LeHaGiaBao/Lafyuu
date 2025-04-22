@@ -7,51 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80B921A6F3F58F76C31292 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		109EFB43EDF84819B340617C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C8582F66FD4384B3F354F3 /* Poppins-Regular.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2EE9512C2DAA7F620083BE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
-		2EE951302DAA7F620083BE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		2EE951312DAA7F620083BE1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2EE951322DAA7F620083BE1E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		2EE951332DAA7F620083BE1E /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3500EDB4D7824C7594918035 /* Poppins-Bold.ttf */; };
-		2EE951342DAA7F620083BE1E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C8582F66FD4384B3F354F3 /* Poppins-Regular.ttf */; };
-		2EE951402DAA7FAE0083BE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
-		2EE951442DAA7FAE0083BE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		2EE951452DAA7FAE0083BE1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2EE951462DAA7FAE0083BE1E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		2EE951472DAA7FAE0083BE1E /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3500EDB4D7824C7594918035 /* Poppins-Bold.ttf */; };
-		2EE951482DAA7FAE0083BE1E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C8582F66FD4384B3F354F3 /* Poppins-Regular.ttf */; };
-		67D15184573FBEAED9EE6F86 /* libPods-Lafyuu-LafyuuStaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D32070608AE8051D91CABB /* libPods-Lafyuu-LafyuuStaging.a */; };
-		6FC556047C63752BDA2F0B4D /* libPods-Lafyuu-LafyuuDevelopment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F73D11CF1977F7F3161064 /* libPods-Lafyuu-LafyuuDevelopment.a */; };
+		1C0E45A9B5B474ECF8A44442 /* libPods-Lafyuu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E570B9D3335390EA113A8C0F /* libPods-Lafyuu.a */; };
+		266BB41068DCBD64E35DF016 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		2E6D60842DB77ED4005CE656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		2E6D60882DB77ED4005CE656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		2E6D60892DB77ED4005CE656 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2E6D608A2DB77ED4005CE656 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		2E6D608B2DB77ED4005CE656 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E414122DB64F61BD1D18EC /* BootSplash.storyboard */; };
+		2E6D608C2DB77ED4005CE656 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6DAF3E7E9B42C39C39CDD2 /* Colors.xcassets */; };
+		2E6D608D2DB77ED4005CE656 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9825ED9556C4FD399580659 /* Poppins-Bold.ttf */; };
+		2E6D608E2DB77ED4005CE656 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 530C9101B6EB4BB7869FC374 /* Poppins-Regular.ttf */; };
+		2E6D60AF2DB77F25005CE656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		2E6D60B32DB77F25005CE656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		2E6D60B42DB77F25005CE656 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2E6D60B52DB77F25005CE656 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		2E6D60B62DB77F25005CE656 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E414122DB64F61BD1D18EC /* BootSplash.storyboard */; };
+		2E6D60B72DB77F25005CE656 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6DAF3E7E9B42C39C39CDD2 /* Colors.xcassets */; };
+		2E6D60B82DB77F25005CE656 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9825ED9556C4FD399580659 /* Poppins-Bold.ttf */; };
+		2E6D60B92DB77F25005CE656 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 530C9101B6EB4BB7869FC374 /* Poppins-Regular.ttf */; };
+		492A915209F64177FB70BA83 /* libPods-Lafyuu-LafyuuDevelopment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5960D5F0A1EE51B24176751 /* libPods-Lafyuu-LafyuuDevelopment.a */; };
+		500FB54F55E178E293574264 /* libPods-Lafyuu-LafyuuStaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E834FB629F37261F1555346B /* libPods-Lafyuu-LafyuuStaging.a */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9D97E4CC0492E142B5682937 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		C01FEB5D312C4D21BA0B1465 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3500EDB4D7824C7594918035 /* Poppins-Bold.ttf */; };
+		8739DB9B4F944F37B68F2AEE /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 530C9101B6EB4BB7869FC374 /* Poppins-Regular.ttf */; };
+		8C663434097B42C1BF557015 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6DAF3E7E9B42C39C39CDD2 /* Colors.xcassets */; };
+		B77C7BBE3AD44A4F8806F5A6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9825ED9556C4FD399580659 /* Poppins-Bold.ttf */; };
+		BF84C84309614F99A97842DE /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E414122DB64F61BD1D18EC /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0591AE8F7FC5E1004CBE1B14 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuStaging.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Lafyuu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lafyuu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Lafyuu/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Lafyuu/Info.plist; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Lafyuu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		18C8582F66FD4384B3F354F3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		25F73D11CF1977F7F3161064 /* libPods-Lafyuu-LafyuuDevelopment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu-LafyuuDevelopment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EE9513B2DAA7F620083BE1E /* LafyuuStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LafyuuStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EE9513C2DAA7F620083BE1E /* LafyuuStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LafyuuStaging-Info.plist"; sourceTree = SOURCE_ROOT; };
-		2EE9514F2DAA7FAE0083BE1E /* LafyuuDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LafyuuDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EE951502DAA7FAE0083BE1E /* LafyuuDevelopment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LafyuuDevelopment-Info.plist"; sourceTree = SOURCE_ROOT; };
-		3041A376355991A73258580D /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuDevelopment.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuDevelopment/Pods-Lafyuu-LafyuuDevelopment.release.xcconfig"; sourceTree = "<group>"; };
-		3500EDB4D7824C7594918035 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-Lafyuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-Lafyuu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.release.xcconfig"; sourceTree = "<group>"; };
-		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Lafyuu/AppDelegate.swift; sourceTree = "<group>"; };
-		819A4AB394580EBDF473D82F /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuDevelopment/Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Lafyuu/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C0D32070608AE8051D91CABB /* libPods-Lafyuu-LafyuuStaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu-LafyuuStaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = lafyuu/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = lafyuu/Info.plist; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = lafyuu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		15D09D82C8E039D20991C3B8 /* Pods-Lafyuu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.release.xcconfig"; sourceTree = "<group>"; };
+		2E6D60952DB77ED4005CE656 /* LafyuuStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LafyuuStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6D60962DB77ED4005CE656 /* LafyuuStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LafyuuStaging-Info.plist"; sourceTree = "<group>"; };
+		2E6D60C02DB77F25005CE656 /* LafyuuDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LafyuuDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6D60C12DB77F25005CE656 /* LafyuuDevelopment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LafyuuDevelopment-Info.plist"; sourceTree = "<group>"; };
+		2F34FFAACEC7A7FA9A9E34F7 /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuDevelopment.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuDevelopment/Pods-Lafyuu-LafyuuDevelopment.release.xcconfig"; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-lafyuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafyuu.debug.xcconfig"; path = "Target Support Files/Pods-lafyuu/Pods-lafyuu.debug.xcconfig"; sourceTree = "<group>"; };
+		451902985B805D79CF92C99C /* Pods-Lafyuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu/Pods-Lafyuu.debug.xcconfig"; sourceTree = "<group>"; };
+		530C9101B6EB4BB7869FC374 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-lafyuu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafyuu.release.xcconfig"; path = "Target Support Files/Pods-lafyuu/Pods-lafyuu.release.xcconfig"; sourceTree = "<group>"; };
+		5F6DAF3E7E9B42C39C39CDD2 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = lafyuu/Colors.xcassets; sourceTree = "<group>"; };
+		73BBF3B8E804FAE167501573 /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuDevelopment/Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig"; sourceTree = "<group>"; };
+		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = lafyuu/AppDelegate.swift; sourceTree = "<group>"; };
+		7EC532EDA4D182C984CE9D31 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuStaging.release.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = lafyuu/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1E414122DB64F61BD1D18EC /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = lafyuu/BootSplash.storyboard; sourceTree = "<group>"; };
+		B5960D5F0A1EE51B24176751 /* libPods-Lafyuu-LafyuuDevelopment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu-LafyuuDevelopment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9825ED9556C4FD399580659 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		E570B9D3335390EA113A8C0F /* libPods-Lafyuu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76ABFD136EDF8682980E0E1 /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuStaging.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging.debug.xcconfig"; sourceTree = "<group>"; };
+		E834FB629F37261F1555346B /* libPods-Lafyuu-LafyuuStaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lafyuu-LafyuuStaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3B752C5288A0F45A1D72AAF /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lafyuu-LafyuuStaging.debug.xcconfig"; path = "Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,30 +70,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* (null) in Frameworks */,
+				1C0E45A9B5B474ECF8A44442 /* libPods-Lafyuu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE9512D2DAA7F620083BE1E /* Frameworks */ = {
+		2E6D60852DB77ED4005CE656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67D15184573FBEAED9EE6F86 /* libPods-Lafyuu-LafyuuStaging.a in Frameworks */,
+				500FB54F55E178E293574264 /* libPods-Lafyuu-LafyuuStaging.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE951412DAA7FAE0083BE1E /* Frameworks */ = {
+		2E6D60B02DB77F25005CE656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC556047C63752BDA2F0B4D /* libPods-Lafyuu-LafyuuDevelopment.a in Frameworks */,
+				492A915209F64177FB70BA83 /* libPods-Lafyuu-LafyuuDevelopment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B07FAE1A68108700A75B9A /* Lafyuu */ = {
+		0D7097079C4648F886DF6647 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9825ED9556C4FD399580659 /* Poppins-Bold.ttf */,
+				530C9101B6EB4BB7869FC374 /* Poppins-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* lafyuu */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -90,27 +110,21 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				B1E414122DB64F61BD1D18EC /* BootSplash.storyboard */,
+				5F6DAF3E7E9B42C39C39CDD2 /* Colors.xcassets */,
 			);
-			name = Lafyuu;
+			name = lafyuu;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				25F73D11CF1977F7F3161064 /* libPods-Lafyuu-LafyuuDevelopment.a */,
-				C0D32070608AE8051D91CABB /* libPods-Lafyuu-LafyuuStaging.a */,
+				E570B9D3335390EA113A8C0F /* libPods-Lafyuu.a */,
+				B5960D5F0A1EE51B24176751 /* libPods-Lafyuu-LafyuuDevelopment.a */,
+				E834FB629F37261F1555346B /* libPods-Lafyuu-LafyuuStaging.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		76CBCBAC2DB543258A42655A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3500EDB4D7824C7594918035 /* Poppins-Bold.ttf */,
-				18C8582F66FD4384B3F354F3 /* Poppins-Regular.ttf */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -123,14 +137,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Lafyuu */,
+				13B07FAE1A68108700A75B9A /* lafyuu */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				76CBCBAC2DB543258A42655A /* Resources */,
-				2EE9513C2DAA7F620083BE1E /* LafyuuStaging-Info.plist */,
-				2EE951502DAA7FAE0083BE1E /* LafyuuDevelopment-Info.plist */,
+				0D7097079C4648F886DF6647 /* Resources */,
+				2E6D60962DB77ED4005CE656 /* LafyuuStaging-Info.plist */,
+				2E6D60C12DB77F25005CE656 /* LafyuuDevelopment-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -141,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* Lafyuu.app */,
-				2EE9513B2DAA7F620083BE1E /* LafyuuStaging.app */,
-				2EE9514F2DAA7FAE0083BE1E /* LafyuuDevelopment.app */,
+				2E6D60952DB77ED4005CE656 /* LafyuuStaging.app */,
+				2E6D60C02DB77F25005CE656 /* LafyuuDevelopment.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,12 +164,14 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-Lafyuu.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-Lafyuu.release.xcconfig */,
-				819A4AB394580EBDF473D82F /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */,
-				3041A376355991A73258580D /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */,
-				F3B752C5288A0F45A1D72AAF /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */,
-				0591AE8F7FC5E1004CBE1B14 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-lafyuu.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-lafyuu.release.xcconfig */,
+				451902985B805D79CF92C99C /* Pods-Lafyuu.debug.xcconfig */,
+				15D09D82C8E039D20991C3B8 /* Pods-Lafyuu.release.xcconfig */,
+				73BBF3B8E804FAE167501573 /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */,
+				2F34FFAACEC7A7FA9A9E34F7 /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */,
+				E76ABFD136EDF8682980E0E1 /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */,
+				7EC532EDA4D182C984CE9D31 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -180,50 +196,50 @@
 			dependencies = (
 			);
 			name = Lafyuu;
-			productName = Lafyuu;
+			productName = lafyuu;
 			productReference = 13B07F961A680F5B00A75B9A /* Lafyuu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2EE951292DAA7F620083BE1E /* LafyuuStaging */ = {
+		2E6D60812DB77ED4005CE656 /* LafyuuStaging */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EE951382DAA7F620083BE1E /* Build configuration list for PBXNativeTarget "LafyuuStaging" */;
+			buildConfigurationList = 2E6D60922DB77ED4005CE656 /* Build configuration list for PBXNativeTarget "LafyuuStaging" */;
 			buildPhases = (
-				2EE9512A2DAA7F620083BE1E /* [CP] Check Pods Manifest.lock */,
-				2EE9512B2DAA7F620083BE1E /* Sources */,
-				2EE9512D2DAA7F620083BE1E /* Frameworks */,
-				2EE9512F2DAA7F620083BE1E /* Resources */,
-				2EE951352DAA7F620083BE1E /* Bundle React Native code and images */,
-				2EE951362DAA7F620083BE1E /* [CP] Embed Pods Frameworks */,
-				2EE951372DAA7F620083BE1E /* [CP] Copy Pods Resources */,
+				2E6D60822DB77ED4005CE656 /* [CP] Check Pods Manifest.lock */,
+				2E6D60832DB77ED4005CE656 /* Sources */,
+				2E6D60852DB77ED4005CE656 /* Frameworks */,
+				2E6D60872DB77ED4005CE656 /* Resources */,
+				2E6D608F2DB77ED4005CE656 /* Bundle React Native code and images */,
+				2E6D60902DB77ED4005CE656 /* [CP] Embed Pods Frameworks */,
+				2E6D60912DB77ED4005CE656 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LafyuuStaging;
-			productName = Lafyuu;
-			productReference = 2EE9513B2DAA7F620083BE1E /* LafyuuStaging.app */;
+			productName = lafyuu;
+			productReference = 2E6D60952DB77ED4005CE656 /* LafyuuStaging.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2EE9513D2DAA7FAE0083BE1E /* LafyuuDevelopment */ = {
+		2E6D60AC2DB77F25005CE656 /* LafyuuDevelopment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EE9514C2DAA7FAE0083BE1E /* Build configuration list for PBXNativeTarget "LafyuuDevelopment" */;
+			buildConfigurationList = 2E6D60BD2DB77F25005CE656 /* Build configuration list for PBXNativeTarget "LafyuuDevelopment" */;
 			buildPhases = (
-				2EE9513E2DAA7FAE0083BE1E /* [CP] Check Pods Manifest.lock */,
-				2EE9513F2DAA7FAE0083BE1E /* Sources */,
-				2EE951412DAA7FAE0083BE1E /* Frameworks */,
-				2EE951432DAA7FAE0083BE1E /* Resources */,
-				2EE951492DAA7FAE0083BE1E /* Bundle React Native code and images */,
-				2EE9514A2DAA7FAE0083BE1E /* [CP] Embed Pods Frameworks */,
-				2EE9514B2DAA7FAE0083BE1E /* [CP] Copy Pods Resources */,
+				2E6D60AD2DB77F25005CE656 /* [CP] Check Pods Manifest.lock */,
+				2E6D60AE2DB77F25005CE656 /* Sources */,
+				2E6D60B02DB77F25005CE656 /* Frameworks */,
+				2E6D60B22DB77F25005CE656 /* Resources */,
+				2E6D60BA2DB77F25005CE656 /* Bundle React Native code and images */,
+				2E6D60BB2DB77F25005CE656 /* [CP] Embed Pods Frameworks */,
+				2E6D60BC2DB77F25005CE656 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LafyuuDevelopment;
-			productName = Lafyuu;
-			productReference = 2EE9514F2DAA7FAE0083BE1E /* LafyuuDevelopment.app */;
+			productName = lafyuu;
+			productReference = 2E6D60C02DB77F25005CE656 /* LafyuuDevelopment.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +255,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Lafyuu" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "lafyuu" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -253,8 +269,8 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Lafyuu */,
-				2EE951292DAA7F620083BE1E /* LafyuuStaging */,
-				2EE9513D2DAA7FAE0083BE1E /* LafyuuDevelopment */,
+				2E6D60812DB77ED4005CE656 /* LafyuuStaging */,
+				2E6D60AC2DB77F25005CE656 /* LafyuuDevelopment */,
 			);
 		};
 /* End PBXProject section */
@@ -266,33 +282,39 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9D97E4CC0492E142B5682937 /* PrivacyInfo.xcprivacy in Resources */,
-				C01FEB5D312C4D21BA0B1465 /* Poppins-Bold.ttf in Resources */,
-				109EFB43EDF84819B340617C /* Poppins-Regular.ttf in Resources */,
+				266BB41068DCBD64E35DF016 /* PrivacyInfo.xcprivacy in Resources */,
+				BF84C84309614F99A97842DE /* BootSplash.storyboard in Resources */,
+				8C663434097B42C1BF557015 /* Colors.xcassets in Resources */,
+				B77C7BBE3AD44A4F8806F5A6 /* Poppins-Bold.ttf in Resources */,
+				8739DB9B4F944F37B68F2AEE /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE9512F2DAA7F620083BE1E /* Resources */ = {
+		2E6D60872DB77ED4005CE656 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE951302DAA7F620083BE1E /* LaunchScreen.storyboard in Resources */,
-				2EE951312DAA7F620083BE1E /* Images.xcassets in Resources */,
-				2EE951322DAA7F620083BE1E /* PrivacyInfo.xcprivacy in Resources */,
-				2EE951332DAA7F620083BE1E /* Poppins-Bold.ttf in Resources */,
-				2EE951342DAA7F620083BE1E /* Poppins-Regular.ttf in Resources */,
+				2E6D60882DB77ED4005CE656 /* LaunchScreen.storyboard in Resources */,
+				2E6D60892DB77ED4005CE656 /* Images.xcassets in Resources */,
+				2E6D608A2DB77ED4005CE656 /* PrivacyInfo.xcprivacy in Resources */,
+				2E6D608B2DB77ED4005CE656 /* BootSplash.storyboard in Resources */,
+				2E6D608C2DB77ED4005CE656 /* Colors.xcassets in Resources */,
+				2E6D608D2DB77ED4005CE656 /* Poppins-Bold.ttf in Resources */,
+				2E6D608E2DB77ED4005CE656 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE951432DAA7FAE0083BE1E /* Resources */ = {
+		2E6D60B22DB77F25005CE656 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE951442DAA7FAE0083BE1E /* LaunchScreen.storyboard in Resources */,
-				2EE951452DAA7FAE0083BE1E /* Images.xcassets in Resources */,
-				2EE951462DAA7FAE0083BE1E /* PrivacyInfo.xcprivacy in Resources */,
-				2EE951472DAA7FAE0083BE1E /* Poppins-Bold.ttf in Resources */,
-				2EE951482DAA7FAE0083BE1E /* Poppins-Regular.ttf in Resources */,
+				2E6D60B32DB77F25005CE656 /* LaunchScreen.storyboard in Resources */,
+				2E6D60B42DB77F25005CE656 /* Images.xcassets in Resources */,
+				2E6D60B52DB77F25005CE656 /* PrivacyInfo.xcprivacy in Resources */,
+				2E6D60B62DB77F25005CE656 /* BootSplash.storyboard in Resources */,
+				2E6D60B72DB77F25005CE656 /* Colors.xcassets in Resources */,
+				2E6D60B82DB77F25005CE656 /* Poppins-Bold.ttf in Resources */,
+				2E6D60B92DB77F25005CE656 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +354,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lafyuu/Pods-Lafyuu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE9512A2DAA7F620083BE1E /* [CP] Check Pods Manifest.lock */ = {
+		2E6D60822DB77ED4005CE656 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +376,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE951352DAA7F620083BE1E /* Bundle React Native code and images */ = {
+		2E6D608F2DB77ED4005CE656 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +392,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		2EE951362DAA7F620083BE1E /* [CP] Embed Pods Frameworks */ = {
+		2E6D60902DB77ED4005CE656 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,7 +409,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE951372DAA7F620083BE1E /* [CP] Copy Pods Resources */ = {
+		2E6D60912DB77ED4005CE656 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,7 +426,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lafyuu-LafyuuStaging/Pods-Lafyuu-LafyuuStaging-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE9513E2DAA7FAE0083BE1E /* [CP] Check Pods Manifest.lock */ = {
+		2E6D60AD2DB77F25005CE656 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,7 +448,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE951492DAA7FAE0083BE1E /* Bundle React Native code and images */ = {
+		2E6D60BA2DB77F25005CE656 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,7 +464,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		2EE9514A2DAA7FAE0083BE1E /* [CP] Embed Pods Frameworks */ = {
+		2E6D60BB2DB77F25005CE656 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,7 +481,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lafyuu-LafyuuDevelopment/Pods-Lafyuu-LafyuuDevelopment-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EE9514B2DAA7FAE0083BE1E /* [CP] Copy Pods Resources */ = {
+		2E6D60BC2DB77F25005CE656 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,19 +548,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE9512B2DAA7F620083BE1E /* Sources */ = {
+		2E6D60832DB77ED4005CE656 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE9512C2DAA7F620083BE1E /* AppDelegate.swift in Sources */,
+				2E6D60842DB77ED4005CE656 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EE9513F2DAA7FAE0083BE1E /* Sources */ = {
+		2E6D60AE2DB77F25005CE656 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE951402DAA7FAE0083BE1E /* AppDelegate.swift in Sources */,
+				2E6D60AF2DB77F25005CE656 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,13 +569,13 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Lafyuu.debug.xcconfig */;
+			baseConfigurationReference = 451902985B805D79CF92C99C /* Pods-Lafyuu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Lafyuu/Info.plist;
+				INFOPLIST_FILE = lafyuu/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lafyuu;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -582,12 +604,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Lafyuu.release.xcconfig */;
+			baseConfigurationReference = 15D09D82C8E039D20991C3B8 /* Pods-Lafyuu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Lafyuu/Info.plist;
+				INFOPLIST_FILE = lafyuu/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lafyuu;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -613,9 +635,9 @@
 			};
 			name = Release;
 		};
-		2EE951392DAA7F620083BE1E /* Debug */ = {
+		2E6D60932DB77ED4005CE656 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3B752C5288A0F45A1D72AAF /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */;
+			baseConfigurationReference = E76ABFD136EDF8682980E0E1 /* Pods-Lafyuu-LafyuuStaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -648,9 +670,9 @@
 			};
 			name = Debug;
 		};
-		2EE9513A2DAA7F620083BE1E /* Release */ = {
+		2E6D60942DB77ED4005CE656 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0591AE8F7FC5E1004CBE1B14 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */;
+			baseConfigurationReference = 7EC532EDA4D182C984CE9D31 /* Pods-Lafyuu-LafyuuStaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -681,16 +703,16 @@
 			};
 			name = Release;
 		};
-		2EE9514D2DAA7FAE0083BE1E /* Debug */ = {
+		2E6D60BE2DB77F25005CE656 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 819A4AB394580EBDF473D82F /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */;
+			baseConfigurationReference = 73BBF3B8E804FAE167501573 /* Pods-Lafyuu-LafyuuDevelopment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "LafyuuDevelopment-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Lafyuu Development";
+				INFOPLIST_KEY_CFBundleDisplayName = Lafyuu;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -716,15 +738,15 @@
 			};
 			name = Debug;
 		};
-		2EE9514E2DAA7FAE0083BE1E /* Release */ = {
+		2E6D60BF2DB77F25005CE656 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3041A376355991A73258580D /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */;
+			baseConfigurationReference = 2F34FFAACEC7A7FA9A9E34F7 /* Pods-Lafyuu-LafyuuDevelopment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "LafyuuDevelopment-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Lafyuu Development";
+				INFOPLIST_KEY_CFBundleDisplayName = Lafyuu;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -907,25 +929,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EE951382DAA7F620083BE1E /* Build configuration list for PBXNativeTarget "LafyuuStaging" */ = {
+		2E6D60922DB77ED4005CE656 /* Build configuration list for PBXNativeTarget "LafyuuStaging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EE951392DAA7F620083BE1E /* Debug */,
-				2EE9513A2DAA7F620083BE1E /* Release */,
+				2E6D60932DB77ED4005CE656 /* Debug */,
+				2E6D60942DB77ED4005CE656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EE9514C2DAA7FAE0083BE1E /* Build configuration list for PBXNativeTarget "LafyuuDevelopment" */ = {
+		2E6D60BD2DB77F25005CE656 /* Build configuration list for PBXNativeTarget "LafyuuDevelopment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EE9514D2DAA7FAE0083BE1E /* Debug */,
-				2EE9514E2DAA7FAE0083BE1E /* Release */,
+				2E6D60BE2DB77F25005CE656 /* Debug */,
+				2E6D60BF2DB77F25005CE656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Lafyuu" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "lafyuu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

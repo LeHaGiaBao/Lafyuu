@@ -24,10 +24,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2EE951292DAA7F620083BE1E"
+               BlueprintIdentifier = "2E6D60812DB77ED4005CE656"
                BuildableName = "LafyuuStaging.app"
                BlueprintName = "LafyuuStaging"
-               ReferencedContainer = "container:Lafyuu.xcodeproj">
+               ReferencedContainer = "container:lafyuu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -53,10 +53,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EE951292DAA7F620083BE1E"
+            BlueprintIdentifier = "2E6D60812DB77ED4005CE656"
             BuildableName = "LafyuuStaging.app"
             BlueprintName = "LafyuuStaging"
-            ReferencedContainer = "container:Lafyuu.xcodeproj">
+            ReferencedContainer = "container:lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -70,10 +70,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EE951292DAA7F620083BE1E"
+            BlueprintIdentifier = "2E6D60812DB77ED4005CE656"
             BuildableName = "LafyuuStaging.app"
             BlueprintName = "LafyuuStaging"
-            ReferencedContainer = "container:Lafyuu.xcodeproj">
+            ReferencedContainer = "container:lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

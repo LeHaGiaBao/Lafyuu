@@ -5,6 +5,15 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;echo &quot;.env.production&quot; &gt; /tmp/envfile&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -17,7 +26,7 @@
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "Lafyuu.app"
                BlueprintName = "Lafyuu"
-               ReferencedContainer = "container:Lafyuu.xcodeproj">
+               ReferencedContainer = "container:lafyuu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +42,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "LafyuuTests.xctest"
-               BlueprintName = "LafyuuTests"
-               ReferencedContainer = "container:Lafyuu.xcodeproj">
+               BuildableName = "lafyuuTests.xctest"
+               BlueprintName = "lafyuuTests"
+               ReferencedContainer = "container:lafyuu.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,7 +66,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "Lafyuu.app"
             BlueprintName = "Lafyuu"
-            ReferencedContainer = "container:Lafyuu.xcodeproj">
+            ReferencedContainer = "container:lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,7 +83,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "Lafyuu.app"
             BlueprintName = "Lafyuu"
-            ReferencedContainer = "container:Lafyuu.xcodeproj">
+            ReferencedContainer = "container:lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

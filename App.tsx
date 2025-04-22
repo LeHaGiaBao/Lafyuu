@@ -1,15 +1,21 @@
-import Routes from '@/routes';
 import React from 'react';
+import {
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from 'react-native-safe-area-context';
 import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {enableFreeze} from 'react-native-screens';
+import MainRoutes from '@routes';
 
 enableFreeze(true);
 
-function App() {
+function App(): React.JSX.Element {
   return (
     <GestureHandlerRootView style={styles.appContainer}>
-      <Routes />
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <MainRoutes />
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 }

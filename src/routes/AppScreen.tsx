@@ -1,8 +1,17 @@
 import React, {memo} from 'react';
-import NavigationBar from './NavigationBar';
+import {Text, View} from 'react-native';
 
 function AppScreen() {
-  return <NavigationBar />;
+  return (
+    <View>
+      <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
+    </View>
+  );
 }
 
 export default memo(AppScreen);

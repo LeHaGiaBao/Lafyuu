@@ -14,6 +14,8 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+RCT_NEW_ARCH_ENABLED=0
+
 target 'Lafyuu' do
   config = use_native_modules!
 
@@ -22,10 +24,13 @@ target 'Lafyuu' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
-
-  target 'LafyuuTests' do
-    inherit! :complete
-    # Pods for testing
+  
+  target 'LafyuuStaging' do
+      inherit! :complete
+  end
+  
+  target 'LafyuuDevelopment' do
+      inherit! :complete
   end
 
   post_install do |installer|
@@ -38,10 +43,3 @@ target 'Lafyuu' do
     )
   end
 end
-
-pod 'Firebase', :modular_headers => true
-pod 'FirebaseCoreInternal', :modular_headers => true
-pod 'GoogleUtilities', :modular_headers => true
-pod 'FirebaseCore', :modular_headers => true
-use_frameworks! :linkage => :static
-$RNFirebaseAsStaticFramework = true

@@ -1,13 +1,8 @@
 import React, {memo} from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {BackgroundColor, NeutralColor} from '@constants';
 import Icon from '../Icon/Icon';
-
-interface LFButtonAddProps extends TouchableOpacityProps {}
+import {LFButtonAddProps} from '../types';
 
 const LFButtonAdd = (props: LFButtonAddProps) => {
   const {style, ...rest} = props;

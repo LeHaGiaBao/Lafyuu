@@ -1,17 +1,9 @@
 import React, {memo, useCallback, useState} from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-  View,
-} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BackgroundColor, NeutralColor} from '@constants';
 import Icon from '../Icon/Icon';
 import LFText from '../Text';
-
-interface LFButtonNumberProps extends TouchableOpacityProps {
-  number: number;
-}
+import {LFButtonNumberProps} from '../types';
 
 const LFButtonNumber = (props: LFButtonNumberProps) => {
   const {number = 1} = props;

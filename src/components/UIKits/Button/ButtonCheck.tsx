@@ -1,18 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
 import React, {memo, useCallback, useState} from 'react';
-import {
-  ButtonProps,
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from '../Icon/Icon';
 import LFText from '../Text';
-
-interface LFButtonCheckProps extends ButtonProps, TouchableOpacityProps {
-  icon?: string;
-}
+import {LFButtonCheckProps} from '../types';
 
 const LFButtonCheck = (props: LFButtonCheckProps) => {
   const {title, icon, ...rest} = props;

@@ -14,12 +14,19 @@
     "ios-prod": "react-native run-ios --scheme Lafyuu",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@dwarvesf/react-hooks": "^0.8.2",
+    "@dwarvesf/react-utils": "^0.4.2",
+    "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/native": "^7.1.6",
     "@react-navigation/native-stack": "^7.3.10",
+    "i18next": "23.11.5",
     "react": "18.3.1",
+    "react-i18next": "^15.4.1",
+    "react-icomoon": "^2.6.1",
     "react-native": "0.77.2",
     "react-native-bootsplash": "^6.3.5",
     "react-native-config": "1.4.6",
@@ -33,6 +40,8 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
@@ -45,13 +54,24 @@
     "@types/react-test-renderer": "^18.0.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.19.0",
+    "husky": "^9.1.7",
     "jest": "^29.6.3",
-    "prettier": "2.8.8",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
     "react-native-svg-transformer": "^1.5.0",
     "react-test-renderer": "18.3.1",
     "typescript": "5.0.4"
   },
   "engines": {
     "node": ">=18"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier --write"
+    ],
+    "**/*.{html,json,css,scss,md,mdx}": [
+      "prettier -w"
+    ]
   }
 }

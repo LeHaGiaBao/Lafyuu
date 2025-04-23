@@ -15,6 +15,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
     paddingTop: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

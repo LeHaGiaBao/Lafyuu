@@ -18,12 +18,13 @@ interface LFButtonProps extends ButtonProps, TouchableOpacityProps {
 }
 
 const LFButton = (props: LFButtonProps) => {
-  const {title, size = 'Large', type = 'Primary', icon, ...rest} = props;
+  const {title, size = 'Large', type = 'Primary', icon, style, ...rest} = props;
 
   return (
     <TouchableOpacity
       style={[
         buttonStyles.button,
+        style,
         {
           width: size === 'Large' ? '100%' : 'auto',
           backgroundColor:

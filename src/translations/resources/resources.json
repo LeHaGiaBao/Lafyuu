@@ -1,0 +1,24 @@
+{
+  "resources": {
+    "login_title": "Welcome to Lafyuu",
+    "login_sub_title": "Sign in to continue",
+    "email_placeholder": "Your Email",
+    "password_placeholder": "Password",
+    "sign_in": "Sign In",
+    "or": "Or",
+    "sign_in_with_google": "Login with Google",
+    "sign_in_with_facebook": "Login with facebook",
+    "forgot_password": "Forgot Password?",
+    "not_have_account": "Don’t have a account? ",
+    "register": "Register",
+    "email_validate": "Oops! Your Email Is Not Correct",
+    "password_validate": "Oops! Your Password Is Not Correct",
+    "get_started": "Let’s Get Started",
+    "new_account": "Create an new account",
+    "full_name_placeholder": "Full Name",
+    "password_again_placeholder": "Password Again",
+    "sign_up": "Sign Up",
+    "have_account": "have a account? ",
+    "search_product": "Search Product"
+  }
+}

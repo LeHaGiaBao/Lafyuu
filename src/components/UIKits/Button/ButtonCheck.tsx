@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
+import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
 import Icon from '../Icon/Icon';
 import LFText from '../Text';
 import {LFButtonCheckProps} from '../types';

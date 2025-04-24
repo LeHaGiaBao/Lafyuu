@@ -2,6 +2,7 @@ import {PropsWithChildren} from 'react';
 import {
   ButtonProps,
   ColorValue,
+  TextInputProps,
   TextProps,
   TextStyle,
   TouchableOpacityProps,
@@ -30,6 +31,14 @@ export type TypoType =
   | 'LinkNormal'
   | 'LinkSmall';
 
+export type InputType =
+  | 'Text'
+  | 'Email'
+  | 'Password'
+  | 'Account'
+  | 'Phone'
+  | 'Search';
+
 export interface LFButtonProps extends ButtonProps, TouchableOpacityProps {
   size: 'Large' | 'Small';
   type: 'Primary' | 'Secondary';
@@ -52,4 +61,13 @@ export interface LFTextProps extends TextProps, PropsWithChildren {
   color?: ColorValue;
   numberOfLines?: number;
   styles?: TextStyle;
+}
+
+export interface LFInputProps extends TextInputProps, PropsWithChildren {
+  type?: InputType;
+  errorText?: string;
+}
+
+export interface LFSearchInputProps extends LFInputProps {
+  isActive: boolean;
 }

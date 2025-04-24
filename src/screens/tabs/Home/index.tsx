@@ -14,7 +14,10 @@ const styles = StyleSheet.create({
   homeContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
+    paddingHorizontal: 16,
     paddingTop: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

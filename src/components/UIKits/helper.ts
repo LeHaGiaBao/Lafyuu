@@ -1,4 +1,4 @@
-import {TypoType} from './types';
+import {InputType, TypoType} from './types';
 import {FontFamily, FontSize, LineHeight} from '@constants';
 
 export const generateTextStyles = (typo: TypoType) => {
@@ -118,5 +118,50 @@ export const generateTextStyles = (typo: TypoType) => {
     textSize,
     textFamily,
     textLineHeight,
+  };
+};
+
+export const generateInputIcon = (type?: InputType, isFocus?: boolean) => {
+  let icon = '';
+
+  switch (type) {
+    case 'Email':
+      if (isFocus) {
+        icon = 'message-b';
+      } else {
+        icon = 'message';
+      }
+      break;
+    case 'Password':
+      if (isFocus) {
+        icon = 'password-b';
+      } else {
+        icon = 'password';
+      }
+      break;
+    case 'Account':
+      if (isFocus) {
+        icon = 'user-b';
+      } else {
+        icon = 'user';
+      }
+      break;
+    case 'Phone':
+      if (isFocus) {
+        icon = 'phone-b';
+      } else {
+        icon = 'phone';
+      }
+      break;
+    case 'Search':
+      icon = 'search-b';
+      break;
+    case 'Text':
+    default:
+      break;
+  }
+
+  return {
+    icon,
   };
 };

@@ -1,16 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {memo, PropsWithChildren} from 'react';
-import {ColorValue, StyleSheet, Text, TextProps, TextStyle} from 'react-native';
-import {TypoType} from '../types';
-import {generateTextStyles} from '../helper';
+import React, {memo} from 'react';
+import {StyleSheet, Text} from 'react-native';
 import {NeutralColor} from '@constants';
-
-interface LFTextProps extends TextProps, PropsWithChildren {
-  typo?: TypoType;
-  color?: ColorValue;
-  numberOfLines?: number;
-  styles?: TextStyle;
-}
+import {generateTextStyles} from '../helper';
+import {LFTextProps} from '../types';
 
 const LFText = (props: LFTextProps) => {
   const {

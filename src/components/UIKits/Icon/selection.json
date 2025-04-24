@@ -4582,6 +4582,44 @@
       "setIdx": 1,
       "setId": 2,
       "iconIdx": 66
+    },
+    {
+      "icon": {
+        "paths": ["M384 256l256 256-256 256"],
+        "attrs": [
+          {
+            "fill": "none",
+            "stroke": "rgb(144, 152, 177)",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 85.33333333333333
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": ["Right"]
+      },
+      "attrs": [
+        {
+          "fill": "none",
+          "stroke": "rgb(144, 152, 177)",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 85.33333333333333
+        }
+      ],
+      "properties": {
+        "order": 3,
+        "id": 0,
+        "name": "Right",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
     }
   ],
   "height": 1024,

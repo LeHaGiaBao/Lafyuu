@@ -1,13 +1,11 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {BackgroundColor} from '@constants';
-import {LFForm} from '@components/UIKits';
 
 function HomeScreen() {
   return (
     <View style={styles.homeContainer}>
       <View />
-      <LFForm.SearchInput isActive />
     </View>
   );
 }

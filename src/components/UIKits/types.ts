@@ -71,3 +71,9 @@ export interface LFInputProps extends TextInputProps, PropsWithChildren {
 export interface LFSearchInputProps extends LFInputProps {
   isActive: boolean;
 }
+
+export interface LFDatePickerProps {
+  label?: string;
+  value: Date | null;
+  onChange: (date: Date) => void;
+}

@@ -6,6 +6,7 @@ import {
   TextProps,
   TextStyle,
   TouchableOpacityProps,
+  ViewProps,
 } from 'react-native';
 
 export type TypoType =
@@ -76,4 +77,8 @@ export interface LFDatePickerProps {
   label?: string;
   value: Date | null;
   onChange: (date: Date) => void;
+}
+
+export interface LFLineProps extends ViewProps {
+  color?: ColorValue;
 }

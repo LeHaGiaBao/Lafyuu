@@ -40,6 +40,8 @@ export type InputType =
   | 'Phone'
   | 'Search';
 
+export type RatingType = 'Small' | 'Medium' | 'Big';
+
 export interface LFButtonProps extends ButtonProps, TouchableOpacityProps {
   size: 'Large' | 'Small';
   type: 'Primary' | 'Secondary';
@@ -79,6 +81,12 @@ export interface LFDatePickerProps {
   onChange: (date: Date) => void;
 }
 
-export interface LFLineProps extends ViewProps {
+export interface LFLineProps extends ViewProps, PropsWithChildren {
   color?: ColorValue;
+}
+
+export interface LFRatingProps extends ViewProps, PropsWithChildren {
+  ratingType?: RatingType;
+  rating: number;
+  canChange?: boolean;
 }

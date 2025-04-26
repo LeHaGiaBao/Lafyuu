@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {BackgroundColor, NeutralColor} from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import {LFButtonAddProps} from '../types';
 
 const LFButtonAdd = (props: LFButtonAddProps) => {
@@ -9,7 +9,7 @@ const LFButtonAdd = (props: LFButtonAddProps) => {
 
   return (
     <TouchableOpacity style={[buttonStyles.button, style]} {...rest}>
-      <Icon icon={'plus'} size={24} />
+      <LFIcon.Icon icon={'plus'} size={24} />
     </TouchableOpacity>
   );
 };

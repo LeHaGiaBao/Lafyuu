@@ -7,14 +7,13 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import LFText from '../Text';
 import {generateInputIcon} from '../helper';
 import {LFInputProps} from '../types';
 
 const LFInput = (props: LFInputProps) => {
-  const {value = '', type, errorText, ...rest} = props;
-  const [textValue, setTextValue] = useState(value);
+  const {value = '', onChangeText, type, errorText, ...rest} = props;
   const [focus, setFocus] = useState(false);
 
   const {icon} = generateInputIcon(type, focus);
@@ -30,16 +29,16 @@ const LFInput = (props: LFInputProps) => {
               : NeutralColor.LightColor,
           },
         ]}>
-        <Icon icon={icon} size={24} />
+        <LFIcon.Icon icon={icon} size={24} />
         <TextInput
           autoCapitalize="none"
-          value={textValue}
-          onChangeText={val => setTextValue(val)}
+          value={value}
+          onChangeText={onChangeText}
           style={[
             inputStyles.placeholderText,
             {
               fontFamily:
-                textValue === '' ? FontFamily.FontRegular : FontFamily.FontBold,
+                value === '' ? FontFamily.FontRegular : FontFamily.FontBold,
             },
           ]}
           onFocus={() => setFocus(true)}

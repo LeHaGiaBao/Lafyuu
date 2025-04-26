@@ -1,6 +1,6 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import {generateRatingStarSize} from '../helper';
 import {LFRatingProps} from '../types';
 
@@ -21,11 +21,11 @@ const LFStar = (props: LFRatingProps) => {
       {Array.from({length: MAX_RATING}, (_, index) =>
         canChange ? (
           <TouchableOpacity key={index} onPress={() => handleRating(index)}>
-            <Icon icon={index < star ? 'star-b' : 'star'} size={size} />
+            <LFIcon.Icon icon={index < star ? 'star-b' : 'star'} size={size} />
           </TouchableOpacity>
         ) : (
           <View key={index}>
-            <Icon icon={index < star ? 'star-b' : 'star'} size={size} />
+            <LFIcon.Icon icon={index < star ? 'star-b' : 'star'} size={size} />
           </View>
         ),
       )}

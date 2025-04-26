@@ -24,8 +24,8 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
+import LFIcon from '../Icon';
 import LFText from '../Text';
-import Icon from '../Icon/Icon';
 
 const LFDatePicker = (props: LFDatePickerProps) => {
   const {value, onChange} = props;
@@ -198,7 +198,7 @@ const LFDatePicker = (props: LFDatePickerProps) => {
           editable={false}
           placeholder="MM/DD/YYYY"
         />
-        <Icon icon={'date'} size={24} />
+        <LFIcon.Icon icon={'date'} size={24} />
       </TouchableOpacity>
       {/* Calendar modal */}
       <Modal
@@ -217,7 +217,7 @@ const LFDatePicker = (props: LFDatePickerProps) => {
               <TouchableOpacity
                 onPress={goToPrevMonth}
                 style={styles.navButton}>
-                <Icon icon={'left'} size={24} />
+                <LFIcon.Icon icon={'left'} size={24} />
               </TouchableOpacity>
 
               <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
@@ -227,7 +227,7 @@ const LFDatePicker = (props: LFDatePickerProps) => {
               <TouchableOpacity
                 onPress={goToNextMonth}
                 style={styles.navButton}>
-                <Icon icon={'Right'} size={24} />
+                <LFIcon.Icon icon={'Right'} size={24} />
               </TouchableOpacity>
             </View>
             {renderDaysOfWeek()}

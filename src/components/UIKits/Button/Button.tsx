@@ -2,7 +2,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import LFText from '../Text';
 import {LFButtonProps} from '../types';
 
@@ -38,7 +38,7 @@ const LFButton = (props: LFButtonProps) => {
       {...rest}>
       {icon ? (
         <>
-          <Icon icon={`${props.icon}`} size={24} />
+          <LFIcon.Icon icon={`${props.icon}`} size={24} />
           <View style={buttonStyles.text}>
             <LFText.Text
               typo="H5"

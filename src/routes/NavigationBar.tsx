@@ -55,7 +55,7 @@ function NavigationBar() {
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
-            <LFIcon icon={`${focused ? 'home-b' : 'home'}`} size={24} />
+            <LFIcon.Icon icon={`${focused ? 'home-b' : 'home'}`} size={24} />
           ),
         }}
       />
@@ -65,7 +65,10 @@ function NavigationBar() {
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
-            <LFIcon icon={`${focused ? 'search-b' : 'search'}`} size={24} />
+            <LFIcon.Icon
+              icon={`${focused ? 'search-b' : 'search'}`}
+              size={24}
+            />
           ),
         }}
       />
@@ -75,7 +78,7 @@ function NavigationBar() {
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
-            <LFIcon icon={`${focused ? 'cart-b' : 'cart'}`} size={24} />
+            <LFIcon.Icon icon={`${focused ? 'cart-b' : 'cart'}`} size={24} />
           ),
         }}
       />
@@ -85,7 +88,7 @@ function NavigationBar() {
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
-            <LFIcon icon={`${focused ? 'offer-b' : 'offer'}`} size={24} />
+            <LFIcon.Icon icon={`${focused ? 'offer-b' : 'offer'}`} size={24} />
           ),
         }}
       />
@@ -95,7 +98,7 @@ function NavigationBar() {
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
-            <LFIcon icon={`${focused ? 'user-b' : 'user'}`} size={24} />
+            <LFIcon.Icon icon={`${focused ? 'user-b' : 'user'}`} size={24} />
           ),
         }}
       />

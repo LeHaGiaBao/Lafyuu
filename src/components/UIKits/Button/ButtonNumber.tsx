@@ -1,7 +1,7 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BackgroundColor, NeutralColor} from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import LFText from '../Text';
 import {LFButtonNumberProps} from '../types';
 
@@ -22,7 +22,7 @@ const LFButtonNumber = (props: LFButtonNumberProps) => {
   return (
     <View style={buttonStyles.button}>
       <TouchableOpacity style={buttonStyles.iconContainer} onPress={minus}>
-        <Icon icon={'minus'} size={16} />
+        <LFIcon.Icon icon={'minus'} size={16} />
       </TouchableOpacity>
       <View style={buttonStyles.numberContainer}>
         <LFText.Text typo="CaptionLargeRegular" color={NeutralColor.DarkColor}>
@@ -30,7 +30,7 @@ const LFButtonNumber = (props: LFButtonNumberProps) => {
         </LFText.Text>
       </View>
       <TouchableOpacity style={buttonStyles.iconContainer} onPress={plus}>
-        <Icon icon={'plus-i'} size={16} />
+        <LFIcon.Icon icon={'plus-i'} size={16} />
       </TouchableOpacity>
     </View>
   );

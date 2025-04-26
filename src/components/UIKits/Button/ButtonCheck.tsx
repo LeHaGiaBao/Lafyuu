@@ -2,7 +2,7 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import LFText from '../Text';
 import {LFButtonCheckProps} from '../types';
 
@@ -37,7 +37,7 @@ const LFButtonCheck = (props: LFButtonCheckProps) => {
       {...rest}>
       {props.icon ? (
         <>
-          <Icon icon={`${props.icon}`} size={16} />
+          <LFIcon.Icon icon={`${props.icon}`} size={16} />
           <LFText.Text
             typo={isCheck ? 'CaptionLargeBold' : 'CaptionLargeRegular'}
             color={isCheck ? PrimaryColor.BlueColor : NeutralColor.GreyColor}>

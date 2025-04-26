@@ -5,4 +5,7 @@ export const Routes = {
   cartScreen: 'cart_screen',
   offerScreen: 'offer_screen',
   accountScreen: 'account_screen',
+
+  loginScreen: 'login_screen',
+  registerScreen: 'register_screen',
 };

@@ -1,7 +1,8 @@
 import React, {memo, useCallback} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import RootNavigator from './RootNavigator';
 import BootSplash from 'react-native-bootsplash';
+import AuthNavigator from './AuthNavigator';
+import RootNavigator from './RootNavigator';
 
 function MainRoutes() {
   const onReady = useCallback(() => {
@@ -10,7 +11,7 @@ function MainRoutes() {
 
   return (
     <NavigationContainer onReady={onReady}>
-      <RootNavigator />
+      {true ? <AuthNavigator /> : <RootNavigator />}
     </NavigationContainer>
   );
 }

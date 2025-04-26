@@ -8,7 +8,7 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import Icon from '../Icon/Icon';
+import LFIcon from '../Icon';
 import {LFSearchInputProps} from '../types';
 
 const LFSearchInput = (props: LFSearchInputProps) => {
@@ -35,7 +35,7 @@ const LFSearchInput = (props: LFSearchInputProps) => {
               height: isActive ? 44 : 42,
             },
           ]}>
-          <Icon icon={'search-b'} size={16} />
+          <LFIcon.Icon icon={'search-b'} size={16} />
           <TextInput
             autoCapitalize="none"
             value={textValue}
@@ -57,7 +57,7 @@ const LFSearchInput = (props: LFSearchInputProps) => {
           />
           {textValue !== '' && isActive && (
             <TouchableOpacity onPress={clearTextValue}>
-              <Icon icon={'x'} size={20} />
+              <LFIcon.Icon icon={'x'} size={20} />
             </TouchableOpacity>
           )}
         </View>
@@ -73,7 +73,7 @@ const LFSearchInput = (props: LFSearchInputProps) => {
             },
           ]}
           onPress={navToSearch}>
-          <Icon icon={'search-b'} size={16} />
+          <LFIcon.Icon icon={'search-b'} size={16} />
           <TextInput
             autoCapitalize="none"
             value={textValue}

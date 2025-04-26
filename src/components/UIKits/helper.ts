@@ -1,5 +1,5 @@
-import {InputType, TypoType} from './types';
 import {FontFamily, FontSize, LineHeight} from '@constants';
+import {InputType, RatingType, TypoType} from './types';
 
 export const generateTextStyles = (typo: TypoType) => {
   let textSize: number = FontSize.FontSize10;
@@ -163,5 +163,30 @@ export const generateInputIcon = (type?: InputType, isFocus?: boolean) => {
 
   return {
     icon,
+  };
+};
+
+export const generateRatingStarSize = (ratingType?: RatingType) => {
+  let size = 12;
+  let gap = 2;
+
+  switch (ratingType) {
+    case 'Small':
+      size = 12;
+      gap = 2;
+      break;
+    case 'Medium':
+      size = 16;
+      gap = 4;
+      break;
+    case 'Big':
+      size = 32;
+      gap = 16;
+      break;
+  }
+
+  return {
+    size,
+    gap,
   };
 };

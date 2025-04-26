@@ -6,6 +6,7 @@ import {
   TextProps,
   TextStyle,
   TouchableOpacityProps,
+  ViewProps,
 } from 'react-native';
 
 export type TypoType =
@@ -38,6 +39,8 @@ export type InputType =
   | 'Account'
   | 'Phone'
   | 'Search';
+
+export type RatingType = 'Small' | 'Medium' | 'Big';
 
 export interface LFButtonProps extends ButtonProps, TouchableOpacityProps {
   size: 'Large' | 'Small';
@@ -76,4 +79,14 @@ export interface LFDatePickerProps {
   label?: string;
   value: Date | null;
   onChange: (date: Date) => void;
+}
+
+export interface LFLineProps extends ViewProps, PropsWithChildren {
+  color?: ColorValue;
+}
+
+export interface LFRatingProps extends ViewProps, PropsWithChildren {
+  ratingType?: RatingType;
+  rating: number;
+  canChange?: boolean;
 }

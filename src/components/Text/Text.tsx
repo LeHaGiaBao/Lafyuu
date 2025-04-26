@@ -12,6 +12,7 @@ const LFText = (props: LFTextProps) => {
     color = NeutralColor.GreyColor,
     numberOfLines = 0,
     styles,
+    textAlign = 'auto',
     ...rest
   } = props;
 
@@ -28,6 +29,7 @@ const LFText = (props: LFTextProps) => {
           lineHeight: textSize * textLineHeight,
           textDecorationLine:
             typo === 'CaptionNormalRegularLine' ? 'line-through' : 'none',
+          textAlign: textAlign,
         },
         styles,
       ]}
@@ -41,6 +43,7 @@ const LFText = (props: LFTextProps) => {
 const textStyles = StyleSheet.create({
   textStyle: {
     letterSpacing: 0.5,
+    textAlign: 'auto',
   },
 });
 

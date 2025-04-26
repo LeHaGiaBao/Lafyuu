@@ -64,6 +64,7 @@ export interface LFTextProps extends TextProps, PropsWithChildren {
   color?: ColorValue;
   numberOfLines?: number;
   styles?: TextStyle;
+  textAlign?: 'auto' | 'center';
 }
 
 export interface LFInputProps extends TextInputProps, PropsWithChildren {
@@ -89,4 +90,9 @@ export interface LFRatingProps extends ViewProps, PropsWithChildren {
   ratingType?: RatingType;
   rating: number;
   canChange?: boolean;
+}
+
+export interface LFCategoryItemProps {
+  name: string;
+  icon: string;
 }

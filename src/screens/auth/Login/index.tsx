@@ -2,7 +2,7 @@ import React, {memo, useCallback} from 'react';
 import {KeyboardAvoidingView, TouchableOpacity, View} from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {LFButton, LFForm, LFIcon, LFText} from '@components/UIKits';
+import {LFButton, LFForm, LFIcon, LFText} from '@components';
 import {Devices, NeutralColor, PrimaryColor} from '@constants';
 import {useLFNavigation} from '@hooks/core';
 import {Routes} from '@routes/routes';

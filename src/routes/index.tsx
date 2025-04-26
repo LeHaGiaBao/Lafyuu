@@ -11,7 +11,7 @@ function MainRoutes() {
 
   return (
     <NavigationContainer onReady={onReady}>
-      {true ? <AuthNavigator /> : <RootNavigator />}
+      {false ? <AuthNavigator /> : <RootNavigator />}
     </NavigationContainer>
   );
 }

@@ -8,15 +8,21 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
+import {useLFNavigation} from '@hooks/core';
+import {Routes} from '@routes/routes';
 import LFIcon from '../Icon';
+import LFText from '../Text';
 import {LFSearchInputProps} from '../types';
 
 const LFSearchInput = (props: LFSearchInputProps) => {
-  const {value = '', isActive, ...rest} = props;
+  const nav = useLFNavigation();
+  const {value = '', isActive, placeholder, ...rest} = props;
   const [textValue, setTextValue] = useState(value);
   const [focus, setFocus] = useState(false);
 
-  const navToSearch = useCallback(() => {}, []);
+  const navToSearch = useCallback(() => {
+    nav.navigate(Routes.appScreen);
+  }, [nav]);
 
   const clearTextValue = useCallback(() => {
     setTextValue('');
@@ -64,7 +70,7 @@ const LFSearchInput = (props: LFSearchInputProps) => {
       ) : (
         <TouchableOpacity
           style={[
-            inputStyles.input,
+            inputStyles.inputNotActive,
             {
               borderColor: focus
                 ? PrimaryColor.BlueColor
@@ -74,25 +80,9 @@ const LFSearchInput = (props: LFSearchInputProps) => {
           ]}
           onPress={navToSearch}>
           <LFIcon.Icon icon={'search-b'} size={16} />
-          <TextInput
-            autoCapitalize="none"
-            value={textValue}
-            onChangeText={val => setTextValue(val)}
-            style={[
-              inputStyles.placeholderText,
-              {
-                fontFamily:
-                  textValue === ''
-                    ? FontFamily.FontRegular
-                    : FontFamily.FontBold,
-                height: 42,
-                width: '100%',
-              },
-            ]}
-            onFocus={() => setFocus(true)}
-            onBlur={() => setFocus(false)}
-            {...rest}
-          />
+          <LFText.Text typo="FormNormal" style={inputStyles.placeholderText}>
+            {placeholder}
+          </LFText.Text>
         </TouchableOpacity>
       )}
     </>
@@ -104,6 +94,17 @@ const inputStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: 8,
+    width: '100%',
+    paddingHorizontal: 16,
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: BackgroundColor.WhiteColor,
+  },
+  inputNotActive: {
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
     width: '100%',

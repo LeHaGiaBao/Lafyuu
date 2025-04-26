@@ -1,20 +1,36 @@
 import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import {BackgroundColor} from '@constants';
+import {
+  MAN_FASHION_CATEGORY_LIST,
+  WOMAN_FASHION_CATEGORY_LIST,
+} from '@database';
+import translate from '@translations/i18n';
+import ExploreHeader from './Explore.Header';
+import ExploreCategoryList from './Explore.CategoryList';
 
 function ExploreScreen() {
   return (
-    <View style={styles.homeContainer}>
-      <View />
-    </View>
+    <ScrollView
+      style={styles.exploreContainer}
+      showsVerticalScrollIndicator={false}>
+      <ExploreHeader />
+      <ExploreCategoryList
+        categoryName={translate('resources:man_fashion')}
+        data={MAN_FASHION_CATEGORY_LIST}
+      />
+      <ExploreCategoryList
+        categoryName={translate('resources:woman_fashion')}
+        data={WOMAN_FASHION_CATEGORY_LIST}
+      />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  homeContainer: {
-    flex: 1,
+  exploreContainer: {
+    paddingTop: 77,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 70,
   },
 });
 

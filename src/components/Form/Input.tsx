@@ -1,5 +1,6 @@
 import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
+import {generateInputIcon, LFIcon, LFInputProps, LFText} from '@components';
 import {
   BackgroundColor,
   FontFamily,
@@ -7,10 +8,6 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import LFIcon from '../Icon';
-import LFText from '../Text';
-import {generateInputIcon} from '../helper';
-import {LFInputProps} from '../types';
 
 const LFInput = (props: LFInputProps) => {
   const {value = '', onChangeText, type, errorText, ...rest} = props;

@@ -108,8 +108,13 @@ export interface LFNavigationItemProps
   navigationParam?: any;
   icon?: string;
   rightNode?: JSX.Element;
+  numOfNotification?: number;
 }
 
 export interface LFNavigationBackProps extends LFNavigationProps {
   rightNode?: JSX.Element;
+}
+
+export interface LFNotificationMarkProps {
+  number?: number;
 }

@@ -13,4 +13,9 @@ export const Routes = {
   myOrder: 'my_order',
   myAddress: 'my_address',
   myPayment: 'my_payment',
+
+  notificationList: 'notification_list',
+  notificationOffer: 'notification_offer',
+  notificationFeed: 'notification_feed',
+  notificationActivity: 'notification_activity',
 };

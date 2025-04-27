@@ -1,5 +1,6 @@
 import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
+import {LFInputProps, LFText} from '@components';
 import {
   BackgroundColor,
   FontFamily,
@@ -8,8 +9,6 @@ import {
   PrimaryColor,
 } from '@constants';
 import translate from '@translations/i18n';
-import LFText from '../Text';
-import {LFInputProps} from '../types';
 
 const LFCuponInput = (props: LFInputProps) => {
   const {value = '', errorText, ...rest} = props;

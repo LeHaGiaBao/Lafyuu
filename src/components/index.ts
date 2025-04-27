@@ -9,8 +9,8 @@ export {default as LFText} from './Text';
 // Components
 export {default as LFCategory} from './Category';
 export {default as LFNavigation} from './Navigation';
+export {default as LFNotification} from './Notification';
 
-// Helper
+// Utils
 export * from './helper';
-// Types
 export * from './types';

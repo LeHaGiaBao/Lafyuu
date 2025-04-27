@@ -1,5 +1,6 @@
 import React, {memo, useState} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
+import {LFInputProps} from '@components';
 import {
   BackgroundColor,
   FontFamily,
@@ -7,7 +8,6 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import {LFInputProps} from '../types';
 
 const LFTextArea = (props: LFInputProps) => {
   const {value = '', ...rest} = props;

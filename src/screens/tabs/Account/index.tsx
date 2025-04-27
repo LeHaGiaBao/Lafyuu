@@ -1,9 +1,9 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import {BackgroundColor} from '@constants';
 import {LFNavigation, LFNavigationItemProps} from '@components';
-import translate from '@translations/i18n';
+import {BackgroundColor} from '@constants';
 import {ACCOUNT_LIST_ITEM} from '@database';
+import translate from '@translations/i18n';
 
 function AccountScreen() {
   const keyExtractor = useCallback(

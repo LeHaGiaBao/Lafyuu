@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {BackgroundColor} from '@constants';
 import {LFNavigation} from '@components';
+import {BackgroundColor} from '@constants';
 import translate from '@translations/i18n';
 
 function CartScreen() {

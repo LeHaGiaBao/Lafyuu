@@ -7,6 +7,7 @@ import Explore from '@screens/tabs/Explore';
 import Cart from '@screens/tabs/Cart';
 import Offer from '@screens/tabs/Offer';
 import Account from '@screens/tabs/Account';
+import NotificationList from '@screens/main/Notification/NotificationList';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.accountScreen}
         component={Account}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.notificationList}
+        component={NotificationList}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

@@ -1,8 +1,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
+import {LFButtonAddProps, LFIcon} from '@components';
 import {BackgroundColor, NeutralColor} from '@constants';
-import LFIcon from '../Icon';
-import {LFButtonAddProps} from '../types';
 
 const LFButtonAdd = (props: LFButtonAddProps) => {
   const {style, ...rest} = props;

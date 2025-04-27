@@ -1,15 +1,14 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {LFLine, LFText} from '@components';
+import {LFLine, LFNavigationProps, LFText} from '@components';
 import {NeutralColor} from '@constants';
-import {LFNavigationProps} from '../types';
 
 const LFHeader = (props: LFNavigationProps) => {
   const {name} = props;
 
   return (
     <>
-      <View style={styles.navContainer}>
+      <View style={headerStyles.navContainer}>
         <LFText.Text typo="H4" color={NeutralColor.DarkColor}>
           {name}
         </LFText.Text>
@@ -19,7 +18,7 @@ const LFHeader = (props: LFNavigationProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const headerStyles = StyleSheet.create({
   navContainer: {
     display: 'flex',
     justifyContent: 'space-between',

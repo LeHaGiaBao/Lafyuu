@@ -8,14 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {
-  daysOfWeek,
-  formatDate,
-  getDaysInMonth,
-  getFirstDayOfMonth,
-  getMonthYearHeader,
-} from '@utils/datetime';
-import {LFDatePickerProps} from '../types';
+import {LFDatePickerProps, LFIcon, LFText} from '@components';
 import {
   BackgroundColor,
   FontFamily,
@@ -24,8 +17,13 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import LFIcon from '../Icon';
-import LFText from '../Text';
+import {
+  daysOfWeek,
+  formatDate,
+  getDaysInMonth,
+  getFirstDayOfMonth,
+  getMonthYearHeader,
+} from '@utils';
 
 const LFDatePicker = (props: LFDatePickerProps) => {
   const {value, onChange} = props;

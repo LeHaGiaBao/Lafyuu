@@ -1,9 +1,8 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {LFIcon, LFLine, LFText} from '@components';
+import {LFIcon, LFLine, LFNavigationBackProps, LFText} from '@components';
 import {NeutralColor} from '@constants';
-import {LFNavigationBackProps} from '../types';
-import {useLFNavigation} from '@hooks/core';
+import {useLFNavigation} from '@hooks';
 
 const LFHeaderCanGoBack = (props: LFNavigationBackProps) => {
   const {name, rightNode} = props;
@@ -17,8 +16,8 @@ const LFHeaderCanGoBack = (props: LFNavigationBackProps) => {
 
   return (
     <>
-      <View style={styles.navContainer}>
-        <View style={styles.leftNode}>
+      <View style={headerStyles.navContainer}>
+        <View style={headerStyles.leftNode}>
           <TouchableOpacity onPress={handleGoBack}>
             <LFIcon.Icon icon={'left'} size={24} />
           </TouchableOpacity>
@@ -33,7 +32,7 @@ const LFHeaderCanGoBack = (props: LFNavigationBackProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const headerStyles = StyleSheet.create({
   navContainer: {
     display: 'flex',
     justifyContent: 'space-between',

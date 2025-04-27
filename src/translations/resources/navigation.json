@@ -10,6 +10,12 @@
       "order": "Order",
       "address": "Address",
       "payment": "Payment"
+    },
+    "notification": "Notification",
+    "notification_list": {
+      "offer": "Offer",
+      "feed": "Feed",
+      "activity": "Activity"
     }
   }
 }

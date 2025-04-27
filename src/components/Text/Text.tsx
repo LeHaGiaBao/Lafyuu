@@ -1,9 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
+import {generateTextStyles, LFTextProps} from '@components';
 import {NeutralColor} from '@constants';
-import {generateTextStyles} from '../helper';
-import {LFTextProps} from '../types';
 
 const LFText = (props: LFTextProps) => {
   const {

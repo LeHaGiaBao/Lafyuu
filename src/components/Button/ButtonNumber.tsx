@@ -1,9 +1,7 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {LFButtonNumberProps, LFIcon, LFText} from '@components';
 import {BackgroundColor, NeutralColor} from '@constants';
-import LFIcon from '../Icon';
-import LFText from '../Text';
-import {LFButtonNumberProps} from '../types';
 
 const LFButtonNumber = (props: LFButtonNumberProps) => {
   const {number = 1} = props;

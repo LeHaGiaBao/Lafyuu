@@ -5,10 +5,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {LFIcon, LFText} from '@components';
+import {LFIcon, LFNavigationItemProps, LFText} from '@components';
 import {BackgroundColor, NeutralColor} from '@constants';
-import {LFNavigationItemProps} from '../types';
-import {useLFNavigation} from '@hooks/core';
+import {useLFNavigation} from '@hooks';
 
 const LFNavigationItem = (props: LFNavigationItemProps) => {
   const {
@@ -53,12 +52,12 @@ const LFNavigationItem = (props: LFNavigationItemProps) => {
 
   return (
     <TouchableOpacity
-      style={[styles.navContainer, {backgroundColor: backgroundColor}]}
+      style={[itemStyles.navContainer, {backgroundColor: backgroundColor}]}
       onPress={e => handleOnPress(e)}
       onPressIn={e => handlePressIn(e)}
       onPressOut={e => handlePressOut(e)}
       {...rest}>
-      <View style={styles.leftNode}>
+      <View style={itemStyles.leftNode}>
         <LFIcon.Icon icon={icon} size={24} />
         <LFText.Text typo="H6" color={NeutralColor.DarkColor}>
           {name}
@@ -69,7 +68,7 @@ const LFNavigationItem = (props: LFNavigationItemProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const itemStyles = StyleSheet.create({
   navContainer: {
     display: 'flex',
     justifyContent: 'space-between',

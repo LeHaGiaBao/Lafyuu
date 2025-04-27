@@ -4,10 +4,10 @@ import {Controller, useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {LFButton, LFForm, LFIcon, LFText} from '@components';
 import {Devices, NeutralColor, PrimaryColor} from '@constants';
-import {useLFNavigation} from '@hooks/core';
+import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
-import {registerSchema} from '@utils/validation';
+import {registerSchema} from '@utils';
 import {styles} from './styles';
 
 interface RegisterFormInputs {

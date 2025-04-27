@@ -1,9 +1,8 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {LFIcon, LFText} from '@components';
+import {LFCategoryItemProps, LFIcon, LFText} from '@components';
 import {NeutralColor} from '@constants';
-import {useLFNavigation} from '@hooks/core';
-import {LFCategoryItemProps} from '../types';
+import {useLFNavigation} from '@hooks';
 
 const LFCategoryItem = (props: LFCategoryItemProps) => {
   const {name, icon} = props;

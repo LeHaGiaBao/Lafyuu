@@ -1,8 +1,6 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import LFIcon from '../Icon';
-import {generateRatingStarSize} from '../helper';
-import {LFRatingProps} from '../types';
+import {generateRatingStarSize, LFIcon, LFRatingProps} from '@components';
 
 const MAX_RATING = 5;
 

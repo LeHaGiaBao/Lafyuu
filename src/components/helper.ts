@@ -1,5 +1,5 @@
+import {InputType, RatingType, TypoType} from '@components';
 import {FontFamily, FontSize, LineHeight} from '@constants';
-import {InputType, RatingType, TypoType} from './types';
 
 export const generateTextStyles = (typo: TypoType) => {
   let textSize: number = FontSize.FontSize10;

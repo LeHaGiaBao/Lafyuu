@@ -1,9 +1,17 @@
-import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {LFForm, LFIcon, LFLine} from '@components';
+import React, {memo, useCallback} from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {LFForm, LFIcon, LFLine, LFNotification} from '@components';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
 function Header() {
+  const nav = useLFNavigation();
+
+  const goToNotificationList = useCallback(() => {
+    nav.navigate(Routes.notificationList);
+  }, [nav]);
+
   return (
     <>
       <View style={styles.navContainer}>
@@ -15,7 +23,12 @@ function Header() {
         </View>
         <View style={styles.iconContainer}>
           <LFIcon.Icon icon={'love'} size={24} />
-          <LFIcon.Icon icon={'notification'} size={24} />
+          <TouchableOpacity onPress={goToNotificationList}>
+            <View style={styles.dot}>
+              <LFNotification.Mark />
+            </View>
+            <LFIcon.Icon icon={'notification'} size={24} />
+          </TouchableOpacity>
         </View>
       </View>
       <LFLine.Line />
@@ -41,6 +54,12 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     flexDirection: 'row',
     gap: 24,
+  },
+  dot: {
+    position: 'absolute',
+    top: 1,
+    right: 2,
+    zIndex: 10,
   },
 });
 

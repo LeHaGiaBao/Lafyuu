@@ -8,7 +8,7 @@ import {
   NeutralColor,
   PrimaryColor,
 } from '@constants';
-import {useLFNavigation} from '@hooks/core';
+import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
 import LFIcon from '../Icon';
 import LFText from '../Text';

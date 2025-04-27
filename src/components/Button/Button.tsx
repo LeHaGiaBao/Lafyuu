@@ -1,10 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {LFButtonProps, LFIcon, LFText} from '@components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
-import LFIcon from '../Icon';
-import LFText from '../Text';
-import {LFButtonProps} from '../types';
 
 const LFButton = (props: LFButtonProps) => {
   const {title, size = 'Large', type = 'Primary', icon, style, ...rest} = props;

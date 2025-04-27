@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {LFLineProps} from '@components';
 import {NeutralColor} from '@constants';
-import {LFLineProps} from '../types';
 
 const LFLine = (props: LFLineProps) => {
   const {color = NeutralColor.LightColor, ...rest} = props;

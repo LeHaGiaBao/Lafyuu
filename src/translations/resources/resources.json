@@ -25,6 +25,18 @@
     "sign_up": "Sign Up",
     "have_account": "have a account? ",
     "search_product": "Search Product",
-    "apply": "Apply"
+    "apply": "Apply",
+    "man_fashion": "Man Fashion",
+    "woman_fashion": "Woman Fashion",
+    "your_cart": "Your Cart",
+    "last_name": "Last Name",
+    "first_name": "First Name",
+    "save": "Save",
+    "your_birthday": "Your Birhday",
+    "change_email": "Change Email",
+    "change_email_confirm": "We Will Send verification to your New Email",
+    "old_password": "Old Password",
+    "new_password": "New Password",
+    "new_password_again": "New Password Again"
   }
 }

@@ -3,7 +3,7 @@
 import React, {memo} from 'react';
 import {Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {LFIcon} from '@components/UIKits';
+import {LFIcon} from '@components';
 import {
   FontFamily,
   FontSize,

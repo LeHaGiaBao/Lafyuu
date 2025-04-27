@@ -1,23 +1,34 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {FlashList} from '@shopify/flash-list';
 import {BackgroundColor} from '@constants';
+import HomeHeader from './Home.Header';
 
 function HomeScreen() {
+  const renderItem = useCallback(() => {
+    return <View />;
+  }, []);
+
   return (
-    <View style={styles.homeContainer}>
-      <View />
-    </View>
+    <FlashList
+      data={[]}
+      renderItem={renderItem}
+      estimatedItemSize={100}
+      contentContainerStyle={styles.homeContainer}
+      showsVerticalScrollIndicator={false}
+      ListHeaderComponent={
+        <>
+          <HomeHeader />
+        </>
+      }
+    />
   );
 }
 
 const styles = StyleSheet.create({
   homeContainer: {
-    flex: 1,
+    paddingTop: 77,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingHorizontal: 16,
-    paddingTop: 70,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

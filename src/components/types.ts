@@ -110,6 +110,7 @@ export interface LFNavigationItemProps
   navigationParam?: any;
   icon?: string;
   rightNode?: JSX.Element;
+  rightContent?: string;
   numOfNotification?: number;
 }
 

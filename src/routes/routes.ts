@@ -10,9 +10,20 @@ export const Routes = {
   registerScreen: 'register_screen',
 
   myProfile: 'my_profile',
+  myName: 'my_name',
+  myGender: 'my_gender',
+  myBirthday: 'my_birthday',
+  myEmail: 'my_email',
+  myPhone: 'my_phone',
+  myPassword: 'my_password',
+
   myOrder: 'my_order',
   myAddress: 'my_address',
+
   myPayment: 'my_payment',
+  myCard: 'my_payment_card',
+  myPaypal: 'my_paypal',
+  myBank: 'my_bank',
 
   notificationList: 'notification_list',
   notificationOffer: 'notification_offer',

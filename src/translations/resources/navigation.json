@@ -16,6 +16,19 @@
       "offer": "Offer",
       "feed": "Feed",
       "activity": "Activity"
+    },
+    "my_profile": {
+      "name": "Name",
+      "gender": "Gender",
+      "birthday": "Birthday",
+      "email": "Email",
+      "phone": "Phone Number",
+      "password": "Change Password"
+    },
+    "my_payment": {
+      "card": "Credit Card Or Debit",
+      "paypal": "Paypal",
+      "bank": "Bank Transfer"
     }
   }
 }

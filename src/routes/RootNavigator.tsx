@@ -11,6 +11,13 @@ import NotificationList from '@screens/main/Notification/NotificationList';
 import NotificationOffer from '@screens/main/Notification/NotificationOffer';
 import NotificationFeed from '@screens/main/Notification/NotificationFeed';
 import NotificationActivity from '@screens/main/Notification/NotificationActivity';
+import MyProfile from '@screens/main/Profile/MyProfile';
+import MyName from '@screens/main/Profile/MyName';
+import MyBirthday from '@screens/main/Profile/MyBirthday';
+import MyEmail from '@screens/main/Profile/MyEmail';
+import MyPhone from '@screens/main/Profile/MyPhone';
+import MyPassword from '@screens/main/Profile/MyPassword';
+import MyPayment from '@screens/main/Payment/MyPayment';
 
 const Stack = createNativeStackNavigator();
 
@@ -65,6 +72,41 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.notificationActivity}
         component={NotificationActivity}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myProfile}
+        component={MyProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myName}
+        component={MyName}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myBirthday}
+        component={MyBirthday}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myEmail}
+        component={MyEmail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myPhone}
+        component={MyPhone}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myPassword}
+        component={MyPassword}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myPayment}
+        component={MyPayment}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

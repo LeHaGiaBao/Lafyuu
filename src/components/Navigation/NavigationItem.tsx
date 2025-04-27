@@ -28,7 +28,7 @@ const LFNavigationItem = (props: LFNavigationItemProps) => {
 
   const handleOnPress = useCallback(
     (event: GestureResponderEvent) => {
-      nav.navigate(route, {...navigationParam});
+      nav.navigate(route, navigationParam);
       onPress?.(event);
     },
     [nav, navigationParam, onPress, route],

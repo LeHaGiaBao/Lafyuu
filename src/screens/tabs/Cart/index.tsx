@@ -1,20 +1,22 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {BackgroundColor} from '@constants';
+import {LFNavigation} from '@components';
+import translate from '@translations/i18n';
 
 function CartScreen() {
   return (
-    <View style={styles.homeContainer}>
-      <View />
+    <View style={styles.cartContainer}>
+      <LFNavigation.Header name={translate('resources:your_cart')} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  homeContainer: {
+  cartContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 70,
+    paddingTop: 77,
   },
 });
 

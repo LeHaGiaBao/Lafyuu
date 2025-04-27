@@ -5,7 +5,7 @@ import {NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks/core';
 import {LFCategoryItemProps} from '../types';
 
-const CategoryItem = (props: LFCategoryItemProps) => {
+const LFCategoryItem = (props: LFCategoryItemProps) => {
   const {name, icon} = props;
   const nav = useLFNavigation();
 
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(CategoryItem);
+export default memo(LFCategoryItem);

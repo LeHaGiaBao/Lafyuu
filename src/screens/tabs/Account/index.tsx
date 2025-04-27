@@ -1,20 +1,49 @@
-import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {FlatList, StyleSheet} from 'react-native';
 import {BackgroundColor} from '@constants';
+import {LFNavigation, LFNavigationItemProps} from '@components';
+import translate from '@translations/i18n';
+import {ACCOUNT_LIST_ITEM} from '@database';
 
 function AccountScreen() {
+  const keyExtractor = useCallback(
+    (item: LFNavigationItemProps) => item.route,
+    [],
+  );
+
+  const renderItem = useCallback(({item}: {item: LFNavigationItemProps}) => {
+    const {route, name, icon, ...rest} = item;
+
+    return (
+      <LFNavigation.NavigationItem
+        route={route}
+        name={name}
+        icon={icon}
+        {...rest}
+      />
+    );
+  }, []);
+
   return (
-    <View style={styles.homeContainer}>
-      <View />
-    </View>
+    <FlatList
+      data={ACCOUNT_LIST_ITEM}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      style={styles.accountContainer}
+      ListHeaderComponent={
+        <>
+          <LFNavigation.Header name={translate('navigation:account')} />
+        </>
+      }
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  homeContainer: {
+  accountContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 70,
+    paddingTop: 77,
   },
 });
 

@@ -1,8 +1,7 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import {LFCategory, LFText} from '@components';
+import {LFCategory, LFCategoryItemProps, LFText} from '@components';
 import {BackgroundColor, Devices, NeutralColor} from '@constants';
-import {LFCategoryItemProps} from '@components/types';
 
 interface CategoryListProps {
   categoryName: string;

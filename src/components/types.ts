@@ -96,3 +96,20 @@ export interface LFCategoryItemProps {
   name: string;
   icon: string;
 }
+
+export interface LFNavigationProps {
+  name: string;
+}
+
+export interface LFNavigationItemProps
+  extends LFNavigationProps,
+    TouchableOpacityProps {
+  route: string;
+  navigationParam?: any;
+  icon?: string;
+  rightNode?: JSX.Element;
+}
+
+export interface LFNavigationBackProps extends LFNavigationProps {
+  rightNode?: JSX.Element;
+}

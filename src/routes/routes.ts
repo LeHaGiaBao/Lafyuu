@@ -8,4 +8,9 @@ export const Routes = {
 
   loginScreen: 'login_screen',
   registerScreen: 'register_screen',
+
+  myProfile: 'my_profile',
+  myOrder: 'my_order',
+  myAddress: 'my_address',
+  myPayment: 'my_payment',
 };

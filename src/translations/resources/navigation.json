@@ -4,6 +4,12 @@
     "explore": "Explore",
     "cart": "Cart",
     "offer": "Offer",
-    "account": "Account"
+    "account": "Account",
+    "account_list": {
+      "profile": "Profile",
+      "order": "Order",
+      "address": "Address",
+      "payment": "Payment"
+    }
   }
 }

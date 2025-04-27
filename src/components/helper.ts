@@ -33,7 +33,7 @@ export const generateTextStyles = (typo: TypoType) => {
       textLineHeight = LineHeight.LineHeight150;
       break;
     case 'H6':
-      textSize = FontSize.FontSize10;
+      textSize = FontSize.FontSize12;
       textFamily = FontFamily.FontBold;
       textLineHeight = LineHeight.LineHeight150;
       break;

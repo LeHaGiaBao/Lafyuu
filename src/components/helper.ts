@@ -1,5 +1,5 @@
-import {InputType, RatingType, TypoType} from '@components';
-import {FontFamily, FontSize, LineHeight} from '@constants';
+import {InputType, NotificationType, RatingType, TypoType} from '@components';
+import {Devices, FontFamily, FontSize, LineHeight} from '@constants';
 
 export const generateTextStyles = (typo: TypoType) => {
   let textSize: number = FontSize.FontSize10;
@@ -188,5 +188,37 @@ export const generateRatingStarSize = (ratingType?: RatingType) => {
   return {
     size,
     gap,
+  };
+};
+
+export const generateNotificationIcon = (
+  notificationType: NotificationType,
+) => {
+  let icon = '';
+  let leftWidth = 0;
+  let rightWidth = 0;
+
+  switch (notificationType) {
+    case 'Offer':
+      icon = 'offer-b';
+      leftWidth = 24;
+      rightWidth = Devices.width - 72;
+      break;
+    case 'Feed':
+      icon = '';
+      leftWidth = 48;
+      rightWidth = Devices.width - 96;
+      break;
+    case 'Activity':
+      icon = 'transaction-b';
+      leftWidth = 24;
+      rightWidth = Devices.width - 72;
+      break;
+  }
+
+  return {
+    icon,
+    leftWidth,
+    rightWidth,
   };
 };

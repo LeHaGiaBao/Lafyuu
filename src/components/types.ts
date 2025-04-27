@@ -42,6 +42,8 @@ export type InputType =
 
 export type RatingType = 'Small' | 'Medium' | 'Big';
 
+export type NotificationType = 'Offer' | 'Feed' | 'Activity';
+
 export interface LFButtonProps extends ButtonProps, TouchableOpacityProps {
   size: 'Large' | 'Small';
   type: 'Primary' | 'Secondary';
@@ -117,4 +119,12 @@ export interface LFNavigationBackProps extends LFNavigationProps {
 
 export interface LFNotificationMarkProps {
   number?: number;
+}
+
+export interface LFNotificationItemProps extends ViewProps, PropsWithChildren {
+  type: NotificationType;
+  title: string;
+  content: string;
+  time: string;
+  image?: string;
 }

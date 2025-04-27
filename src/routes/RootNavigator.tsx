@@ -8,6 +8,9 @@ import Cart from '@screens/tabs/Cart';
 import Offer from '@screens/tabs/Offer';
 import Account from '@screens/tabs/Account';
 import NotificationList from '@screens/main/Notification/NotificationList';
+import NotificationOffer from '@screens/main/Notification/NotificationOffer';
+import NotificationFeed from '@screens/main/Notification/NotificationFeed';
+import NotificationActivity from '@screens/main/Notification/NotificationActivity';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +50,21 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.notificationList}
         component={NotificationList}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.notificationOffer}
+        component={NotificationOffer}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.notificationFeed}
+        component={NotificationFeed}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.notificationActivity}
+        component={NotificationActivity}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

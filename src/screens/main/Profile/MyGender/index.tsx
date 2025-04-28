@@ -1,7 +1,7 @@
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
 import {LFButton, LFForm, LFNavigation, LFText} from '@components';
-import {BackgroundColor, NeutralColor} from '@constants';
+import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {GENDER} from '@database';
 import {useLFNavigation, useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
@@ -16,18 +16,24 @@ function MyGender() {
   }, [nav]);
 
   return (
-    <View style={styles.myGenderContainer}>
-      <LFNavigation.HeaderCanGoBack
-        name={translate('navigation:my_profile:gender')}
-      />
+    <KeyboardAvoidingView
+      behavior={Devices.IS_IOS ? 'padding' : 'height'}
+      style={styles.myGenderContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainerStyle}
+        showsVerticalScrollIndicator={false}>
+        <LFNavigation.HeaderCanGoBack
+          name={translate('navigation:my_profile:gender')}
+        />
 
-      <View style={styles.form}>
-        <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-          {translate('resources:choose_gender')}
-        </LFText.Text>
+        <View style={styles.form}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:choose_gender')}
+          </LFText.Text>
 
-        <LFForm.Dropdown chooseData={gender} dropdownData={GENDER} />
-      </View>
+          <LFForm.Dropdown chooseData={gender} dropdownData={GENDER} />
+        </View>
+      </ScrollView>
 
       <View style={styles.buttonContainer}>
         <LFButton.Button
@@ -37,7 +43,7 @@ function MyGender() {
           size="Large"
         />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
   myGenderContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   form: {
     display: 'flex',
@@ -57,7 +63,10 @@ const styles = StyleSheet.create({
     margin: 16,
     left: 0,
     right: 0,
-    bottom: 35,
+    bottom: Devices.bottomButton,
+  },
+  contentContainerStyle: {
+    paddingBottom: 100,
   },
 });
 

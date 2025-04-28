@@ -6,7 +6,7 @@ import {
   LFNavigationItemProps,
   LFNotification,
 } from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {NOTIFICATION_LIST_ITEM} from '@database';
 import translate from '@translations/i18n';
 
@@ -57,7 +57,7 @@ function NotificationList() {
 
 const styles = StyleSheet.create({
   notificationContainer: {
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
   rightNode: {

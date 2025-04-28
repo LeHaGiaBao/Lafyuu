@@ -1,7 +1,7 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {LFNavigation, LFNavigationItemProps} from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {ACCOUNT_LIST_ITEM} from '@database';
 import translate from '@translations/i18n';
 
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   accountContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
 });
 

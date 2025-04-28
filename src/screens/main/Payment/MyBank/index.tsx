@@ -1,7 +1,7 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {LFNavigation, LFCardProps, LFCard} from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {MY_CARD_LIST} from '@database';
 import translate from '@translations/i18n';
 
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   myBankContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   header: {
     marginBottom: 8,

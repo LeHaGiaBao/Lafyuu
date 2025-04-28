@@ -1,7 +1,7 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {LFNavigation, LFCardProps, LFCard, LFButton} from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {MY_CARD_LIST} from '@database';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   myCardContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   header: {
     marginBottom: 8,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     margin: 16,
     left: 0,
     right: 0,
-    bottom: 35,
+    bottom: Devices.bottomButton,
   },
 });
 

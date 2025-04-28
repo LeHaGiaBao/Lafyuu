@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {LFNavigation} from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import translate from '@translations/i18n';
 
 function CartScreen() {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   cartContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
 });
 

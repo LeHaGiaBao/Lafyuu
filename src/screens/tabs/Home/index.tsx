@@ -1,7 +1,7 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {FlashList} from '@shopify/flash-list';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import HomeHeader from './Home.Header';
 
 function HomeScreen() {
@@ -27,7 +27,7 @@ function HomeScreen() {
 
 const styles = StyleSheet.create({
   homeContainer: {
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
 });

@@ -1,8 +1,8 @@
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
 import {LFButton, LFForm, LFNavigation, LFText} from '@components';
-import {BackgroundColor, NeutralColor} from '@constants';
+import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {useLFNavigation, useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
 
@@ -26,64 +26,70 @@ function MyPassword() {
   }, [nav]);
 
   return (
-    <View style={styles.myPasswordContainer}>
-      <LFNavigation.HeaderCanGoBack
-        name={translate('navigation:my_profile:password')}
-      />
-      <View style={styles.form}>
-        <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-          {translate('resources:old_password')}
-        </LFText.Text>
-        <Controller
-          control={control}
-          name="oldPassword"
-          render={({field: {onChange, value, onBlur}}) => (
-            <LFForm.Input
-              value={value}
-              placeholder={passwordPlaceholder}
-              type="Password"
-              onChangeText={onChange}
-              onBlur={onBlur}
-            />
-          )}
+    <KeyboardAvoidingView
+      behavior={Devices.IS_IOS ? 'padding' : 'height'}
+      style={styles.myPasswordContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainerStyle}
+        showsVerticalScrollIndicator={false}>
+        <LFNavigation.HeaderCanGoBack
+          name={translate('navigation:my_profile:password')}
         />
-      </View>
-      <View style={styles.form}>
-        <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-          {translate('resources:new_password')}
-        </LFText.Text>
-        <Controller
-          control={control}
-          name="newPassword"
-          render={({field: {onChange, value, onBlur}}) => (
-            <LFForm.Input
-              value={value}
-              placeholder={passwordPlaceholder}
-              type="Password"
-              onChangeText={onChange}
-              onBlur={onBlur}
-            />
-          )}
-        />
-      </View>
-      <View style={styles.form}>
-        <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-          {translate('resources:new_password_again')}
-        </LFText.Text>
-        <Controller
-          control={control}
-          name="newPasswordAgain"
-          render={({field: {onChange, value, onBlur}}) => (
-            <LFForm.Input
-              value={value}
-              placeholder={passwordPlaceholder}
-              type="Password"
-              onChangeText={onChange}
-              onBlur={onBlur}
-            />
-          )}
-        />
-      </View>
+        <View style={styles.form}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:old_password')}
+          </LFText.Text>
+          <Controller
+            control={control}
+            name="oldPassword"
+            render={({field: {onChange, value, onBlur}}) => (
+              <LFForm.Input
+                value={value}
+                placeholder={passwordPlaceholder}
+                type="Password"
+                onChangeText={onChange}
+                onBlur={onBlur}
+              />
+            )}
+          />
+        </View>
+        <View style={styles.form}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:new_password')}
+          </LFText.Text>
+          <Controller
+            control={control}
+            name="newPassword"
+            render={({field: {onChange, value, onBlur}}) => (
+              <LFForm.Input
+                value={value}
+                placeholder={passwordPlaceholder}
+                type="Password"
+                onChangeText={onChange}
+                onBlur={onBlur}
+              />
+            )}
+          />
+        </View>
+        <View style={styles.form}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:new_password_again')}
+          </LFText.Text>
+          <Controller
+            control={control}
+            name="newPasswordAgain"
+            render={({field: {onChange, value, onBlur}}) => (
+              <LFForm.Input
+                value={value}
+                placeholder={passwordPlaceholder}
+                type="Password"
+                onChangeText={onChange}
+                onBlur={onBlur}
+              />
+            )}
+          />
+        </View>
+      </ScrollView>
 
       <View style={styles.buttonContainer}>
         <LFButton.Button
@@ -93,7 +99,7 @@ function MyPassword() {
           size="Large"
         />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -101,7 +107,7 @@ const styles = StyleSheet.create({
   myPasswordContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   form: {
     display: 'flex',
@@ -113,7 +119,10 @@ const styles = StyleSheet.create({
     margin: 16,
     left: 0,
     right: 0,
-    bottom: 35,
+    bottom: Devices.bottomButton,
+  },
+  contentContainerStyle: {
+    paddingBottom: 100,
   },
 });
 

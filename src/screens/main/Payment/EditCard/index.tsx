@@ -1,8 +1,8 @@
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
 import {LFButton, LFCard, LFForm, LFNavigation, LFText} from '@components';
-import {BackgroundColor, NeutralColor} from '@constants';
+import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {useLFNavigation, useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
 
@@ -36,8 +36,12 @@ function EditCard() {
   }, [nav]);
 
   return (
-    <>
-      <View style={styles.editCardContainer}>
+    <KeyboardAvoidingView
+      behavior={Devices.IS_IOS ? 'padding' : 'height'}
+      style={styles.editCardContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainerStyle}
+        showsVerticalScrollIndicator={false}>
         <LFNavigation.HeaderCanGoBack
           name={cardHolder + ' ' + translate('navigation:card')}
         />
@@ -136,17 +140,16 @@ function EditCard() {
             )}
           />
         </View>
-
-        <View style={styles.buttonContainer}>
-          <LFButton.Button
-            onPress={handleSubmit(handleSave)}
-            title={translate('resources:save')}
-            type="Primary"
-            size="Large"
-          />
-        </View>
+      </ScrollView>
+      <View style={styles.buttonContainer}>
+        <LFButton.Button
+          onPress={handleSubmit(handleSave)}
+          title={translate('resources:save')}
+          type="Primary"
+          size="Large"
+        />
       </View>
-    </>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -154,7 +157,7 @@ const styles = StyleSheet.create({
   editCardContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   card: {
     padding: 16,
@@ -178,7 +181,10 @@ const styles = StyleSheet.create({
     margin: 16,
     left: 0,
     right: 0,
-    bottom: 35,
+    bottom: Devices.bottomButton,
+  },
+  contentContainerStyle: {
+    paddingBottom: 100,
   },
 });
 

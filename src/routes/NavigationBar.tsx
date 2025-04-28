@@ -5,6 +5,7 @@ import {Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {LFIcon} from '@components';
 import {
+  Devices,
   FontFamily,
   FontSize,
   LineHeight,
@@ -26,7 +27,7 @@ function NavigationBar() {
       screenOptions={({route}) => ({
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          height: 100,
+          height: Devices.IS_IPHONE_HAS_NOTCH ? 100 : 70,
           paddingTop: 8,
           borderTopWidth: 1,
           borderTopColor: NeutralColor.LightColor,

@@ -1,8 +1,8 @@
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
 import {LFButton, LFForm, LFNavigation, LFText} from '@components';
-import {BackgroundColor, NeutralColor} from '@constants';
+import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks';
 import translate from '@translations/i18n';
 
@@ -25,8 +25,12 @@ function AddNewCard() {
   }, [nav]);
 
   return (
-    <>
-      <View style={styles.myCardContainer}>
+    <KeyboardAvoidingView
+      behavior={Devices.IS_IOS ? 'padding' : 'height'}
+      style={styles.myCardContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainerStyle}
+        showsVerticalScrollIndicator={false}>
         <LFNavigation.HeaderCanGoBack name={translate('navigation:add_card')} />
         <View style={styles.form}>
           <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
@@ -113,17 +117,17 @@ function AddNewCard() {
             )}
           />
         </View>
+      </ScrollView>
 
-        <View style={styles.buttonContainer}>
-          <LFButton.Button
-            onPress={handleSubmit(handleSave)}
-            title={translate('resources:add_card')}
-            type="Primary"
-            size="Large"
-          />
-        </View>
+      <View style={styles.buttonContainer}>
+        <LFButton.Button
+          onPress={handleSubmit(handleSave)}
+          title={translate('resources:add_card')}
+          type="Primary"
+          size="Large"
+        />
       </View>
-    </>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -131,7 +135,7 @@ const styles = StyleSheet.create({
   myCardContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   form: {
     display: 'flex',
@@ -152,7 +156,10 @@ const styles = StyleSheet.create({
     margin: 16,
     left: 0,
     right: 0,
-    bottom: 35,
+    bottom: Devices.bottomButton,
+  },
+  contentContainerStyle: {
+    paddingBottom: 100,
   },
 });
 

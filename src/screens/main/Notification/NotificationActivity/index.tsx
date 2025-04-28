@@ -5,7 +5,7 @@ import {
   LFNotificationItemProps,
   LFNotification,
 } from '@components';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {NOTIFICATION_ACTIVITY_ITEM} from '@database';
 import translate from '@translations/i18n';
 
@@ -43,7 +43,7 @@ function NotificationActivity() {
 
 const styles = StyleSheet.create({
   notificationContainer: {
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
 });

@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import images from '@assets/images';
 import {LFIcon, LFNavigation, LFNavigationItemProps, LFText} from '@components';
-import {BackgroundColor, NeutralColor} from '@constants';
+import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {MY_PROFILE_ITEM} from '@database';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   myProfileContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
   },
   rightNode: {
     display: 'flex',

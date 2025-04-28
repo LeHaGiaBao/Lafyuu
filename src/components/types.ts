@@ -129,3 +129,18 @@ export interface LFNotificationItemProps extends ViewProps, PropsWithChildren {
   time: string;
   image?: string;
 }
+
+export interface LFDropdownProps
+  extends TouchableOpacityProps,
+    PropsWithChildren {
+  chooseData: any;
+  dropdownData: any[];
+}
+
+export interface LFCardProps extends TouchableOpacityProps, PropsWithChildren {
+  cardId?: number;
+  cardNumber: number;
+  cardHolder: string;
+  cardSave: string;
+  backgroundColor?: string;
+}

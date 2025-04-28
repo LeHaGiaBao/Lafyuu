@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
-import {BackgroundColor} from '@constants';
+import {BackgroundColor, Devices} from '@constants';
 import {
   MAN_FASHION_CATEGORY_LIST,
   WOMAN_FASHION_CATEGORY_LIST,
@@ -29,7 +29,7 @@ function ExploreScreen() {
 
 const styles = StyleSheet.create({
   exploreContainer: {
-    paddingTop: 77,
+    paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
 });

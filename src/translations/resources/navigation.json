@@ -29,6 +29,8 @@
       "card": "Credit Card Or Debit",
       "paypal": "Paypal",
       "bank": "Bank Transfer"
-    }
+    },
+    "add_card": "Add Card",
+    "card": "Card"
   }
 }

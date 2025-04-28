@@ -1,23 +1,15 @@
-import React, {memo, useCallback, useState} from 'react';
+import React, {memo, useCallback} from 'react';
 import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
 import {LFButton, LFForm, LFNavigation, LFText} from '@components';
 import {BackgroundColor, Devices, NeutralColor} from '@constants';
+import {GENDER} from '@database';
 import {useLFNavigation, useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
 
-function MyBirthday() {
+function MyGender() {
   const nav = useLFNavigation();
   const params = (useLFNavigationParams() as {navigationParam?: string}) || {};
-  const navigationParam = params?.navigationParam ?? new Date(2000, 12, 12);
-  const [birthday, setBirthday] = useState<Date | null>(
-    navigationParam instanceof Date
-      ? navigationParam
-      : new Date(navigationParam),
-  );
-
-  const handleDateChange = (date: Date) => {
-    setBirthday(date);
-  };
+  const gender = params as string;
 
   const handleSave = useCallback(() => {
     nav.goBack();
@@ -26,18 +18,20 @@ function MyBirthday() {
   return (
     <KeyboardAvoidingView
       behavior={Devices.IS_IOS ? 'padding' : 'height'}
-      style={styles.myBirthdayContainer}>
+      style={styles.myGenderContainer}>
       <ScrollView
         contentContainerStyle={styles.contentContainerStyle}
         showsVerticalScrollIndicator={false}>
         <LFNavigation.HeaderCanGoBack
-          name={translate('navigation:my_profile:birthday')}
+          name={translate('navigation:my_profile:gender')}
         />
+
         <View style={styles.form}>
           <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-            {translate('resources:your_birthday')}
+            {translate('resources:choose_gender')}
           </LFText.Text>
-          <LFForm.DatePicker value={birthday} onChange={handleDateChange} />
+
+          <LFForm.Dropdown chooseData={gender} dropdownData={GENDER} />
         </View>
       </ScrollView>
 
@@ -54,7 +48,7 @@ function MyBirthday() {
 }
 
 const styles = StyleSheet.create({
-  myBirthdayContainer: {
+  myGenderContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
     paddingTop: Devices.headerTop,
@@ -76,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(MyBirthday);
+export default memo(MyGender);

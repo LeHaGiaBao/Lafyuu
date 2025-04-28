@@ -1,6 +1,8 @@
 import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
+export const GENDER = ['Male', 'Female', 'Other'];
+
 export const ACCOUNT_LIST_ITEM = [
   {
     route: Routes.myProfile,

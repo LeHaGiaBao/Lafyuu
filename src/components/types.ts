@@ -129,3 +129,8 @@ export interface LFNotificationItemProps extends ViewProps, PropsWithChildren {
   time: string;
   image?: string;
 }
+
+export interface LFDropdownProps extends ViewProps, PropsWithChildren {
+  chooseData: any;
+  dropdownData: any[];
+}

@@ -13,6 +13,7 @@ import NotificationFeed from '@screens/main/Notification/NotificationFeed';
 import NotificationActivity from '@screens/main/Notification/NotificationActivity';
 import MyProfile from '@screens/main/Profile/MyProfile';
 import MyName from '@screens/main/Profile/MyName';
+import MyGender from '@screens/main/Profile/MyGender';
 import MyBirthday from '@screens/main/Profile/MyBirthday';
 import MyEmail from '@screens/main/Profile/MyEmail';
 import MyPhone from '@screens/main/Profile/MyPhone';
@@ -82,6 +83,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.myName}
         component={MyName}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myGender}
+        component={MyGender}
         options={{headerShown: false}}
       />
       <Stack.Screen

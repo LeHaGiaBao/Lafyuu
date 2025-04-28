@@ -1,3 +1,4 @@
+import {PrimaryColor} from '@constants';
 import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
@@ -79,5 +80,22 @@ export const MY_PAYMENT_ITEM = [
     route: Routes.myBank,
     name: translate('navigation:my_payment:bank'),
     icon: 'bank-b',
+  },
+];
+
+export const MY_CARD_LIST = [
+  {
+    cardId: 0,
+    cardNumber: 6326912481249875,
+    cardHolder: 'Lailyfa Febrina',
+    cardSave: '19/2042',
+    backgroundColor: PrimaryColor.BlueColor,
+  },
+  {
+    cardId: 1,
+    cardNumber: 6326912481249875,
+    cardHolder: 'Lailyfa Febrina',
+    cardSave: '19/2042',
+    backgroundColor: PrimaryColor.PurpleColor,
   },
 ];

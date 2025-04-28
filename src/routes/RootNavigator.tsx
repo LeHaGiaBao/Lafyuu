@@ -19,6 +19,11 @@ import MyEmail from '@screens/main/Profile/MyEmail';
 import MyPhone from '@screens/main/Profile/MyPhone';
 import MyPassword from '@screens/main/Profile/MyPassword';
 import MyPayment from '@screens/main/Payment/MyPayment';
+import MyCard from '@screens/main/Payment/MyCard';
+import MyPaypal from '@screens/main/Payment/MyPaypal';
+import MyBank from '@screens/main/Payment/MyBank';
+import AddNewCard from '@screens/main/Payment/AddNewCard';
+import EditCard from '@screens/main/Payment/EditCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -113,6 +118,31 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.myPayment}
         component={MyPayment}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myCard}
+        component={MyCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myPaypal}
+        component={MyPaypal}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myBank}
+        component={MyBank}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.addNewCard}
+        component={AddNewCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.editCard}
+        component={EditCard}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

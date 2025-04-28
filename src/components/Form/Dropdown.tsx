@@ -4,7 +4,7 @@ import {LFDropdownProps, LFIcon, LFText} from '@components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
 
 const LFDropdown = (props: LFDropdownProps) => {
-  const {chooseData, dropdownData} = props;
+  const {chooseData, dropdownData, ...rest} = props;
   const [selectedData, setSelectedData] = useState(chooseData);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -51,7 +51,8 @@ const LFDropdown = (props: LFDropdownProps) => {
               : NeutralColor.LightColor,
           },
         ]}
-        onPress={toggleDropdown}>
+        onPress={toggleDropdown}
+        {...rest}>
         <LFText.Text typo="FormFill" color={NeutralColor.GreyColor}>
           {selectedData}
         </LFText.Text>

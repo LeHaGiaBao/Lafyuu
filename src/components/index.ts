@@ -1,5 +1,6 @@
 // UI Kits
 export {default as LFButton} from './Button';
+export {default as LFCard} from './Card';
 export {default as LFForm} from './Form';
 export {default as LFIcon} from './Icon';
 export {default as LFLine} from './Line';

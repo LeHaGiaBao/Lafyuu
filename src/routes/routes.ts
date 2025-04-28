@@ -24,6 +24,8 @@ export const Routes = {
   myCard: 'my_payment_card',
   myPaypal: 'my_paypal',
   myBank: 'my_bank',
+  addNewCard: 'add_new_card',
+  editCard: 'edit_card',
 
   notificationList: 'notification_list',
   notificationOffer: 'notification_offer',

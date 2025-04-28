@@ -38,6 +38,19 @@
     "change_email_confirm": "We Will Send verification to your New Email",
     "old_password": "Old Password",
     "new_password": "New Password",
-    "new_password_again": "New Password Again"
+    "new_password_again": "New Password Again",
+    "card_holder": "CARD HOLDER",
+    "card_save": "CARD SAVE",
+    "add_card": "Add Card",
+    "add_card_form": {
+      "card_number": "Card Number",
+      "card_number_placeholder": "Enter Card Number",
+      "expiration_date": "Expiration Date",
+      "expiration_date_placeholder": "Expiration Date",
+      "security_code": "Security Code",
+      "security_code_placeholder": "Security Code",
+      "card_holder": "Card Holder",
+      "card_holder_placeholder": "Enter Card Holder"
+    }
   }
 }

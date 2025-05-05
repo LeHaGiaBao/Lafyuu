@@ -78,5 +78,6 @@
     "**/*.{html,json,css,scss,md,mdx}": [
       "prettier -w"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

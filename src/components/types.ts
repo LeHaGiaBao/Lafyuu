@@ -2,6 +2,7 @@ import {PropsWithChildren} from 'react';
 import {
   ButtonProps,
   ColorValue,
+  ImageSourcePropType,
   TextInputProps,
   TextProps,
   TextStyle,
@@ -143,4 +144,28 @@ export interface LFCardProps extends TouchableOpacityProps, PropsWithChildren {
   cardHolder: string;
   cardSave: string;
   backgroundColor?: string;
+}
+
+export interface LFCountdownProps {
+  endTime: Date;
+}
+
+export interface BannerItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: ImageSourcePropType;
+  endTime: Date;
+}
+
+export interface LFProductCardProps
+  extends TouchableOpacityProps,
+    PropsWithChildren {
+  id: any;
+  image: ImageSourcePropType;
+  name: string;
+  price: number;
+  rating?: number;
+  discountPrice?: number;
+  percentage?: number;
 }

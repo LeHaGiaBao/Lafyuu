@@ -12,6 +12,7 @@ export {default as LFText} from './Text';
 export {default as LFCategory} from './Category';
 export {default as LFNavigation} from './Navigation';
 export {default as LFNotification} from './Notification';
+export {default as LFProductCard} from './ProductCard';
 
 // Utils
 export * from './helper';

@@ -157,3 +157,15 @@ export interface BannerItem {
   image: ImageSourcePropType;
   endTime: Date;
 }
+
+export interface LFProductCardProps
+  extends TouchableOpacityProps,
+    PropsWithChildren {
+  id: any;
+  image: ImageSourcePropType;
+  name: string;
+  price: number;
+  rating?: number;
+  discountPrice?: number;
+  percentage?: number;
+}

@@ -1,37 +1,46 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import {LFCategory, LFCategoryItemProps, LFText} from '@components';
+import {LFProductCard, LFProductCardProps, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
-import {CATEGORY_DATA} from '@database';
+import {FLASH_SALE} from '@database';
 import translate from '@translations/i18n';
 
-function HomeCategory() {
+function HomeFlashsale() {
   const keyExtractor = useCallback(
-    (item: LFCategoryItemProps) => item.name,
+    (item: LFProductCardProps) => item.id.toString(),
     [],
   );
 
-  const renderItem = useCallback(({item}: {item: LFCategoryItemProps}) => {
-    const {name, icon} = item;
+  const renderItem = useCallback(({item}: {item: LFProductCardProps}) => {
+    const {id, image, name, price, discountPrice, percentage} = item;
 
-    return <LFCategory.CategoryItem name={name} icon={icon} />;
+    return (
+      <LFProductCard.SmallCard
+        id={id}
+        image={image}
+        name={name}
+        price={price}
+        discountPrice={discountPrice}
+        percentage={percentage}
+      />
+    );
   }, []);
 
   return (
     <>
       <View style={styles.header}>
         <LFText.Text typo="H4" color={NeutralColor.DarkColor}>
-          {translate('resources:category')}
+          {translate('resources:flash_sale')}
         </LFText.Text>
 
         <LFText.Text typo="H4" color={PrimaryColor.BlueColor}>
-          {translate('resources:more_category')}
+          {translate('resources:see_more')}
         </LFText.Text>
       </View>
 
       <FlatList
         horizontal
-        data={CATEGORY_DATA}
+        data={FLASH_SALE}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsHorizontalScrollIndicator={false}
@@ -54,8 +63,8 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingHorizontal: 16,
     display: 'flex',
-    gap: 12,
+    gap: 16,
   },
 });
 
-export default memo(HomeCategory);
+export default memo(HomeFlashsale);

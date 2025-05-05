@@ -5,6 +5,9 @@ import {BackgroundColor, Devices} from '@constants';
 import HomeHeader from './Home.Header';
 import HomeBanner from './Home.Banner';
 import HomeCategory from './Home.Category';
+import HomeFlashsale from './Home.Flashsale';
+import HomeMegasale from './Home.Megasale';
+import HomeRecommend from './Home.Recommend';
 
 function HomeScreen() {
   const renderItem = useCallback(() => {
@@ -23,6 +26,9 @@ function HomeScreen() {
           <HomeHeader />
           <HomeBanner />
           <HomeCategory />
+          <HomeFlashsale />
+          <HomeMegasale />
+          <HomeRecommend />
         </>
       }
     />

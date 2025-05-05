@@ -7,8 +7,8 @@ import {
   View,
   ViewToken,
 } from 'react-native';
-import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
 import {BannerItem, LFCountDown, LFText} from '@components';
+import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
 import {BANNER_DATA} from '@database';
 
 const TIME = 5000;
@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   pagination: {
-    marginVertical: 16,
+    marginTop: 16,
+    marginBottom: 12,
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'center',

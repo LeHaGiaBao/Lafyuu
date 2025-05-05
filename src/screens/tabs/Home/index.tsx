@@ -4,6 +4,7 @@ import {FlashList} from '@shopify/flash-list';
 import {BackgroundColor, Devices} from '@constants';
 import HomeHeader from './Home.Header';
 import HomeBanner from './Home.Banner';
+import HomeCategory from './Home.Category';
 
 function HomeScreen() {
   const renderItem = useCallback(() => {
@@ -21,6 +22,7 @@ function HomeScreen() {
         <>
           <HomeHeader />
           <HomeBanner />
+          <HomeCategory />
         </>
       }
     />

@@ -40,3 +40,36 @@ export const BANNER_DATA: BannerItem[] = [
     endTime: new Date(Date.now() + 72 * 60 * 60 * 1000), // 72h from now
   },
 ];
+
+export const CATEGORY_DATA = [
+  {
+    id: 0,
+    name: 'Man Shirt',
+    icon: 'shirt-b',
+  },
+  {
+    id: 1,
+    name: 'Dress',
+    icon: 'dress-b',
+  },
+  {
+    id: 2,
+    name: 'Man Work Equipment',
+    icon: 'bag-b',
+  },
+  {
+    id: 3,
+    name: 'Woman Bag',
+    icon: 'woman-bag-b',
+  },
+  {
+    id: 4,
+    name: 'Man Shoes',
+    icon: 'man-shoes-b',
+  },
+  {
+    id: 5,
+    name: 'High Heels',
+    icon: 'woman-shoes-b',
+  },
+];

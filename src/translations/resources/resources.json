@@ -51,6 +51,11 @@
       "security_code_placeholder": "Security Code",
       "card_holder": "Card Holder",
       "card_holder_placeholder": "Enter Card Holder"
-    }
+    },
+    "category": "Category",
+    "more_category": "More Category",
+    "flash_sale": "Flash Sale",
+    "mega_sale": "Mega Sale",
+    "see_more": "See More"
   }
 }

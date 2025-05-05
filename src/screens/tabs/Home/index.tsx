@@ -3,6 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {FlashList} from '@shopify/flash-list';
 import {BackgroundColor, Devices} from '@constants';
 import HomeHeader from './Home.Header';
+import HomeBanner from './Home.Banner';
 
 function HomeScreen() {
   const renderItem = useCallback(() => {
@@ -19,6 +20,7 @@ function HomeScreen() {
       ListHeaderComponent={
         <>
           <HomeHeader />
+          <HomeBanner />
         </>
       }
     />

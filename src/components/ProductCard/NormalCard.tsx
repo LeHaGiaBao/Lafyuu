@@ -56,9 +56,9 @@ const LFNormalCard = (props: LFProductCardProps) => {
       </View>
 
       {isFavorite ? (
-        <View style={cardStyles.favorite}>
+        <TouchableOpacity style={cardStyles.favorite}>
           <LFIcon.Icon icon={'trash'} size={24} />
-        </View>
+        </TouchableOpacity>
       ) : null}
     </TouchableOpacity>
   );

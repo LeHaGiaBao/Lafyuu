@@ -24,6 +24,8 @@ import MyPaypal from '@screens/main/Payment/MyPaypal';
 import MyBank from '@screens/main/Payment/MyBank';
 import AddNewCard from '@screens/main/Payment/AddNewCard';
 import EditCard from '@screens/main/Payment/EditCard';
+import Flashsale from '@screens/main/Product/Flashsale';
+import Megasale from '@screens/main/Product/Megasale';
 
 const Stack = createNativeStackNavigator();
 
@@ -143,6 +145,16 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.editCard}
         component={EditCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.flashsale}
+        component={Flashsale}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.megasale}
+        component={Megasale}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

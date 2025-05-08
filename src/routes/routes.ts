@@ -31,4 +31,7 @@ export const Routes = {
   notificationOffer: 'notification_offer',
   notificationFeed: 'notification_feed',
   notificationActivity: 'notification_activity',
+
+  flashsale: 'flashsale',
+  megasale: 'megasale',
 };

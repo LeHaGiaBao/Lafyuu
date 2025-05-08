@@ -34,4 +34,5 @@ export const Routes = {
 
   flashsale: 'flashsale',
   megasale: 'megasale',
+  categoryList: 'category_list',
 };

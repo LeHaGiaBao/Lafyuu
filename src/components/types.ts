@@ -168,4 +168,5 @@ export interface LFProductCardProps
   rating?: number;
   discountPrice?: number;
   percentage?: number;
+  isFavorite?: boolean;
 }

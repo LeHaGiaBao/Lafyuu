@@ -3,9 +3,17 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import {LFProductCard, LFProductCardProps, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
 import {FLASH_SALE} from '@database';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
 function HomeFlashsale() {
+  const nav = useLFNavigation();
+
+  const goToFlashsale = useCallback(() => {
+    nav.navigate(Routes.flashsale);
+  }, [nav]);
+
   const keyExtractor = useCallback(
     (item: LFProductCardProps) => item.id.toString(),
     [],
@@ -33,7 +41,10 @@ function HomeFlashsale() {
           {translate('resources:flash_sale')}
         </LFText.Text>
 
-        <LFText.Text typo="H4" color={PrimaryColor.BlueColor}>
+        <LFText.Text
+          typo="H4"
+          color={PrimaryColor.BlueColor}
+          onPress={goToFlashsale}>
           {translate('resources:see_more')}
         </LFText.Text>
       </View>

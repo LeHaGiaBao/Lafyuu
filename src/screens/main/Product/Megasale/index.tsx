@@ -1,18 +1,29 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {memo, useCallback, useMemo} from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {FlashList} from '@shopify/flash-list';
-import {LFProductCard, LFProductCardProps} from '@components';
+import {
+  LFIcon,
+  LFNavigation,
+  LFProductCard,
+  LFProductCardProps,
+} from '@components';
 import {BackgroundColor, Devices} from '@constants';
-import {HOME_DATA} from '@database';
-import HomeHeader from './Home.Header';
-import HomeBanner from './Home.Banner';
-import HomeCategory from './Home.Category';
-import HomeFlashsale from './Home.Flashsale';
-import HomeMegasale from './Home.Megasale';
-import HomeRecommend from './Home.Recommend';
+import {SUPER_MEGA_SALE} from '@database';
+import translate from '@translations/i18n';
+import MegasaleBanner from './Megasale.Banner';
 
-function HomeScreen() {
+function Megasale() {
+  const headerRightNode = useMemo(() => {
+    return (
+      <View style={styles.rightNode}>
+        <TouchableOpacity>
+          <LFIcon.Icon icon="search" size={24} />
+        </TouchableOpacity>
+      </View>
+    );
+  }, []);
+
   const keyExtractor = useCallback(
     (item: LFProductCardProps) => item.id.toString(),
     [],
@@ -47,9 +58,9 @@ function HomeScreen() {
   );
 
   return (
-    <View style={styles.homeContainer}>
+    <View style={styles.megasaleContainer}>
       <FlashList
-        data={HOME_DATA}
+        data={SUPER_MEGA_SALE}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         estimatedItemSize={100}
@@ -58,12 +69,11 @@ function HomeScreen() {
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
           <>
-            <HomeHeader />
-            <HomeBanner />
-            <HomeCategory />
-            <HomeFlashsale />
-            <HomeMegasale />
-            <HomeRecommend />
+            <LFNavigation.HeaderCanGoBack
+              name={translate('navigation:super_mega_sale')}
+              rightNode={headerRightNode}
+            />
+            <MegasaleBanner />
           </>
         }
       />
@@ -72,7 +82,7 @@ function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  homeContainer: {
+  megasaleContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
   },
@@ -80,6 +90,13 @@ const styles = StyleSheet.create({
     paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
+  rightNode: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 32,
+  },
 });
 
-export default memo(HomeScreen);
+export default memo(Megasale);

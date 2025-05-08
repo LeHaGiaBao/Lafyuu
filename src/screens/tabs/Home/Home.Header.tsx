@@ -8,6 +8,10 @@ import translate from '@translations/i18n';
 function Header() {
   const nav = useLFNavigation();
 
+  const goToFavorite = useCallback(() => {
+    nav.navigate(Routes.favorite);
+  }, [nav]);
+
   const goToNotificationList = useCallback(() => {
     nav.navigate(Routes.notificationList);
   }, [nav]);
@@ -22,7 +26,10 @@ function Header() {
           />
         </View>
         <View style={styles.iconContainer}>
-          <LFIcon.Icon icon={'love'} size={24} />
+          <TouchableOpacity onPress={goToFavorite}>
+            <LFIcon.Icon icon={'love'} size={24} />
+          </TouchableOpacity>
+
           <TouchableOpacity onPress={goToNotificationList}>
             <View style={styles.dot}>
               <LFNotification.Mark />

@@ -31,6 +31,10 @@
       "bank": "Bank Transfer"
     },
     "add_card": "Add Card",
-    "card": "Card"
+    "card": "Card",
+    "super_flash_sale": "Super Flash Sale",
+    "super_mega_sale": "Super Mega Sale",
+    "category": "Category",
+    "favorite": "Favorite"
   }
 }

@@ -2,17 +2,12 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {FlashList} from '@shopify/flash-list';
-import {LFProductCard, LFProductCardProps} from '@components';
+import {LFNavigation, LFProductCard, LFProductCardProps} from '@components';
 import {BackgroundColor, Devices} from '@constants';
-import {HOME_DATA} from '@database';
-import HomeHeader from './Home.Header';
-import HomeBanner from './Home.Banner';
-import HomeCategory from './Home.Category';
-import HomeFlashsale from './Home.Flashsale';
-import HomeMegasale from './Home.Megasale';
-import HomeRecommend from './Home.Recommend';
+import {FAVORITE_PRODUCT} from '@database';
+import translate from '@translations/i18n';
 
-function HomeScreen() {
+function Favorite() {
   const keyExtractor = useCallback(
     (item: LFProductCardProps) => item.id.toString(),
     [],
@@ -20,7 +15,16 @@ function HomeScreen() {
 
   const renderItem = useCallback(
     ({item, index}: {item: LFProductCardProps; index: number}) => {
-      const {id, image, name, rating, price, discountPrice, percentage} = item;
+      const {
+        id,
+        image,
+        name,
+        rating,
+        price,
+        discountPrice,
+        percentage,
+        isFavorite,
+      } = item;
 
       const isLeft = index % 2 === 0;
 
@@ -39,6 +43,7 @@ function HomeScreen() {
             price={price}
             discountPrice={discountPrice}
             percentage={percentage}
+            isFavorite={isFavorite}
           />
         </View>
       );
@@ -47,9 +52,9 @@ function HomeScreen() {
   );
 
   return (
-    <View style={styles.homeContainer}>
+    <View style={styles.favoriteContainer}>
       <FlashList
-        data={HOME_DATA}
+        data={FAVORITE_PRODUCT}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         estimatedItemSize={100}
@@ -58,12 +63,9 @@ function HomeScreen() {
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
           <>
-            <HomeHeader />
-            <HomeBanner />
-            <HomeCategory />
-            <HomeFlashsale />
-            <HomeMegasale />
-            <HomeRecommend />
+            <LFNavigation.HeaderCanGoBack
+              name={translate('navigation:favorite')}
+            />
           </>
         }
       />
@@ -72,7 +74,7 @@ function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  homeContainer: {
+  favoriteContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
   },
@@ -80,6 +82,13 @@ const styles = StyleSheet.create({
     paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },
+  rightNode: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 32,
+  },
 });
 
-export default memo(HomeScreen);
+export default memo(Favorite);

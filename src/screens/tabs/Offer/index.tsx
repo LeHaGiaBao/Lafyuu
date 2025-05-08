@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {LFNavigation, LFText} from '@components';
 import {BackgroundColor, Devices, PrimaryColor} from '@constants';
 import translate from '@translations/i18n';
@@ -8,7 +8,9 @@ import OfferSuperMega from './Offer.SuperMega';
 
 function OfferScreen() {
   return (
-    <View style={styles.offerContainer}>
+    <ScrollView
+      style={styles.offerContainer}
+      showsVerticalScrollIndicator={false}>
       <LFNavigation.Header name={translate('navigation:offer')} />
       <View style={styles.banner}>
         <LFText.Text
@@ -20,7 +22,7 @@ function OfferScreen() {
       </View>
       <OfferSuperFlashsale />
       <OfferSuperMega />
-    </View>
+    </ScrollView>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, {memo, useCallback} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
-import {LFProductCardProps, LFRating, LFText} from '@components';
+import {LFIcon, LFProductCardProps, LFRating, LFText} from '@components';
 import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
 import translate from '@translations/i18n';
 import {formatCurrencyUSD} from '@utils';
@@ -8,8 +8,16 @@ import {formatCurrencyUSD} from '@utils';
 const IMAGE = (Devices.width - 112) / 2;
 
 const LFNormalCard = (props: LFProductCardProps) => {
-  const {image, name, rating, price, discountPrice, percentage, ...rest} =
-    props;
+  const {
+    image,
+    name,
+    rating,
+    price,
+    discountPrice,
+    percentage,
+    isFavorite,
+    ...rest
+  } = props;
 
   const handleNavigateProductDetail = useCallback(() => {}, []);
 
@@ -46,6 +54,12 @@ const LFNormalCard = (props: LFProductCardProps) => {
           {String(percentage) + translate('resources:n_off')}
         </LFText.Text>
       </View>
+
+      {isFavorite ? (
+        <View style={cardStyles.favorite}>
+          <LFIcon.Icon icon={'trash'} size={24} />
+        </View>
+      ) : null}
     </TouchableOpacity>
   );
 };
@@ -71,6 +85,11 @@ const cardStyles = StyleSheet.create({
   },
   rating: {
     marginBottom: 16,
+  },
+  favorite: {
+    position: 'absolute',
+    right: 16,
+    bottom: 16,
   },
 });
 

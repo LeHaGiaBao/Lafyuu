@@ -58,28 +58,35 @@ function Megasale() {
   );
 
   return (
-    <FlashList
-      data={SUPER_MEGA_SALE}
-      renderItem={renderItem}
-      keyExtractor={keyExtractor}
-      numColumns={2}
-      contentContainerStyle={styles.megasaleContainer}
-      showsVerticalScrollIndicator={false}
-      ListHeaderComponent={
-        <>
-          <LFNavigation.HeaderCanGoBack
-            name={translate('navigation:super_mega_sale')}
-            rightNode={headerRightNode}
-          />
-          <MegasaleBanner />
-        </>
-      }
-    />
+    <View style={styles.megasaleContainer}>
+      <FlashList
+        data={SUPER_MEGA_SALE}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        estimatedItemSize={100}
+        numColumns={2}
+        contentContainerStyle={styles.containerList}
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={
+          <>
+            <LFNavigation.HeaderCanGoBack
+              name={translate('navigation:super_mega_sale')}
+              rightNode={headerRightNode}
+            />
+            <MegasaleBanner />
+          </>
+        }
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   megasaleContainer: {
+    flex: 1,
+    backgroundColor: BackgroundColor.WhiteColor,
+  },
+  containerList: {
     paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },

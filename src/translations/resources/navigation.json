@@ -34,6 +34,7 @@
     "card": "Card",
     "super_flash_sale": "Super Flash Sale",
     "super_mega_sale": "Super Mega Sale",
-    "category": "Category"
+    "category": "Category",
+    "favorite": "Favorite"
   }
 }

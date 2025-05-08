@@ -58,28 +58,35 @@ function Flashsale() {
   );
 
   return (
-    <FlashList
-      data={SUPER_FLASH_SALE}
-      renderItem={renderItem}
-      keyExtractor={keyExtractor}
-      numColumns={2}
-      contentContainerStyle={styles.flashsaleContainer}
-      showsVerticalScrollIndicator={false}
-      ListHeaderComponent={
-        <>
-          <LFNavigation.HeaderCanGoBack
-            name={translate('navigation:super_flash_sale')}
-            rightNode={headerRightNode}
-          />
-          <FlashsaleBanner />
-        </>
-      }
-    />
+    <View style={styles.flashsaleContainer}>
+      <FlashList
+        data={SUPER_FLASH_SALE}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        estimatedItemSize={100}
+        numColumns={2}
+        contentContainerStyle={styles.containerList}
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={
+          <>
+            <LFNavigation.HeaderCanGoBack
+              name={translate('navigation:super_flash_sale')}
+              rightNode={headerRightNode}
+            />
+            <FlashsaleBanner />
+          </>
+        }
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   flashsaleContainer: {
+    flex: 1,
+    backgroundColor: BackgroundColor.WhiteColor,
+  },
+  containerList: {
     paddingTop: Devices.headerTop,
     backgroundColor: BackgroundColor.WhiteColor,
   },

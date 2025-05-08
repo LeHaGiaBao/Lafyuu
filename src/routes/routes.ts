@@ -34,5 +34,7 @@ export const Routes = {
 
   flashsale: 'flashsale',
   megasale: 'megasale',
+  favorite: 'favorite',
+
   categoryList: 'category_list',
 };

@@ -2,6 +2,8 @@ import React, {memo, useCallback} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFIcon, LFProductCardProps, LFRating, LFText} from '@components';
 import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 import {formatCurrencyUSD} from '@utils';
 
@@ -19,7 +21,13 @@ const LFNormalCard = (props: LFProductCardProps) => {
     ...rest
   } = props;
 
-  const handleNavigateProductDetail = useCallback(() => {}, []);
+  const nav = useLFNavigation();
+
+  const handleNavigateProductDetail = useCallback(() => {
+    nav.navigate(Routes.productDetail, {
+      name: name,
+    });
+  }, [name, nav]);
 
   return (
     <TouchableOpacity

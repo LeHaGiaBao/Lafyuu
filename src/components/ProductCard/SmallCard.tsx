@@ -2,13 +2,21 @@ import React, {memo, useCallback} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFProductCardProps, LFText} from '@components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 import {formatCurrencyUSD} from '@utils';
 
 const LFSmallCard = (props: LFProductCardProps) => {
   const {image, name, price, discountPrice, percentage, ...rest} = props;
 
-  const handleNavigateProductDetail = useCallback(() => {}, []);
+  const nav = useLFNavigation();
+
+  const handleNavigateProductDetail = useCallback(() => {
+    nav.navigate(Routes.productDetail, {
+      name: name,
+    });
+  }, [name, nav]);
 
   return (
     <TouchableOpacity

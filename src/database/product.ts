@@ -120,3 +120,26 @@ export const FAVORITE_PRODUCT = [
     isFavorite: true,
   },
 ];
+
+export const PRODUCT_DETAIL_BANNER = [
+  {
+    id: '0',
+    image: images.flash1,
+  },
+  {
+    id: '1',
+    image: images.flash1,
+  },
+  {
+    id: '2',
+    image: images.flash1,
+  },
+  {
+    id: '3',
+    image: images.flash1,
+  },
+  {
+    id: '4',
+    image: images.flash1,
+  },
+];

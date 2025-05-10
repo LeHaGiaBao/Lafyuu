@@ -1,4 +1,5 @@
 import images from '@assets/images';
+import {NeutralColor, PrimaryColor} from '@constants';
 
 export const SUPER_FLASH_SALE = [
   {
@@ -168,5 +169,32 @@ export const PRODUCT_DETAIL_SIZE = [
   {
     id: 5,
     name: '8.5',
+  },
+];
+
+export const PRODUCT_DETAIL_COLOR = [
+  {
+    id: 0,
+    color: PrimaryColor.YellowColor,
+  },
+  {
+    id: 1,
+    color: PrimaryColor.BlueColor,
+  },
+  {
+    id: 2,
+    color: PrimaryColor.RedColor,
+  },
+  {
+    id: 3,
+    color: PrimaryColor.GreenColor,
+  },
+  {
+    id: 4,
+    color: PrimaryColor.PurpleColor,
+  },
+  {
+    id: 5,
+    color: NeutralColor.DarkColor,
   },
 ];

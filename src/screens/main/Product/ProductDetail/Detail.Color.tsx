@@ -1,45 +1,40 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFText} from '@components';
-import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
-import {PRODUCT_DETAIL_SIZE} from '@database';
+import {BackgroundColor, NeutralColor} from '@constants';
+import {PRODUCT_DETAIL_COLOR} from '@database';
 import translate from '@translations/i18n';
 
 interface Props {
-  selectedSize: number;
-  onSizeChange: (size: number) => void;
+  selectedColor: number;
+  onColorChange: (size: number) => void;
 }
 
-function DetailSize(props: Props) {
-  const {selectedSize, onSizeChange} = props;
+function DetailColor(props: Props) {
+  const {selectedColor, onColorChange} = props;
 
   const handleSelectItem = useCallback(
     (index: number) => {
-      onSizeChange(index);
+      onColorChange(index);
     },
-    [onSizeChange],
+    [onColorChange],
   );
 
   const renderItem = useCallback(
     ({item}: {item: any}) => {
-      const {name} = item;
+      const {color} = item;
 
-      const borderColor =
-        selectedSize === item.id
-          ? PrimaryColor.BlueColor
-          : NeutralColor.LightColor;
+      const isActive = selectedColor === item.id;
 
       return (
         <TouchableOpacity
           onPress={() => handleSelectItem(item.id)}
-          style={[styles.item, {borderColor}]}>
-          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-            {name}
-          </LFText.Text>
+          style={[styles.item, {backgroundColor: color}]}>
+          {isActive && <View style={styles.chooseItem} />}
         </TouchableOpacity>
       );
     },
-    [selectedSize, handleSelectItem],
+    [selectedColor, handleSelectItem],
   );
 
   const keyExtractor = useCallback((item: any) => item.id, []);
@@ -48,12 +43,12 @@ function DetailSize(props: Props) {
     <>
       <View style={styles.header}>
         <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-          {translate('resources:select_size')}
+          {translate('resources:select_color')}
         </LFText.Text>
       </View>
 
       <FlatList
-        data={PRODUCT_DETAIL_SIZE}
+        data={PRODUCT_DETAIL_COLOR}
         renderItem={renderItem}
         horizontal
         pagingEnabled
@@ -67,13 +62,13 @@ function DetailSize(props: Props) {
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 16,
+    marginTop: 8,
     marginHorizontal: 16,
     display: 'flex',
   },
   list: {
     marginTop: 12,
-    marginBottom: 8,
+    marginBottom: 16,
     paddingHorizontal: 16,
     display: 'flex',
     gap: 8,
@@ -81,13 +76,17 @@ const styles = StyleSheet.create({
   item: {
     height: 48,
     width: 48,
-    borderWidth: 1,
-    backgroundColor: BackgroundColor.WhiteColor,
     borderRadius: 100,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  chooseItem: {
+    height: 16,
+    width: 16,
+    borderRadius: 100,
+    backgroundColor: BackgroundColor.WhiteColor,
+  },
 });
 
-export default memo(DetailSize);
+export default memo(DetailColor);

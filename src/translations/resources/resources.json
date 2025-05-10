@@ -60,6 +60,10 @@
     "n_off": "% Off",
     "select_size": "Select Size",
     "select_color": "Select Color",
-    "specification": "Specification"
+    "specification": "Specification",
+    "shown": "Shown:",
+    "style": "Style:",
+    "add_to_cart": "Add To Cart",
+    "you_might_also_like": "You Might Also Like"
   }
 }

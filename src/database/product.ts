@@ -198,3 +198,30 @@ export const PRODUCT_DETAIL_COLOR = [
     color: NeutralColor.DarkColor,
   },
 ];
+
+export const PRODUCT_DETAIL_ALSO_LIKE = [
+  {
+    id: 0,
+    image: images.flash1,
+    name: 'FS - Nike Air Max 270 React...',
+    price: 299.43,
+    discountPrice: 534.33,
+    percentage: 24,
+  },
+  {
+    id: 1,
+    image: images.flash2,
+    name: 'FS - QUILTED MAXI CROS...',
+    price: 299.43,
+    discountPrice: 534.33,
+    percentage: 24,
+  },
+  {
+    id: 2,
+    image: images.flash3,
+    name: 'FS - Nike Air Max 270 React...',
+    price: 299.43,
+    discountPrice: 534.33,
+    percentage: 24,
+  },
+];

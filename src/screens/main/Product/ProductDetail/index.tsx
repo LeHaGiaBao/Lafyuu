@@ -1,12 +1,15 @@
 import React, {memo, useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
-import {LFIcon, LFNavigation} from '@components';
+import {LFButton, LFIcon, LFNavigation} from '@components';
 import {BackgroundColor, Devices} from '@constants';
 import {useLFNavigationParams} from '@hooks';
+import translate from '@translations/i18n';
 import DetailBanner from './Detail.Banner';
 import DetailName from './Detail.Name';
 import DetailSize from './Detail.Size';
 import DetailColor from './Detail.Color';
+import DetailSpecification from './Detail.Specification';
+import DetailAlsoLike from './Detail.AlsoLike';
 
 function ProductDetail() {
   const params =
@@ -40,6 +43,15 @@ function ProductDetail() {
       <DetailName name={name} />
       <DetailSize selectedSize={size} onSizeChange={setSize} />
       <DetailColor selectedColor={color} onColorChange={setColor} />
+      <DetailSpecification />
+      <DetailAlsoLike />
+      <View style={styles.buttonContainer}>
+        <LFButton.Button
+          title={translate('resources:add_to_cart')}
+          type="Primary"
+          size="Large"
+        />
+      </View>
     </ScrollView>
   );
 }
@@ -55,6 +67,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 32,
+  },
+  buttonContainer: {
+    margin: 16,
+    marginBottom: Devices.bottomButton + 16,
   },
 });
 

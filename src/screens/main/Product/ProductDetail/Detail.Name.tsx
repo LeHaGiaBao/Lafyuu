@@ -1,8 +1,8 @@
+import React, {memo} from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFIcon, LFRating, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
 import {formatCurrencyUSD} from '@utils';
-import React, {memo} from 'react';
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
 interface DetailNameProps {
   name: string;

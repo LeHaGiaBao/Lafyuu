@@ -62,13 +62,12 @@ function DetailColor(props: Props) {
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 8,
+    marginTop: 24,
     marginHorizontal: 16,
     display: 'flex',
   },
   list: {
     marginTop: 12,
-    marginBottom: 16,
     paddingHorizontal: 16,
     display: 'flex',
     gap: 8,

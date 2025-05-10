@@ -225,3 +225,18 @@ export const PRODUCT_DETAIL_ALSO_LIKE = [
     percentage: 24,
   },
 ];
+
+export const PRODUCT_DETAIL_REVIEW_IMAGE = [
+  {
+    id: 0,
+    image: images.review1,
+  },
+  {
+    id: 1,
+    image: images.review2,
+  },
+  {
+    id: 2,
+    image: images.review3,
+  },
+];

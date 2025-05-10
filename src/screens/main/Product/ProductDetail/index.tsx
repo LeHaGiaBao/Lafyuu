@@ -9,6 +9,7 @@ import DetailName from './Detail.Name';
 import DetailSize from './Detail.Size';
 import DetailColor from './Detail.Color';
 import DetailSpecification from './Detail.Specification';
+import DetailReview from './Detail.Review';
 import DetailAlsoLike from './Detail.AlsoLike';
 
 function ProductDetail() {
@@ -44,6 +45,7 @@ function ProductDetail() {
       <DetailSize selectedSize={size} onSizeChange={setSize} />
       <DetailColor selectedColor={color} onColorChange={setColor} />
       <DetailSpecification />
+      <DetailReview />
       <DetailAlsoLike />
       <View style={styles.buttonContainer}>
         <LFButton.Button

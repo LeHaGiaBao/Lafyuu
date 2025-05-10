@@ -63,7 +63,9 @@
     "specification": "Specification",
     "shown": "Shown:",
     "style": "Style:",
-    "add_to_cart": "Add To Cart",
-    "you_might_also_like": "You Might Also Like"
+    "review_product": "Review Product",
+    "review": "Review",
+    "you_might_also_like": "You Might Also Like",
+    "add_to_cart": "Add To Cart"
   }
 }

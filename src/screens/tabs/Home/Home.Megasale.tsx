@@ -55,7 +55,7 @@ function HomeMegasale() {
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.categoryList}
+        contentContainerStyle={styles.productList}
       />
     </>
   );
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  categoryList: {
+  productList: {
     marginBottom: 16,
     paddingHorizontal: 16,
     display: 'flex',

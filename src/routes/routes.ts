@@ -32,6 +32,7 @@ export const Routes = {
   notificationFeed: 'notification_feed',
   notificationActivity: 'notification_activity',
 
+  productDetail: 'product_detail',
   flashsale: 'flashsale',
   megasale: 'megasale',
   favorite: 'favorite',

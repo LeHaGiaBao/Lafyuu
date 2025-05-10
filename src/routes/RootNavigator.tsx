@@ -27,6 +27,7 @@ import EditCard from '@screens/main/Payment/EditCard';
 import Flashsale from '@screens/main/Product/Flashsale';
 import Megasale from '@screens/main/Product/Megasale';
 import Favorite from '@screens/main/Product/Favorite';
+import ProductDetail from '@screens/main/Product/ProductDetail';
 import CategoryList from '@screens/main/Category/CategoryList';
 
 const Stack = createNativeStackNavigator();
@@ -162,6 +163,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.favorite}
         component={Favorite}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.productDetail}
+        component={ProductDetail}
         options={{headerShown: false}}
       />
       <Stack.Screen

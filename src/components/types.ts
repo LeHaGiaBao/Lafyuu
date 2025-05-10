@@ -170,3 +170,8 @@ export interface LFProductCardProps
   percentage?: number;
   isFavorite?: boolean;
 }
+
+export interface LFProductDetailBannerProps {
+  id: string;
+  image: ImageSourcePropType;
+}

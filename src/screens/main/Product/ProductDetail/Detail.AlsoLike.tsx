@@ -1,19 +1,11 @@
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {LFProductCard, LFProductCardProps, LFText} from '@components';
-import {NeutralColor, PrimaryColor} from '@constants';
-import {FLASH_SALE} from '@database';
-import {useLFNavigation} from '@hooks';
-import {Routes} from '@routes/routes';
+import {NeutralColor} from '@constants';
+import {PRODUCT_DETAIL_ALSO_LIKE} from '@database';
 import translate from '@translations/i18n';
 
-function HomeFlashsale() {
-  const nav = useLFNavigation();
-
-  const goToFlashsale = useCallback(() => {
-    nav.navigate(Routes.flashsale);
-  }, [nav]);
-
+function DetailAlsoLike() {
   const keyExtractor = useCallback(
     (item: LFProductCardProps) => item.id.toString(),
     [],
@@ -38,20 +30,13 @@ function HomeFlashsale() {
     <>
       <View style={styles.header}>
         <LFText.Text typo="H4" color={NeutralColor.DarkColor}>
-          {translate('resources:flash_sale')}
-        </LFText.Text>
-
-        <LFText.Text
-          typo="H4"
-          color={PrimaryColor.BlueColor}
-          onPress={goToFlashsale}>
-          {translate('resources:see_more')}
+          {translate('resources:you_might_also_like')}
         </LFText.Text>
       </View>
 
       <FlatList
         horizontal
-        data={FLASH_SALE}
+        data={PRODUCT_DETAIL_ALSO_LIKE}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsHorizontalScrollIndicator={false}
@@ -63,19 +48,15 @@ function HomeFlashsale() {
 
 const styles = StyleSheet.create({
   header: {
+    marginTop: 24,
+    marginBottom: 12,
     paddingHorizontal: 16,
-    paddingBottom: 12,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
   productList: {
-    marginBottom: 16,
     paddingHorizontal: 16,
     display: 'flex',
     gap: 16,
   },
 });
 
-export default memo(HomeFlashsale);
+export default memo(DetailAlsoLike);

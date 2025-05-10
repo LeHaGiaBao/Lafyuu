@@ -143,3 +143,30 @@ export const PRODUCT_DETAIL_BANNER = [
     image: images.flash1,
   },
 ];
+
+export const PRODUCT_DETAIL_SIZE = [
+  {
+    id: 0,
+    name: '6',
+  },
+  {
+    id: 1,
+    name: '6.5',
+  },
+  {
+    id: 2,
+    name: '7',
+  },
+  {
+    id: 3,
+    name: '7.5',
+  },
+  {
+    id: 4,
+    name: '8',
+  },
+  {
+    id: 5,
+    name: '8.5',
+  },
+];

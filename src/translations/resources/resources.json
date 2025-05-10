@@ -57,6 +57,9 @@
     "flash_sale": "Flash Sale",
     "mega_sale": "Mega Sale",
     "see_more": "See More",
-    "n_off": "% Off"
+    "n_off": "% Off",
+    "select_size": "Select Size",
+    "select_color": "Select Color",
+    "specification": "Specification"
   }
 }

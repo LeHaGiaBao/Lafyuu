@@ -5,6 +5,7 @@ import {BackgroundColor, Devices} from '@constants';
 import {useLFNavigationParams} from '@hooks';
 import DetailBanner from './Detail.Banner';
 import DetailName from './Detail.Name';
+import DetailSize from './Detail.Size';
 
 function ProductDetail() {
   const params =
@@ -33,6 +34,7 @@ function ProductDetail() {
       <LFNavigation.HeaderCanGoBack name={name} rightNode={headerRightNode} />
       <DetailBanner />
       <DetailName name={name} />
+      <DetailSize />
     </ScrollView>
   );
 }

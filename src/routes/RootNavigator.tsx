@@ -29,6 +29,7 @@ import Megasale from '@screens/main/Product/Megasale';
 import Favorite from '@screens/main/Product/Favorite';
 import ProductDetail from '@screens/main/Product/ProductDetail';
 import CategoryList from '@screens/main/Category/CategoryList';
+import MyAddress from '@screens/main/Address/MyAddress';
 
 const Stack = createNativeStackNavigator();
 
@@ -173,6 +174,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.categoryList}
         component={CategoryList}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myAddress}
+        component={MyAddress}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

@@ -9,6 +9,7 @@ export {default as LFRating} from './Rating';
 export {default as LFText} from './Text';
 
 // Components
+export {default as LFAddress} from './Address';
 export {default as LFCategory} from './Category';
 export {default as LFNavigation} from './Navigation';
 export {default as LFNotification} from './Notification';

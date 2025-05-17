@@ -185,3 +185,12 @@ export interface LFProductDetailBannerProps {
   id: string;
   image: ImageSourcePropType;
 }
+
+export interface LFAddressItemProps extends ViewProps, PropsWithChildren {
+  id: any;
+  name: string;
+  address: string;
+  phone: string;
+  canChoose?: boolean;
+  isChoose?: boolean;
+}

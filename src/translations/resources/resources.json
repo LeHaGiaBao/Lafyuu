@@ -72,6 +72,8 @@
     "items": "Items",
     "shipping": "Shipping",
     "import_charges": "Import charges",
-    "total_price": "Total Price"
+    "total_price": "Total Price",
+    "add_address": "Add Address",
+    "edit": "Edit"
   }
 }

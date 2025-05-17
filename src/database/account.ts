@@ -99,3 +99,22 @@ export const MY_CARD_LIST = [
     backgroundColor: PrimaryColor.PurpleColor,
   },
 ];
+
+export const MY_ADDRESS_LIST = [
+  {
+    id: 0,
+    name: 'Priscekila',
+    address:
+      '3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States',
+    phone: '+99 1234567890',
+    canChoose: false,
+  },
+  {
+    id: 1,
+    name: 'Priscekila',
+    address:
+      '3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States',
+    phone: '+99 1234567890',
+    canChoose: false,
+  },
+];

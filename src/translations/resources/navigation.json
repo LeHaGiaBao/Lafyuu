@@ -36,6 +36,7 @@
     "super_mega_sale": "Super Mega Sale",
     "category": "Category",
     "favorite": "Favorite",
-    "address": "Address"
+    "address": "Address",
+    "ship_to": "Ship To"
   }
 }

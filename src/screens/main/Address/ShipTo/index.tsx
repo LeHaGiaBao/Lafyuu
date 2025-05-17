@@ -1,9 +1,10 @@
-import React, {memo, useCallback} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import React, {memo, useCallback, useState} from 'react';
+import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {
   LFAddress,
   LFAddressItemProps,
   LFButton,
+  LFIcon,
   LFNavigation,
 } from '@components';
 import {BackgroundColor, Devices} from '@constants';
@@ -11,8 +12,9 @@ import {MY_ADDRESS_LIST} from '@database';
 import {useLFNavigation} from '@hooks';
 import translate from '@translations/i18n';
 
-function MyAddress() {
+function ShipTo() {
   const nav = useLFNavigation();
+  const [choosedAddress, setChoosedAddress] = useState(null);
 
   const handleSave = useCallback(() => {
     nav.goBack();
@@ -23,25 +25,35 @@ function MyAddress() {
     [],
   );
 
-  const renderItem = useCallback(({item}: {item: LFAddressItemProps}) => {
-    const {id, name, address, phone, ...rest} = item;
-
-    return (
-      <View style={styles.item}>
-        <LFAddress.AddressItem
-          id={id}
-          name={name}
-          address={address}
-          phone={phone}
-          isChoose={false}
-          {...rest}
-        />
-      </View>
-    );
+  const handleChooseAddress = useCallback((id: any) => {
+    setChoosedAddress(id);
   }, []);
 
+  const renderItem = useCallback(
+    ({item}: {item: LFAddressItemProps}) => {
+      const {id, name, address, phone, ...rest} = item;
+
+      const isChoose = choosedAddress === id;
+
+      return (
+        <View style={styles.item}>
+          <LFAddress.AddressItem
+            id={id}
+            name={name}
+            address={address}
+            phone={phone}
+            isChoose={isChoose}
+            onPress={() => handleChooseAddress(id)}
+            {...rest}
+          />
+        </View>
+      );
+    },
+    [choosedAddress, handleChooseAddress],
+  );
+
   return (
-    <View style={styles.myAddressContainer}>
+    <View style={styles.shipToContainer}>
       <FlatList
         data={MY_ADDRESS_LIST}
         renderItem={renderItem}
@@ -51,7 +63,12 @@ function MyAddress() {
         ListHeaderComponent={
           <>
             <LFNavigation.HeaderCanGoBack
-              name={translate('navigation:address')}
+              name={translate('navigation:ship_to')}
+              rightNode={
+                <TouchableOpacity>
+                  <LFIcon.Icon icon="plus" size={24} />
+                </TouchableOpacity>
+              }
             />
           </>
         }
@@ -59,7 +76,7 @@ function MyAddress() {
       <View style={styles.buttonContainer}>
         <LFButton.Button
           onPress={handleSave}
-          title={translate('resources:add_address')}
+          title={translate('resources:next')}
           type="Primary"
           size="Large"
         />
@@ -69,7 +86,7 @@ function MyAddress() {
 }
 
 const styles = StyleSheet.create({
-  myAddressContainer: {
+  shipToContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
   },
@@ -97,4 +114,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(MyAddress);
+export default memo(ShipTo);

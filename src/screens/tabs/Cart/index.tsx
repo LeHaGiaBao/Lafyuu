@@ -10,11 +10,18 @@ import {
 } from '@components';
 import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
 import {CART_PRODUCT_LIST} from '@database';
+import {useLFNavigation} from '@hooks';
 import translate from '@translations/i18n';
 import {formatCurrencyUSD} from '@utils';
+import {Routes} from '@routes/routes';
 
 function CartScreen() {
   const [cuponCode, setCuponCode] = useState('');
+  const nav = useLFNavigation();
+
+  const goToCheckout = useCallback(() => {
+    nav.navigate(Routes.shipTo);
+  }, [nav]);
 
   const keyExtractor = useCallback(
     (item: LFHorizontalCardProps) => item.id.toString(),
@@ -126,6 +133,7 @@ function CartScreen() {
 
         <View style={styles.buttonContainer}>
           <LFButton.Button
+            onPress={goToCheckout}
             title={translate('resources:check_out')}
             type="Primary"
             size="Large"
@@ -133,7 +141,7 @@ function CartScreen() {
         </View>
       </View>
     );
-  }, [cuponCode]);
+  }, [cuponCode, goToCheckout]);
 
   return (
     <View style={styles.cartContainer}>

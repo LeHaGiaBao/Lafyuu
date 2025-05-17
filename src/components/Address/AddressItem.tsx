@@ -1,25 +1,24 @@
-import React, {memo, useCallback, useState} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFAddressItemProps, LFButton, LFIcon, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
 import translate from '@translations/i18n';
 
 const LFAddressItem = (props: LFAddressItemProps) => {
-  const {name, address, phone, canChoose = false, isChoose, ...rest} = props;
-  const [isChoosen, setIsChoosen] = useState(isChoose);
+  const {name, address, phone, isChoose, onPress, ...rest} = props;
 
   const handleChoose = useCallback(() => {
-    if (canChoose) {
-      setIsChoosen(prev => !prev);
+    if (onPress) {
+      onPress();
     }
-  }, [canChoose]);
+  }, [onPress]);
 
   return (
     <TouchableOpacity
       style={[
         addressItemStyles.container,
         {
-          borderColor: isChoosen
+          borderColor: isChoose
             ? PrimaryColor.BlueColor
             : NeutralColor.LightColor,
         },
@@ -66,7 +65,7 @@ const addressItemStyles = StyleSheet.create({
   container: {
     display: 'flex',
     gap: 16,
-    margin: 16,
+    marginHorizontal: 16,
     padding: 16,
     borderWidth: 1,
     borderRadius: 5,

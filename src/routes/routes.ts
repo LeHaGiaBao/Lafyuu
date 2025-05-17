@@ -19,6 +19,7 @@ export const Routes = {
 
   myOrder: 'my_order',
   myAddress: 'my_address',
+  shipTo: 'ship_to',
 
   myPayment: 'my_payment',
   myCard: 'my_payment_card',

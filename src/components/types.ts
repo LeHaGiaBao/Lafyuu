@@ -191,6 +191,6 @@ export interface LFAddressItemProps extends ViewProps, PropsWithChildren {
   name: string;
   address: string;
   phone: string;
-  canChoose?: boolean;
+  onPress?: () => void;
   isChoose?: boolean;
 }

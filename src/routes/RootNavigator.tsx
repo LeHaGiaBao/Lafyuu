@@ -36,6 +36,7 @@ import NewAddress from '@screens/main/Address/NewAddress';
 import EditAddress from '@screens/main/Address/EditAddress';
 import DeleteConfirm from '@screens/main/Address/DeleteConfirm';
 import ShipTo from '@screens/main/Address/ShipTo';
+import MyOrder from '@screens/main/Order/MyOrder';
 
 const Stack = createNativeStackNavigator();
 
@@ -215,6 +216,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.shipTo}
         component={ShipTo}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myOrder}
+        component={MyOrder}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

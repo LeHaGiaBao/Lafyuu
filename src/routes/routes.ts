@@ -17,6 +17,7 @@ export const Routes = {
   myPhone: 'my_phone',
   myPassword: 'my_password',
 
+  orderDetail: 'order_detail',
   myOrder: 'my_order',
   myAddress: 'my_address',
   shipTo: 'ship_to',

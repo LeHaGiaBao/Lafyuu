@@ -91,6 +91,10 @@
     "pay": "Pay",
     "success": "Success",
     "success_description": "Thank you for shopping using Lafyuu",
-    "back_to_order": "Back To Order"
+    "back_to_order": "Back To Order",
+    "order_at_lafyuu": "Order at Lafyuu",
+    "item_purchased": "Items purchased",
+    "order_status": "Order Status",
+    "price": "Price"
   }
 }

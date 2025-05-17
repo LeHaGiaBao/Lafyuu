@@ -194,3 +194,14 @@ export interface LFAddressItemProps extends ViewProps, PropsWithChildren {
   onPress?: () => void;
   isChoose?: boolean;
 }
+
+export interface LFOrderItemProps
+  extends TouchableOpacityProps,
+    PropsWithChildren {
+  id: any;
+  orderCode: string;
+  date: string;
+  status: string;
+  numberOfItems: number;
+  totalPrice: number;
+}

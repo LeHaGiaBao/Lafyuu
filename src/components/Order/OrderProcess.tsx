@@ -9,16 +9,16 @@ const LFOrderProcess = (props: LFOrderProcessProps) => {
   const {steps} = props;
 
   return (
-    <View style={styles.progressContainer}>
+    <View style={orderProcessStyles.progressContainer}>
       {steps.map((step, index) => {
         const isLastStep = index === steps.length - 1;
         const lastCompletedStep = steps?.findIndex(sp => !sp.completed);
 
         return (
-          <View key={step.id} style={styles.stepContainer}>
+          <View key={step.id} style={orderProcessStyles.stepContainer}>
             <View
               style={[
-                styles.indicator,
+                orderProcessStyles.indicator,
                 {
                   backgroundColor: step.completed
                     ? PrimaryColor.BlueColor
@@ -31,7 +31,7 @@ const LFOrderProcess = (props: LFOrderProcessProps) => {
             {!isLastStep && (
               <View
                 style={[
-                  styles.line,
+                  orderProcessStyles.line,
                   {
                     backgroundColor:
                       step.completed && index === lastCompletedStep - 1
@@ -54,7 +54,7 @@ const LFOrderProcess = (props: LFOrderProcessProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const orderProcessStyles = StyleSheet.create({
   progressContainer: {
     backgroundColor: BackgroundColor.WhiteColor,
     flexDirection: 'row',

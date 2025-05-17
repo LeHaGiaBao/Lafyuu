@@ -213,3 +213,13 @@ export interface LFOrderProcessProps {
     completed: boolean;
   }>;
 }
+
+export interface LFReviewItemProps extends PropsWithChildren {
+  id: string | number;
+  imageProfile: any;
+  name: string;
+  rating: number;
+  review: string;
+  images: any[];
+  date: string;
+}

@@ -15,6 +15,7 @@ export {default as LFNavigation} from './Navigation';
 export {default as LFNotification} from './Notification';
 export {default as LFOrder} from './Order';
 export {default as LFProductCard} from './ProductCard';
+export {default as LFReview} from './Review';
 
 // Utils
 export * from './helper';

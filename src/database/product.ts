@@ -240,3 +240,14 @@ export const PRODUCT_DETAIL_REVIEW_IMAGE = [
     image: images.review3,
   },
 ];
+
+export const PRODUCT_DETAIL_REVIEW = {
+  id: 0,
+  imageProfile: images.profile,
+  name: 'James Lawson',
+  rating: 4,
+  review:
+    'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
+  images: PRODUCT_DETAIL_REVIEW_IMAGE,
+  date: 'December 10, 2016',
+};

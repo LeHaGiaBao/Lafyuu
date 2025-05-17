@@ -1,20 +1,11 @@
-import React, {memo, useCallback} from 'react';
-import {FlatList, Image, StyleSheet, View} from 'react-native';
-import images from '@assets/images';
-import {LFRating, LFText} from '@components';
+import React, {memo} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {LFRating, LFReview, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
-import {PRODUCT_DETAIL_REVIEW_IMAGE} from '@database';
+import {PRODUCT_DETAIL_REVIEW} from '@database';
 import translate from '@translations/i18n';
 
 function DetailReview() {
-  const keyExtractor = useCallback((item: any) => item.id.toString(), []);
-
-  const renderItem = useCallback(({item}: {item: any}) => {
-    const {image} = item;
-
-    return <Image source={image} style={styles.reviewImage} />;
-  }, []);
-
   return (
     <>
       <View style={styles.header}>
@@ -38,40 +29,7 @@ function DetailReview() {
           </LFText.Text>
         </LFText.Text>
       </View>
-
-      <View style={styles.profileContainer}>
-        <Image source={images.profile} style={styles.image} />
-        <View style={styles.rightNode}>
-          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
-            James Lawson
-          </LFText.Text>
-          <LFRating.Star rating={4} ratingType="Medium" />
-        </View>
-      </View>
-
-      <View style={styles.reviewContainer}>
-        <LFText.Text typo="BodyNormalRegular" color={NeutralColor.GreyColor}>
-          air max are always very comfortable fit, clean and just perfect in
-          every way. just the box was too small and scrunched the sneakers up a
-          little bit, not sure if the box was always this small but the 90s are
-          and will always be one of my favorites.
-        </LFText.Text>
-      </View>
-
-      <FlatList
-        horizontal
-        data={PRODUCT_DETAIL_REVIEW_IMAGE}
-        renderItem={renderItem}
-        keyExtractor={keyExtractor}
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.imageList}
-      />
-
-      <View style={styles.date}>
-        <LFText.Text typo="CaptionNormalRegular" color={NeutralColor.GreyColor}>
-          December 10, 2016
-        </LFText.Text>
-      </View>
+      <LFReview.ReviewItem {...PRODUCT_DETAIL_REVIEW} />
     </>
   );
 }
@@ -92,41 +50,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-  },
-  profileContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 16,
-    padding: 16,
-  },
-  image: {
-    width: 48,
-    height: 48,
-    borderRadius: 100,
-    backgroundColor: NeutralColor.LightColor,
-  },
-  rightNode: {
-    display: 'flex',
-    gap: 8,
-  },
-  reviewContainer: {
-    paddingHorizontal: 16,
-  },
-  imageList: {
-    marginTop: 16,
-    paddingHorizontal: 16,
-    display: 'flex',
-    gap: 16,
-  },
-  reviewImage: {
-    width: 72,
-    height: 72,
-    borderRadius: 8,
-  },
-  date: {
-    marginTop: 16,
-    paddingHorizontal: 16,
   },
 });
 

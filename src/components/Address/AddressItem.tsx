@@ -2,10 +2,21 @@ import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFAddressItemProps, LFButton, LFIcon, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
 const LFAddressItem = (props: LFAddressItemProps) => {
   const {name, address, phone, isChoose, onPress, ...rest} = props;
+  const nav = useLFNavigation();
+
+  const handleEdit = useCallback(() => {
+    nav.navigate(Routes.editAddress);
+  }, [nav]);
+
+  const handleDelete = useCallback(() => {
+    nav.navigate(Routes.deleteConfirm);
+  }, [nav]);
 
   const handleChoose = useCallback(() => {
     if (onPress) {
@@ -46,14 +57,14 @@ const LFAddressItem = (props: LFAddressItemProps) => {
       <View style={addressItemStyles.buttonContainer}>
         <View style={addressItemStyles.editButton}>
           <LFButton.Button
-            onPress={() => {}}
+            onPress={handleEdit}
             title={translate('resources:edit')}
             type="Primary"
             size="Large"
           />
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleDelete}>
           <LFIcon.Icon icon="trash" size={24} />
         </TouchableOpacity>
       </View>

@@ -9,13 +9,14 @@ import {
 import {BackgroundColor, Devices} from '@constants';
 import {MY_ADDRESS_LIST} from '@database';
 import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
 function MyAddress() {
   const nav = useLFNavigation();
 
-  const handleSave = useCallback(() => {
-    nav.goBack();
+  const addAdress = useCallback(() => {
+    nav.navigate(Routes.newAddress);
   }, [nav]);
 
   const keyExtractor = useCallback(
@@ -58,7 +59,7 @@ function MyAddress() {
       />
       <View style={styles.buttonContainer}>
         <LFButton.Button
-          onPress={handleSave}
+          onPress={addAdress}
           title={translate('resources:add_address')}
           type="Primary"
           size="Large"

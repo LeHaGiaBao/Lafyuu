@@ -74,7 +74,19 @@
     "import_charges": "Import charges",
     "total_price": "Total Price",
     "add_address": "Add Address",
+    "save_address": "Save Address",
     "next": "Next",
-    "edit": "Edit"
+    "edit": "Edit",
+    "country": "Country or region",
+    "street_address": "Street Address",
+    "street_address_2": "Street Address 2 (Optional)",
+    "city": "City",
+    "state": "State/Province/Region",
+    "zip_code": "Zip Code",
+    "phone_number": "Phone Number",
+    "confirmation": "Confirmation",
+    "confirm_description": "Are you sure wanna delete address",
+    "delete": "Delete",
+    "cancel": "Cancel"
   }
 }

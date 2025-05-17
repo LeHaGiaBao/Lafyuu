@@ -30,6 +30,9 @@ import Favorite from '@screens/main/Product/Favorite';
 import ProductDetail from '@screens/main/Product/ProductDetail';
 import CategoryList from '@screens/main/Category/CategoryList';
 import MyAddress from '@screens/main/Address/MyAddress';
+import NewAddress from '@screens/main/Address/NewAddress';
+import EditAddress from '@screens/main/Address/EditAddress';
+import DeleteConfirm from '@screens/main/Address/DeleteConfirm';
 import ShipTo from '@screens/main/Address/ShipTo';
 
 const Stack = createNativeStackNavigator();
@@ -180,6 +183,21 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.myAddress}
         component={MyAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.newAddress}
+        component={NewAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.editAddress}
+        component={EditAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.deleteConfirm}
+        component={DeleteConfirm}
         options={{headerShown: false}}
       />
       <Stack.Screen

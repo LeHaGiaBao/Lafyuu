@@ -20,6 +20,9 @@ export const Routes = {
   myOrder: 'my_order',
   myAddress: 'my_address',
   shipTo: 'ship_to',
+  newAddress: 'new_address',
+  editAddress: 'edit_address',
+  deleteConfirm: 'delete_confirm',
 
   myPayment: 'my_payment',
   myCard: 'my_payment_card',

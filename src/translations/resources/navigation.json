@@ -37,6 +37,8 @@
     "category": "Category",
     "favorite": "Favorite",
     "address": "Address",
-    "ship_to": "Ship To"
+    "ship_to": "Ship To",
+    "add_address": "Add Address",
+    "edit_address": "Edit Address"
   }
 }

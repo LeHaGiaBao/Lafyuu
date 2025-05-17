@@ -24,6 +24,8 @@ import MyPaypal from '@screens/main/Payment/MyPaypal';
 import MyBank from '@screens/main/Payment/MyBank';
 import AddNewCard from '@screens/main/Payment/AddNewCard';
 import EditCard from '@screens/main/Payment/EditCard';
+import ChooseCard from '@screens/main/Payment/ChooseCard';
+import PaymentStatus from '@screens/main/Payment/PaymentStatus';
 import Flashsale from '@screens/main/Product/Flashsale';
 import Megasale from '@screens/main/Product/Megasale';
 import Favorite from '@screens/main/Product/Favorite';
@@ -153,6 +155,16 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.editCard}
         component={EditCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.chooseCard}
+        component={ChooseCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.paymentStatus}
+        component={PaymentStatus}
         options={{headerShown: false}}
       />
       <Stack.Screen

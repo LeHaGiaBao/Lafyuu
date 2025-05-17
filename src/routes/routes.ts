@@ -30,6 +30,8 @@ export const Routes = {
   myBank: 'my_bank',
   addNewCard: 'add_new_card',
   editCard: 'edit_card',
+  chooseCard: 'choose_card',
+  paymentStatus: 'payment_status',
 
   notificationList: 'notification_list',
   notificationOffer: 'notification_offer',

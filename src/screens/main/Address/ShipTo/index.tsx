@@ -10,14 +10,21 @@ import {
 import {BackgroundColor, Devices} from '@constants';
 import {MY_ADDRESS_LIST} from '@database';
 import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
 
 function ShipTo() {
   const nav = useLFNavigation();
   const [choosedAddress, setChoosedAddress] = useState(null);
 
-  const handleSave = useCallback(() => {
-    nav.goBack();
+  const handleNext = useCallback(() => {
+    nav.navigate(Routes.myPayment, {
+      isOrder: true,
+    });
+  }, [nav]);
+
+  const handleAddAddress = useCallback(() => {
+    nav.navigate(Routes.newAddress);
   }, [nav]);
 
   const keyExtractor = useCallback(
@@ -65,7 +72,7 @@ function ShipTo() {
             <LFNavigation.HeaderCanGoBack
               name={translate('navigation:ship_to')}
               rightNode={
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleAddAddress}>
                   <LFIcon.Icon icon="plus" size={24} />
                 </TouchableOpacity>
               }
@@ -75,8 +82,9 @@ function ShipTo() {
       />
       <View style={styles.buttonContainer}>
         <LFButton.Button
-          onPress={handleSave}
+          onPress={handleNext}
           title={translate('resources:next')}
+          disabled={choosedAddress === null}
           type="Primary"
           size="Large"
         />

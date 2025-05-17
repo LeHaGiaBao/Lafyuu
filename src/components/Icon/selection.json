@@ -4735,6 +4735,63 @@
       "setIdx": 0,
       "setId": 2,
       "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 155.152c154.238 0 279.273 125.035 279.273 279.273s-125.035 279.273-279.273 279.273c-154.238 0-279.273-125.035-279.273-279.273s125.035-279.273 279.273-279.273z",
+          "M426.667 438.303l59.475 58.182 118.949-116.364"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(64, 191, 255)"
+          },
+          {
+            "fill": "none",
+            "stroke": "rgb(255, 255, 255)",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 46.54545454545455
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": true,
+        "grid": 0,
+        "tags": ["Success Icon"],
+        "colorPermutations": {
+          "25111312912552552551641912551": [
+            {
+              "f": 0
+            },
+            {
+              "s": 2
+            }
+          ]
+        }
+      },
+      "attrs": [
+        {
+          "fill": "rgb(64, 191, 255)"
+        },
+        {
+          "fill": "none",
+          "stroke": "rgb(255, 255, 255)",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 46.54545454545455
+        }
+      ],
+      "properties": {
+        "order": 5,
+        "id": 1,
+        "name": "success",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
     }
   ],
   "height": 1024,

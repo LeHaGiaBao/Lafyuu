@@ -116,3 +116,21 @@ export const MY_ADDRESS_LIST = [
     phone: '+99 1234567890',
   },
 ];
+
+export const MY_PAYMENT_ORDER = [
+  {
+    route: Routes.chooseCard,
+    name: translate('navigation:my_payment:card'),
+    icon: 'card-b',
+  },
+  {
+    route: Routes.myPaypal,
+    name: translate('navigation:my_payment:paypal'),
+    icon: 'paypal',
+  },
+  {
+    route: Routes.myBank,
+    name: translate('navigation:my_payment:bank'),
+    icon: 'bank-b',
+  },
+];

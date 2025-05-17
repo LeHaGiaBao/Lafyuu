@@ -87,6 +87,10 @@
     "confirmation": "Confirmation",
     "confirm_description": "Are you sure wanna delete address",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "pay": "Pay",
+    "success": "Success",
+    "success_description": "Thank you for shopping using Lafyuu",
+    "back_to_order": "Back To Order"
   }
 }

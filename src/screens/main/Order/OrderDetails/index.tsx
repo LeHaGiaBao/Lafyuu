@@ -1,28 +1,20 @@
-import React, {memo, useCallback, useMemo, useState} from 'react';
+/* eslint-disable react-native/no-inline-styles */
+import React, {memo, useCallback, useMemo} from 'react';
 import {StyleSheet, View, FlatList} from 'react-native';
 import {
   LFButton,
-  LFForm,
   LFHorizontalCardProps,
   LFNavigation,
+  LFOrder,
   LFProductCard,
   LFText,
 } from '@components';
 import {BackgroundColor, Devices, NeutralColor, PrimaryColor} from '@constants';
-import {CART_PRODUCT_LIST} from '@database';
-import {useLFNavigation} from '@hooks';
-import {Routes} from '@routes/routes';
+import {MY_ORDER_PROCESS_STEPS, ORDER_DETAIL_PRODUCT_LIST} from '@database';
 import translate from '@translations/i18n';
 import {formatCurrencyUSD} from '@utils';
 
-function CartScreen() {
-  const [cuponCode, setCuponCode] = useState('');
-  const nav = useLFNavigation();
-
-  const goToCheckout = useCallback(() => {
-    nav.navigate(Routes.shipTo);
-  }, [nav]);
-
+function OrderDetails() {
   const keyExtractor = useCallback(
     (item: LFHorizontalCardProps) => item.id.toString(),
     [],
@@ -48,21 +40,31 @@ function CartScreen() {
 
   const renderHeader = useMemo(() => {
     return (
-      <View style={styles.headerContainer}>
-        <LFNavigation.Header name={translate('resources:your_cart')} />
-      </View>
+      <>
+        <View style={styles.headerContainer}>
+          <LFNavigation.HeaderCanGoBack
+            name={translate('navigation:order_detail')}
+          />
+        </View>
+
+        <LFOrder.OrderProcess steps={MY_ORDER_PROCESS_STEPS} />
+
+        <View style={[styles.titleContainer, {marginBottom: 16}]}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:product')}
+          </LFText.Text>
+        </View>
+      </>
     );
   }, []);
 
-  const renderFooter = useMemo(() => {
+  const renderShippingDetails = useMemo(() => {
     return (
-      <View>
-        <View style={styles.cuponContainer}>
-          <LFForm.CuponInput
-            placeholder={translate('resources:enter_cupon_code')}
-            value={cuponCode}
-            onChangeText={setCuponCode}
-          />
+      <>
+        <View style={styles.titleContainer}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:shipping_details')}
+          </LFText.Text>
         </View>
 
         <View style={styles.priceContainer}>
@@ -70,14 +72,91 @@ function CartScreen() {
             <LFText.Text
               typo="BodyNormalRegular"
               color={NeutralColor.GreyColor}>
-              {translate('resources:items') + ` (${CART_PRODUCT_LIST.length})`}
+              {translate('resources:date_shipping')}
             </LFText.Text>
 
             <LFText.Text
               typo="BodyNormalRegular"
+              color={NeutralColor.DarkColor}>
+              January 16, 2015
+            </LFText.Text>
+          </View>
+
+          <View style={styles.priceItem}>
+            <LFText.Text
+              typo="BodyNormalRegular"
               color={NeutralColor.GreyColor}>
+              {translate('resources:shipping')}
+            </LFText.Text>
+
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.DarkColor}>
+              POS Reggular
+            </LFText.Text>
+          </View>
+
+          <View style={styles.priceItem}>
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.GreyColor}>
+              {translate('resources:resi')}
+            </LFText.Text>
+
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.DarkColor}>
+              000192848573
+            </LFText.Text>
+          </View>
+
+          <View style={styles.priceItem}>
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.GreyColor}>
+              {translate('resources:address')}
+            </LFText.Text>
+
+            <View style={styles.addressContainer}>
+              <LFText.Text
+                typo="BodyNormalRegular"
+                color={NeutralColor.DarkColor}
+                numberOfLines={3}>
+                2727 Lakeshore Rd undefined Nampa, Tennessee 78410
+              </LFText.Text>
+            </View>
+          </View>
+        </View>
+      </>
+    );
+  }, []);
+
+  const renderPaymentDetails = useMemo(() => {
+    return (
+      <>
+        <View style={styles.titleContainer}>
+          <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
+            {translate('resources:payment_details')}
+          </LFText.Text>
+        </View>
+
+        <View style={styles.priceContainer}>
+          <View style={styles.priceItem}>
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.GreyColor}>
+              {translate('resources:items') +
+                ` (${ORDER_DETAIL_PRODUCT_LIST.length})`}
+            </LFText.Text>
+
+            <LFText.Text
+              typo="BodyNormalRegular"
+              color={NeutralColor.DarkColor}>
               {formatCurrencyUSD(
-                CART_PRODUCT_LIST.reduce((acc, item) => acc + item.price, 0),
+                ORDER_DETAIL_PRODUCT_LIST.reduce(
+                  (acc, item) => acc + item.price,
+                  0,
+                ),
               )}
             </LFText.Text>
           </View>
@@ -91,7 +170,7 @@ function CartScreen() {
 
             <LFText.Text
               typo="BodyNormalRegular"
-              color={NeutralColor.GreyColor}>
+              color={NeutralColor.DarkColor}>
               {formatCurrencyUSD(40.0)}
             </LFText.Text>
           </View>
@@ -105,7 +184,7 @@ function CartScreen() {
 
             <LFText.Text
               typo="BodyNormalRegular"
-              color={NeutralColor.GreyColor}>
+              color={NeutralColor.DarkColor}>
               {formatCurrencyUSD(128.0)}
             </LFText.Text>
           </View>
@@ -123,30 +202,40 @@ function CartScreen() {
               typo="BodyNormalRegular"
               color={PrimaryColor.BlueColor}>
               {formatCurrencyUSD(
-                CART_PRODUCT_LIST.reduce((acc, item) => acc + item.price, 0) +
+                ORDER_DETAIL_PRODUCT_LIST.reduce(
+                  (acc, item) => acc + item.price,
+                  0,
+                ) +
                   40.0 +
                   128.0,
               )}
             </LFText.Text>
           </View>
         </View>
+      </>
+    );
+  }, []);
 
+  const renderFooter = useMemo(() => {
+    return (
+      <View>
+        {renderShippingDetails}
+        {renderPaymentDetails}
         <View style={styles.buttonContainer}>
           <LFButton.Button
-            onPress={goToCheckout}
-            title={translate('resources:check_out')}
+            title={translate('resources:notify_me')}
             type="Primary"
             size="Large"
           />
         </View>
       </View>
     );
-  }, [cuponCode, goToCheckout]);
+  }, [renderShippingDetails, renderPaymentDetails]);
 
   return (
     <View style={styles.cartContainer}>
       <FlatList
-        data={CART_PRODUCT_LIST}
+        data={ORDER_DETAIL_PRODUCT_LIST}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsVerticalScrollIndicator={false}
@@ -170,7 +259,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginBottom: 16,
   },
-  cuponContainer: {
+  titleContainer: {
     marginHorizontal: 16,
     marginTop: 16,
     display: 'flex',
@@ -207,6 +296,10 @@ const styles = StyleSheet.create({
     borderStyle: 'dotted',
     borderWidth: 0.1,
   },
+  addressContainer: {
+    width: '50%',
+    textAlign: 'right',
+  },
 });
 
-export default memo(CartScreen);
+export default memo(OrderDetails);

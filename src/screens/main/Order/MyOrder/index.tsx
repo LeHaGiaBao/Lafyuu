@@ -24,7 +24,6 @@ function MyOrder() {
           numberOfItems={numberOfItems}
           totalPrice={totalPrice}
         />
-        ;
       </View>
     );
   }, []);

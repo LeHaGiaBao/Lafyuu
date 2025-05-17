@@ -205,3 +205,11 @@ export interface LFOrderItemProps
   numberOfItems: number;
   totalPrice: number;
 }
+
+export interface LFOrderProcessProps {
+  steps: Array<{
+    id: string | number;
+    label: string;
+    completed: boolean;
+  }>;
+}

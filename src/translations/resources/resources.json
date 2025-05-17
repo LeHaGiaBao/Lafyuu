@@ -95,6 +95,19 @@
     "order_at_lafyuu": "Order at Lafyuu",
     "item_purchased": "Items purchased",
     "order_status": "Order Status",
-    "price": "Price"
+    "price": "Price",
+    "product": "Product",
+    "shipping_details": "Shipping Details",
+    "date_shipping": "Date Shipping",
+    "resi": "No. Resi",
+    "address": "Address",
+    "payment_details": "Payment Details",
+    "notify_me": "Notify Me",
+    "order_process_status": {
+      "packing": "Packing",
+      "shipping": "Shipping",
+      "arriving": "Arriving",
+      "success": "Success"
+    }
   }
 }

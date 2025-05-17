@@ -66,6 +66,12 @@
     "review_product": "Review Product",
     "review": "Review",
     "you_might_also_like": "You Might Also Like",
-    "add_to_cart": "Add To Cart"
+    "add_to_cart": "Add To Cart",
+    "enter_cupon_code": "Enter Cupon Code",
+    "check_out": "Check Out",
+    "items": "Items",
+    "shipping": "Shipping",
+    "import_charges": "Import charges",
+    "total_price": "Total Price"
   }
 }

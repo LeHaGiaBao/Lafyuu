@@ -171,6 +171,16 @@ export interface LFProductCardProps
   isFavorite?: boolean;
 }
 
+export interface LFHorizontalCardProps
+  extends Pick<
+      LFProductCardProps,
+      'id' | 'image' | 'name' | 'price' | 'isFavorite'
+    >,
+    PropsWithChildren {
+  numOfProduct?: number;
+  type: 'Cart' | 'Order';
+}
+
 export interface LFProductDetailBannerProps {
   id: string;
   image: ImageSourcePropType;

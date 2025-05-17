@@ -38,6 +38,8 @@ import DeleteConfirm from '@screens/main/Address/DeleteConfirm';
 import ShipTo from '@screens/main/Address/ShipTo';
 import MyOrder from '@screens/main/Order/MyOrder';
 import OrderDetails from '@screens/main/Order/OrderDetails';
+import ReviewList from '@screens/main/Review/ReviewList';
+import WriteReview from '@screens/main/Review/WriteReview';
 
 const Stack = createNativeStackNavigator();
 
@@ -227,6 +229,16 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.orderDetail}
         component={OrderDetails}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.reviewList}
+        component={ReviewList}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.writeReview}
+        component={WriteReview}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

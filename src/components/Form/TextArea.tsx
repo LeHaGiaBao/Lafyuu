@@ -10,8 +10,7 @@ import {
 } from '@constants';
 
 const LFTextArea = (props: LFInputProps) => {
-  const {value = '', ...rest} = props;
-  const [textValue, setTextValue] = useState(value);
+  const {value = '', onChangeText, ...rest} = props;
   const [focus, setFocus] = useState(false);
 
   return (
@@ -29,8 +28,8 @@ const LFTextArea = (props: LFInputProps) => {
           },
         ]}
         autoCapitalize="none"
-        value={textValue}
-        onChangeText={val => setTextValue(val)}
+        value={value}
+        onChangeText={onChangeText}
         multiline={true}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}

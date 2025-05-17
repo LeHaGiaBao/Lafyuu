@@ -1,11 +1,20 @@
-import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {memo, useCallback, useRef} from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFRating, LFReview, LFText} from '@components';
 import {NeutralColor, PrimaryColor} from '@constants';
 import {PRODUCT_DETAIL_REVIEW} from '@database';
 import translate from '@translations/i18n';
+import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 
 function DetailReview() {
+  const numOfReview = useRef(5);
+  const nav = useLFNavigation();
+
+  const goToAllReview = useCallback(() => {
+    nav.navigate(Routes.reviewList, {numOfReview: numOfReview.current});
+  }, [nav]);
+
   return (
     <>
       <View style={styles.header}>
@@ -13,9 +22,11 @@ function DetailReview() {
           {translate('resources:review_product')}
         </LFText.Text>
 
-        <LFText.Text typo="H4" color={PrimaryColor.BlueColor}>
-          {translate('resources:see_more')}
-        </LFText.Text>
+        <TouchableOpacity onPress={goToAllReview}>
+          <LFText.Text typo="H4" color={PrimaryColor.BlueColor}>
+            {translate('resources:see_more')}
+          </LFText.Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.reviewStar}>
@@ -25,7 +36,7 @@ function DetailReview() {
           <LFText.Text
             typo="CaptionNormalRegular"
             color={NeutralColor.GreyColor}>
-            {`(5 ${translate('resources:review')})`}
+            {`(${numOfReview.current} ${translate('resources:review')})`}
           </LFText.Text>
         </LFText.Text>
       </View>

@@ -32,14 +32,16 @@ const LFReviewItem = (props: LFReviewItemProps) => {
         </LFText.Text>
       </View>
 
-      <FlatList
-        horizontal
-        data={images}
-        renderItem={renderItem}
-        keyExtractor={keyExtractor}
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={reviewItemStyles.imageList}
-      />
+      {images?.length > 0 && (
+        <FlatList
+          horizontal
+          data={images}
+          renderItem={renderItem}
+          keyExtractor={keyExtractor}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={reviewItemStyles.imageList}
+        />
+      )}
 
       <View style={reviewItemStyles.date}>
         <LFText.Text typo="CaptionNormalRegular" color={NeutralColor.GreyColor}>

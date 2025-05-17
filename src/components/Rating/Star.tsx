@@ -1,6 +1,12 @@
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {generateRatingStarSize, LFIcon, LFRatingProps} from '@components';
+import {
+  generateRatingStarSize,
+  LFIcon,
+  LFRatingProps,
+  LFText,
+} from '@components';
+import {NeutralColor} from '@constants';
 
 const MAX_RATING = 5;
 
@@ -27,6 +33,9 @@ const LFStar = (props: LFRatingProps) => {
           </View>
         ),
       )}
+      <LFText.Text typo="H5" color={NeutralColor.GreyColor}>
+        {rating + '/5'}
+      </LFText.Text>
     </View>
   );
 };

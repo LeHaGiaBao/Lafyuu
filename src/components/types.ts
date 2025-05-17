@@ -93,6 +93,7 @@ export interface LFRatingProps extends ViewProps, PropsWithChildren {
   ratingType?: RatingType;
   rating: number;
   canChange?: boolean;
+  showNumber?: boolean;
 }
 
 export interface LFCategoryItemProps {
@@ -220,6 +221,6 @@ export interface LFReviewItemProps extends PropsWithChildren {
   name: string;
   rating: number;
   review: string;
-  images: any[];
+  images?: any[];
   date: string;
 }

@@ -45,4 +45,6 @@ export const Routes = {
   favorite: 'favorite',
 
   categoryList: 'category_list',
+  reviewList: 'review_list',
+  writeReview: 'write_review',
 };

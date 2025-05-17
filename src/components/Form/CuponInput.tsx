@@ -11,8 +11,7 @@ import {
 import translate from '@translations/i18n';
 
 const LFCuponInput = (props: LFInputProps) => {
-  const {value = '', errorText, ...rest} = props;
-  const [textValue, setTextValue] = useState(value);
+  const {value = '', onChangeText, errorText, ...rest} = props;
   const [focus, setFocus] = useState(false);
 
   return (
@@ -20,13 +19,13 @@ const LFCuponInput = (props: LFInputProps) => {
       <View style={inputStyles.inputContainer}>
         <TextInput
           autoCapitalize="none"
-          value={textValue}
-          onChangeText={val => setTextValue(val)}
+          value={value}
+          onChangeText={onChangeText}
           style={[
             inputStyles.placeholderText,
             {
               fontFamily:
-                textValue === '' ? FontFamily.FontRegular : FontFamily.FontBold,
+                value === '' ? FontFamily.FontRegular : FontFamily.FontBold,
               borderColor: focus
                 ? PrimaryColor.BlueColor
                 : NeutralColor.LightColor,

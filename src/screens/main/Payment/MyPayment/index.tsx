@@ -2,10 +2,18 @@ import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {LFNavigation, LFNavigationItemProps} from '@components';
 import {BackgroundColor, Devices} from '@constants';
-import {MY_PAYMENT_ITEM} from '@database';
+import {MY_PAYMENT_ITEM, MY_PAYMENT_ORDER} from '@database';
+import {useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
 
 function MyPayment() {
+  const params =
+    (useLFNavigationParams() as {
+      isOrder?: boolean;
+    }) || {};
+
+  const isOrder = params?.isOrder ?? false;
+
   const keyExtractor = useCallback(
     (item: LFNavigationItemProps) => item.route,
     [],
@@ -26,7 +34,7 @@ function MyPayment() {
 
   return (
     <FlatList
-      data={MY_PAYMENT_ITEM}
+      data={isOrder ? MY_PAYMENT_ORDER : MY_PAYMENT_ITEM}
       renderItem={renderItem}
       keyExtractor={keyExtractor}
       style={styles.paymentContainer}

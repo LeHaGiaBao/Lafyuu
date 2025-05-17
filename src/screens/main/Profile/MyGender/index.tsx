@@ -1,5 +1,10 @@
 import React, {memo, useCallback} from 'react';
-import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StyleSheet,
+  View,
+} from 'react-native';
 import {LFButton, LFForm, LFNavigation, LFText} from '@components';
 import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {GENDER} from '@database';
@@ -19,9 +24,7 @@ function MyGender() {
     <KeyboardAvoidingView
       behavior={Devices.IS_IOS ? 'padding' : 'height'}
       style={styles.myGenderContainer}>
-      <ScrollView
-        contentContainerStyle={styles.contentContainerStyle}
-        showsVerticalScrollIndicator={false}>
+      <SafeAreaView style={styles.contentContainerStyle}>
         <LFNavigation.HeaderCanGoBack
           name={translate('navigation:my_profile:gender')}
         />
@@ -33,7 +36,7 @@ function MyGender() {
 
           <LFForm.Dropdown chooseData={gender} dropdownData={GENDER} />
         </View>
-      </ScrollView>
+      </SafeAreaView>
 
       <View style={styles.buttonContainer}>
         <LFButton.Button

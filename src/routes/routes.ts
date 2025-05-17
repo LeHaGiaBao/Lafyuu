@@ -19,6 +19,10 @@ export const Routes = {
 
   myOrder: 'my_order',
   myAddress: 'my_address',
+  shipTo: 'ship_to',
+  newAddress: 'new_address',
+  editAddress: 'edit_address',
+  deleteConfirm: 'delete_confirm',
 
   myPayment: 'my_payment',
   myCard: 'my_payment_card',
@@ -26,6 +30,8 @@ export const Routes = {
   myBank: 'my_bank',
   addNewCard: 'add_new_card',
   editCard: 'edit_card',
+  chooseCard: 'choose_card',
+  paymentStatus: 'payment_status',
 
   notificationList: 'notification_list',
   notificationOffer: 'notification_offer',

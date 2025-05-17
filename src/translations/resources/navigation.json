@@ -31,10 +31,15 @@
       "bank": "Bank Transfer"
     },
     "add_card": "Add Card",
+    "choose_card": "Choose Card",
     "card": "Card",
     "super_flash_sale": "Super Flash Sale",
     "super_mega_sale": "Super Mega Sale",
     "category": "Category",
-    "favorite": "Favorite"
+    "favorite": "Favorite",
+    "address": "Address",
+    "ship_to": "Ship To",
+    "add_address": "Add Address",
+    "edit_address": "Edit Address"
   }
 }

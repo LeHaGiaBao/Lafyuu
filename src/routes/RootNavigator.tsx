@@ -24,11 +24,18 @@ import MyPaypal from '@screens/main/Payment/MyPaypal';
 import MyBank from '@screens/main/Payment/MyBank';
 import AddNewCard from '@screens/main/Payment/AddNewCard';
 import EditCard from '@screens/main/Payment/EditCard';
+import ChooseCard from '@screens/main/Payment/ChooseCard';
+import PaymentStatus from '@screens/main/Payment/PaymentStatus';
 import Flashsale from '@screens/main/Product/Flashsale';
 import Megasale from '@screens/main/Product/Megasale';
 import Favorite from '@screens/main/Product/Favorite';
 import ProductDetail from '@screens/main/Product/ProductDetail';
 import CategoryList from '@screens/main/Category/CategoryList';
+import MyAddress from '@screens/main/Address/MyAddress';
+import NewAddress from '@screens/main/Address/NewAddress';
+import EditAddress from '@screens/main/Address/EditAddress';
+import DeleteConfirm from '@screens/main/Address/DeleteConfirm';
+import ShipTo from '@screens/main/Address/ShipTo';
 
 const Stack = createNativeStackNavigator();
 
@@ -151,6 +158,16 @@ function RootNavigator() {
         options={{headerShown: false}}
       />
       <Stack.Screen
+        name={Routes.chooseCard}
+        component={ChooseCard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.paymentStatus}
+        component={PaymentStatus}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name={Routes.flashsale}
         component={Flashsale}
         options={{headerShown: false}}
@@ -173,6 +190,31 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.categoryList}
         component={CategoryList}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.myAddress}
+        component={MyAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.newAddress}
+        component={NewAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.editAddress}
+        component={EditAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.deleteConfirm}
+        component={DeleteConfirm}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.shipTo}
+        component={ShipTo}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

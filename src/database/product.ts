@@ -240,3 +240,55 @@ export const PRODUCT_DETAIL_REVIEW_IMAGE = [
     image: images.review3,
   },
 ];
+
+export const PRODUCT_DETAIL_REVIEW = {
+  id: 0,
+  imageProfile: images.profile,
+  name: 'James Lawson',
+  rating: 4,
+  review:
+    'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
+  images: PRODUCT_DETAIL_REVIEW_IMAGE,
+  date: 'December 10, 2016',
+};
+
+export const PRODUCT_DETAIL_REVIEW_LIST = [
+  {
+    id: 0,
+    imageProfile: images.profile,
+    name: 'James Lawson',
+    rating: 5,
+    review:
+      'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
+    images: PRODUCT_DETAIL_REVIEW_IMAGE,
+    date: 'December 10, 2016',
+  },
+  {
+    id: 1,
+    imageProfile: images.profile1,
+    name: 'Laura Octavian',
+    rating: 4,
+    review:
+      'This is really amazing product, i like the design of product, I hope can buy it again!',
+    date: 'December 10, 2016',
+  },
+  {
+    id: 2,
+    imageProfile: images.profile2,
+    name: 'Jhonson Bridge',
+    rating: 5,
+    review:
+      'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit',
+    date: 'December 10, 2016',
+  },
+  {
+    id: 3,
+    imageProfile: images.profile3,
+    name: 'Griffin Rod',
+    rating: 5,
+    review:
+      'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small  ',
+    images: PRODUCT_DETAIL_REVIEW_IMAGE,
+    date: 'December 10, 2016',
+  },
+];

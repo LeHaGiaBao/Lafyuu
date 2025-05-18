@@ -33,6 +33,9 @@
     "add_card": "Add Card",
     "choose_card": "Choose Card",
     "card": "Card",
+    "order": "Order",
+    "review": "Review",
+    "order_detail": "Order Details",
     "super_flash_sale": "Super Flash Sale",
     "super_mega_sale": "Super Mega Sale",
     "category": "Category",
@@ -40,6 +43,7 @@
     "address": "Address",
     "ship_to": "Ship To",
     "add_address": "Add Address",
-    "edit_address": "Edit Address"
+    "edit_address": "Edit Address",
+    "write_review": "Write Review"
   }
 }

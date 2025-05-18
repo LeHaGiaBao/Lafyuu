@@ -93,6 +93,7 @@ export interface LFRatingProps extends ViewProps, PropsWithChildren {
   ratingType?: RatingType;
   rating: number;
   canChange?: boolean;
+  showNumber?: boolean;
 }
 
 export interface LFCategoryItemProps {
@@ -193,4 +194,33 @@ export interface LFAddressItemProps extends ViewProps, PropsWithChildren {
   phone: string;
   onPress?: () => void;
   isChoose?: boolean;
+}
+
+export interface LFOrderItemProps
+  extends TouchableOpacityProps,
+    PropsWithChildren {
+  id: any;
+  orderCode: string;
+  date: string;
+  status: string;
+  numberOfItems: number;
+  totalPrice: number;
+}
+
+export interface LFOrderProcessProps {
+  steps: Array<{
+    id: string | number;
+    label: string;
+    completed: boolean;
+  }>;
+}
+
+export interface LFReviewItemProps extends PropsWithChildren {
+  id: string | number;
+  imageProfile: any;
+  name: string;
+  rating: number;
+  review: string;
+  images?: any[];
+  date: string;
 }

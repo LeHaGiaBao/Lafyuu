@@ -1,4 +1,4 @@
-import React, {memo, useCallback} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {LFButton, LFNavigation, LFReview, LFReviewItemProps} from '@components';
 import {BackgroundColor, Devices} from '@constants';
@@ -6,6 +6,7 @@ import {PRODUCT_DETAIL_REVIEW_LIST} from '@database';
 import {useLFNavigation, useLFNavigationParams} from '@hooks';
 import translate from '@translations/i18n';
 import {Routes} from '@routes/routes';
+import ReviewFilter from './Review.Filter';
 
 function ReviewList() {
   const nav = useLFNavigation();
@@ -13,8 +14,8 @@ function ReviewList() {
     (useLFNavigationParams() as {
       numOfReview?: number;
     }) || {};
-
   const numOfReview = params?.numOfReview ?? 0;
+  const [reviewFilter, setReviewFilter] = useState(0);
 
   const goToWriteReview = useCallback(() => {
     nav.navigate(Routes.writeReview);
@@ -35,11 +36,14 @@ function ReviewList() {
 
   const renderHeader = useCallback(() => {
     return (
-      <LFNavigation.HeaderCanGoBack
-        name={numOfReview + ' ' + translate('navigation:review')}
-      />
+      <>
+        <LFNavigation.HeaderCanGoBack
+          name={numOfReview + ' ' + translate('navigation:review')}
+        />
+        <ReviewFilter idSelected={reviewFilter} onPress={setReviewFilter} />
+      </>
     );
-  }, [numOfReview]);
+  }, [numOfReview, reviewFilter]);
 
   const renderFooter = useCallback(() => {
     return <View style={styles.footer} />;

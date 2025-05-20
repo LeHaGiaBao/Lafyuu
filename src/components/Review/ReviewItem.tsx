@@ -32,7 +32,7 @@ const LFReviewItem = (props: LFReviewItemProps) => {
         </LFText.Text>
       </View>
 
-      {images?.length > 0 && (
+      {images && images.length > 0 && (
         <FlatList
           horizontal
           data={images}

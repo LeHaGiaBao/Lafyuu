@@ -56,6 +56,7 @@ export interface LFButtonAddProps extends TouchableOpacityProps {}
 export interface LFButtonCheckProps
   extends Omit<LFButtonProps, 'size' | 'type'> {
   icon?: string;
+  isActive?: boolean;
 }
 
 export interface LFButtonNumberProps extends TouchableOpacityProps {

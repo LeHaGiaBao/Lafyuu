@@ -1,29 +1,24 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {memo, useCallback, useState} from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {LFButtonCheckProps, LFIcon, LFText} from '@components';
 import {BackgroundColor, NeutralColor, PrimaryColor} from '@constants';
 
 const LFButtonCheck = (props: LFButtonCheckProps) => {
-  const {title, icon, ...rest} = props;
-  const [isCheck, setIsCheck] = useState(false);
-
-  const handleCheck = useCallback(() => {
-    setIsCheck(!isCheck);
-  }, [isCheck]);
+  const {title, icon, isActive, ...rest} = props;
 
   return (
     <TouchableOpacity
       style={[
         buttonStyles.button,
         {
-          backgroundColor: isCheck
+          backgroundColor: isActive
             ? 'rgba(64, 191, 255, 0.1)'
             : BackgroundColor.WhiteColor,
-          borderColor: isCheck
+          borderColor: isActive
             ? BackgroundColor.WhiteColor
             : NeutralColor.LightColor,
-          borderWidth: isCheck ? 0 : 1,
+          borderWidth: isActive ? 0 : 1,
           display: 'flex',
           flexDirection: icon ? 'row' : 'column',
           justifyContent: icon ? 'space-between' : 'center',
@@ -31,21 +26,20 @@ const LFButtonCheck = (props: LFButtonCheckProps) => {
           gap: 8,
         },
       ]}
-      onPress={handleCheck}
       {...rest}>
       {props.icon ? (
         <>
           <LFIcon.Icon icon={`${props.icon}`} size={16} />
           <LFText.Text
-            typo={isCheck ? 'CaptionLargeBold' : 'CaptionLargeRegular'}
-            color={isCheck ? PrimaryColor.BlueColor : NeutralColor.GreyColor}>
+            typo={isActive ? 'CaptionLargeBold' : 'CaptionLargeRegular'}
+            color={isActive ? PrimaryColor.BlueColor : NeutralColor.GreyColor}>
             {title}
           </LFText.Text>
         </>
       ) : (
         <LFText.Text
-          typo={isCheck ? 'CaptionLargeBold' : 'CaptionLargeRegular'}
-          color={isCheck ? PrimaryColor.BlueColor : NeutralColor.GreyColor}>
+          typo={isActive ? 'CaptionLargeBold' : 'CaptionLargeRegular'}
+          color={isActive ? PrimaryColor.BlueColor : NeutralColor.GreyColor}>
           {title}
         </LFText.Text>
       )}

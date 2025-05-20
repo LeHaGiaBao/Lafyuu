@@ -11,7 +11,13 @@ import {NeutralColor} from '@constants';
 const MAX_RATING = 5;
 
 const LFStar = (props: LFRatingProps) => {
-  const {rating = 0, ratingType, canChange, ...rest} = props;
+  const {
+    rating = 0,
+    ratingType,
+    canChange,
+    showNumber = false,
+    ...rest
+  } = props;
   const [star, setStar] = useState(rating);
 
   const {size, gap} = generateRatingStarSize(ratingType);
@@ -33,9 +39,11 @@ const LFStar = (props: LFRatingProps) => {
           </View>
         ),
       )}
-      <LFText.Text typo="H5" color={NeutralColor.GreyColor}>
-        {rating + '/5'}
-      </LFText.Text>
+      {showNumber && (
+        <LFText.Text typo="H5" color={NeutralColor.GreyColor}>
+          {rating + '/5'}
+        </LFText.Text>
+      )}
     </View>
   );
 };

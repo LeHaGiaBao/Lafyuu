@@ -1,5 +1,6 @@
 import images from '@assets/images';
 import {NeutralColor, PrimaryColor} from '@constants';
+import translate from '@translations/i18n';
 
 export const SUPER_FLASH_SALE = [
   {
@@ -290,5 +291,38 @@ export const PRODUCT_DETAIL_REVIEW_LIST = [
       'air max are always very comfortable fit, clean and just perfect in every way. just the box was too small  ',
     images: PRODUCT_DETAIL_REVIEW_IMAGE,
     date: 'December 10, 2016',
+  },
+];
+
+export const REVIEW_LIST = [
+  {
+    id: 0,
+    text: translate('resources:all_reviews'),
+    icon: '',
+  },
+  {
+    id: 1,
+    text: '1',
+    icon: 'star-b',
+  },
+  {
+    id: 2,
+    text: '2',
+    icon: 'star-b',
+  },
+  {
+    id: 3,
+    text: '3',
+    icon: 'star-b',
+  },
+  {
+    id: 4,
+    text: '4',
+    icon: 'star-b',
+  },
+  {
+    id: 5,
+    text: '5',
+    icon: 'star-b',
   },
 ];

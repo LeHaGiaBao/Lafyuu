@@ -27,7 +27,7 @@
                BlueprintIdentifier = "2E6D60AC2DB77F25005CE656"
                BuildableName = "LafyuuDevelopment.app"
                BlueprintName = "LafyuuDevelopment"
-               ReferencedContainer = "container:lafyuu.xcodeproj">
+               ReferencedContainer = "container:Lafyuu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -56,7 +56,7 @@
             BlueprintIdentifier = "2E6D60AC2DB77F25005CE656"
             BuildableName = "LafyuuDevelopment.app"
             BlueprintName = "LafyuuDevelopment"
-            ReferencedContainer = "container:lafyuu.xcodeproj">
+            ReferencedContainer = "container:Lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,7 +73,7 @@
             BlueprintIdentifier = "2E6D60AC2DB77F25005CE656"
             BuildableName = "LafyuuDevelopment.app"
             BlueprintName = "LafyuuDevelopment"
-            ReferencedContainer = "container:lafyuu.xcodeproj">
+            ReferencedContainer = "container:Lafyuu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

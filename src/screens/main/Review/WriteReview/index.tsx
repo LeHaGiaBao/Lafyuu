@@ -1,10 +1,25 @@
-import React, {memo, useCallback, useRef} from 'react';
-import {KeyboardAvoidingView, ScrollView, StyleSheet, View} from 'react-native';
+import React, {memo, useCallback, useRef, useState} from 'react';
+import {
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  View,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
-import {LFButton, LFForm, LFNavigation, LFRating, LFText} from '@components';
+import {
+  LFButton,
+  LFForm,
+  LFNavigation,
+  LFRating,
+  LFText,
+  LFIcon,
+} from '@components';
 import {BackgroundColor, Devices, NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks';
 import translate from '@translations/i18n';
+import {launchImageLibrary} from 'react-native-image-picker';
 
 interface MyNameFormInputs {
   review: string;
@@ -14,10 +29,29 @@ interface MyNameFormInputs {
 function WriteReview() {
   const nav = useLFNavigation();
   const review = useRef(0);
+  const [selectedImages, setSelectedImages] = useState<any[]>([]);
 
   const {control, handleSubmit} = useForm<MyNameFormInputs>({
     mode: 'onChange',
+    defaultValues: {
+      images: [],
+    },
   });
+
+  const handleAddPhoto = useCallback(async () => {
+    const result = await launchImageLibrary({
+      mediaType: 'photo',
+      quality: 1,
+      includeBase64: false,
+    });
+    if (result?.assets?.[0]) {
+      setSelectedImages(prev => [...prev, result?.assets?.[0]]);
+    }
+  }, []);
+
+  const handleRemoveImage = useCallback((index: number) => {
+    setSelectedImages(prev => prev.filter((_, i) => i !== index));
+  }, []);
 
   const handleSave = useCallback(() => {
     nav.goBack();
@@ -68,7 +102,21 @@ function WriteReview() {
           <LFText.Text typo="H5" color={NeutralColor.DarkColor}>
             {translate('resources:photo')}
           </LFText.Text>
-          <LFButton.ButtonAdd />
+          <View style={styles.imageContainer}>
+            {selectedImages.map((image, index) => (
+              <View key={index} style={styles.imageWrapper}>
+                <Image source={{uri: image.uri}} style={styles.image} />
+                <TouchableOpacity
+                  style={styles.removeButton}
+                  onPress={() => handleRemoveImage(index)}>
+                  <LFIcon.Icon icon="trash" size={16} />
+                </TouchableOpacity>
+              </View>
+            ))}
+            {selectedImages?.length !== 5 && (
+              <LFButton.ButtonAdd onPress={handleAddPhoto} />
+            )}
+          </View>
         </View>
       </ScrollView>
 
@@ -104,6 +152,35 @@ const styles = StyleSheet.create({
   },
   contentContainerStyle: {
     paddingBottom: 100,
+  },
+  imageContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    alignItems: 'center',
+  },
+  imageWrapper: {
+    position: 'relative',
+  },
+  image: {
+    width: 72,
+    height: 72,
+    borderRadius: 5,
+  },
+  removeButton: {
+    position: 'absolute',
+    top: -8,
+    right: -8,
+    backgroundColor: BackgroundColor.WhiteColor,
+    borderRadius: 12,
+    padding: 4,
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
   },
 });
 

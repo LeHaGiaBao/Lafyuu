@@ -2,24 +2,23 @@ import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {LFNavigation, LFNavigationItemProps} from '@components';
 import {BackgroundColor, Devices} from '@constants';
-import {CATEGORY_LIST} from '@database';
+import {SEARCH_SHORT_BY_LIST} from '@database';
 import translate from '@translations/i18n';
 
-function CategoryList() {
+function SearchShortBy() {
   const keyExtractor = useCallback(
     (item: LFNavigationItemProps) => item.route,
     [],
   );
 
   const renderItem = useCallback(({item}: {item: LFNavigationItemProps}) => {
-    const {route, name, icon, ...rest} = item;
+    const {route, name, isGoBack, ...rest} = item;
 
     return (
       <LFNavigation.NavigationItem
         route={route}
         name={name}
-        icon={icon}
-        isGoBack={true}
+        isGoBack={isGoBack}
         {...rest}
       />
     );
@@ -27,14 +26,14 @@ function CategoryList() {
 
   return (
     <FlatList
-      data={CATEGORY_LIST}
+      data={SEARCH_SHORT_BY_LIST}
       renderItem={renderItem}
       keyExtractor={keyExtractor}
-      style={styles.categoryContainer}
+      style={styles.shortByContainer}
       ListHeaderComponent={
         <>
           <LFNavigation.HeaderCanGoBack
-            name={translate('navigation:category')}
+            name={translate('resources:short_by')}
           />
         </>
       }
@@ -43,11 +42,11 @@ function CategoryList() {
 }
 
 const styles = StyleSheet.create({
-  categoryContainer: {
+  shortByContainer: {
     flex: 1,
     backgroundColor: BackgroundColor.WhiteColor,
     paddingTop: Devices.headerTop,
   },
 });
 
-export default memo(CategoryList);
+export default memo(SearchShortBy);

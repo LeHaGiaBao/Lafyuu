@@ -44,6 +44,7 @@
     "ship_to": "Ship To",
     "add_address": "Add Address",
     "edit_address": "Edit Address",
-    "write_review": "Write Review"
+    "write_review": "Write Review",
+    "filter_search": "Filter Search"
   }
 }

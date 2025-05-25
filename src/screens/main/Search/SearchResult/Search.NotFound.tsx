@@ -3,8 +3,8 @@ import {StyleSheet, View} from 'react-native';
 import {LFButton, LFIcon, LFText} from '@components';
 import {BackgroundColor, NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks';
-import translate from '@translations/i18n';
 import {Routes} from '@routes/routes';
+import translate from '@translations/i18n';
 
 function SearchNotFound() {
   const nav = useLFNavigation();

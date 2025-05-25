@@ -50,4 +50,5 @@ export const Routes = {
   searchProduct: 'search_product',
   searchResult: 'search_result',
   searchShortBy: 'search_short_by',
+  searchFilter: 'search_filter',
 };

@@ -43,6 +43,7 @@ import WriteReview from '@screens/main/Review/WriteReview';
 import SearchProduct from '@screens/main/Search/SearchProduct';
 import SearchResult from '@screens/main/Search/SearchResult';
 import SearchShortBy from '@screens/main/Search/SearchShortBy';
+import SearchFilter from '@screens/main/Search/SearchFilter';
 
 const Stack = createNativeStackNavigator();
 
@@ -257,6 +258,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.searchShortBy}
         component={SearchShortBy}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.searchFilter}
+        component={SearchFilter}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

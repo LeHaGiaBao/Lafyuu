@@ -1,11 +1,11 @@
 import React, {memo, useCallback, useRef} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFIcon, LFText} from '@components';
-import translate from '@translations/i18n';
 import {NeutralColor} from '@constants';
+import {CATEGORY_LIST} from '@database';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
-import {CATEGORY_LIST} from '@database';
+import translate from '@translations/i18n';
 
 interface SearchFilterProps {
   result: Array<any>;
@@ -43,8 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 16,
-    marginTop: 16,
+    padding: 16,
   },
   filterContainer: {
     display: 'flex',

@@ -1,9 +1,9 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFForm, LFIcon, LFLine} from '@components';
-import translate from '@translations/i18n';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
+import translate from '@translations/i18n';
 
 interface SearchHeaderProps {
   text: string;
@@ -16,6 +16,10 @@ function Header(props: SearchHeaderProps) {
 
   const goToShortBy = useCallback(() => {
     nav.navigate(Routes.searchShortBy);
+  }, [nav]);
+
+  const goToFilter = useCallback(() => {
+    nav.navigate(Routes.searchFilter);
   }, [nav]);
 
   return (
@@ -34,7 +38,7 @@ function Header(props: SearchHeaderProps) {
             <LFIcon.Icon icon={'short-icon'} size={24} />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={goToFilter}>
             <LFIcon.Icon icon={'filter'} size={24} />
           </TouchableOpacity>
         </View>

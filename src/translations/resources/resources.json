@@ -117,6 +117,13 @@
     "short_by": "Short By",
     "product_not_found": "Product Not Found",
     "back_to_home": "Back To Home",
-    "result": "Result"
+    "result": "Result",
+    "price_range": "Price Range",
+    "condition": "Condition",
+    "buying_format": "Buying Format",
+    "item_location": "Item Location",
+    "show_only": "Show Only",
+    "min": "Min",
+    "max": "Max"
   }
 }

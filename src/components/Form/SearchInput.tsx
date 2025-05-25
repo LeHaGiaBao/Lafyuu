@@ -20,6 +20,10 @@ const LFSearchInput = (props: LFSearchInputProps) => {
   const [focus, setFocus] = useState(false);
 
   const navToSearch = useCallback(() => {
+    nav.navigate(Routes.searchProduct);
+  }, [nav]);
+
+  const onSubmitEditing = useCallback(() => {
     nav.navigate(Routes.searchResult);
   }, [nav]);
 
@@ -57,6 +61,8 @@ const LFSearchInput = (props: LFSearchInputProps) => {
             onFocus={() => setFocus(true)}
             onBlur={() => setFocus(false)}
             placeholder={placeholder}
+            onSubmitEditing={onSubmitEditing}
+            returnKeyType="search"
             {...rest}
           />
           {value !== '' && isActive && (

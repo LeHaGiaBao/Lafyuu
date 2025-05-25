@@ -47,4 +47,7 @@ export const Routes = {
   categoryList: 'category_list',
   reviewList: 'review_list',
   writeReview: 'write_review',
+  searchProduct: 'search_product',
+  searchResult: 'search_result',
+  searchShortBy: 'search_short_by',
 };

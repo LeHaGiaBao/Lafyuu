@@ -40,6 +40,9 @@ import MyOrder from '@screens/main/Order/MyOrder';
 import OrderDetails from '@screens/main/Order/OrderDetails';
 import ReviewList from '@screens/main/Review/ReviewList';
 import WriteReview from '@screens/main/Review/WriteReview';
+import SearchProduct from '@screens/main/Search/SearchProduct';
+import SearchResult from '@screens/main/Search/SearchResult';
+import SearchShortBy from '@screens/main/Search/SearchShortBy';
 
 const Stack = createNativeStackNavigator();
 
@@ -239,6 +242,21 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.writeReview}
         component={WriteReview}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.searchProduct}
+        component={SearchProduct}
+        options={{headerShown: false, animation: 'slide_from_bottom'}}
+      />
+      <Stack.Screen
+        name={Routes.searchResult}
+        component={SearchResult}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.searchShortBy}
+        component={SearchShortBy}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

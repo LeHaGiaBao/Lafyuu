@@ -113,6 +113,10 @@
     "write_review_description": "Please write Overall level of satisfaction with your shipping / Delivery Service",
     "write_your_review": "Write Your Review",
     "photo": "Photo",
-    "all_reviews": "All Review"
+    "all_reviews": "All Review",
+    "short_by": "Short By",
+    "product_not_found": "Product Not Found",
+    "back_to_home": "Back To Home",
+    "result": "Result"
   }
 }

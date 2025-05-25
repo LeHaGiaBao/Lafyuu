@@ -1,19 +1,21 @@
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {LFForm, LFIcon, LFLine, LFNotification} from '@components';
+import {LFForm, LFIcon, LFLine} from '@components';
+import translate from '@translations/i18n';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
-import translate from '@translations/i18n';
 
-function Header() {
+interface SearchHeaderProps {
+  text: string;
+  setText: any;
+}
+
+function Header(props: SearchHeaderProps) {
+  const {text, setText} = props;
   const nav = useLFNavigation();
 
-  const goToFavorite = useCallback(() => {
-    nav.navigate(Routes.favorite);
-  }, [nav]);
-
-  const goToNotificationList = useCallback(() => {
-    nav.navigate(Routes.notificationList);
+  const goToShortBy = useCallback(() => {
+    nav.navigate(Routes.searchShortBy);
   }, [nav]);
 
   return (
@@ -21,20 +23,19 @@ function Header() {
       <View style={styles.navContainer}>
         <View style={styles.searchInput}>
           <LFForm.SearchInput
+            isActive
+            value={text}
+            onChangeText={setText}
             placeholder={translate('resources:search_product')}
-            isActive={false}
           />
         </View>
         <View style={styles.iconContainer}>
-          <TouchableOpacity onPress={goToFavorite}>
-            <LFIcon.Icon icon={'mic'} size={24} />
+          <TouchableOpacity onPress={goToShortBy}>
+            <LFIcon.Icon icon={'short-icon'} size={24} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={goToNotificationList}>
-            <View style={styles.dot}>
-              <LFNotification.Mark />
-            </View>
-            <LFIcon.Icon icon={'notification'} size={24} />
+          <TouchableOpacity>
+            <LFIcon.Icon icon={'filter'} size={24} />
           </TouchableOpacity>
         </View>
       </View>

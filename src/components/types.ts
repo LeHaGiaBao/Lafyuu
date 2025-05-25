@@ -115,9 +115,11 @@ export interface LFNavigationItemProps
   rightNode?: JSX.Element;
   rightContent?: string;
   numOfNotification?: number;
+  isGoBack?: boolean;
 }
 
 export interface LFNavigationBackProps extends LFNavigationProps {
+  icon?: string;
   rightNode?: JSX.Element;
 }
 

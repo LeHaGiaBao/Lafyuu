@@ -5,7 +5,7 @@ import {NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks';
 
 const LFHeaderCanGoBack = (props: LFNavigationBackProps) => {
-  const {name, rightNode} = props;
+  const {name, icon = 'left', rightNode} = props;
   const nav = useLFNavigation();
 
   const handleGoBack = useCallback(() => {
@@ -19,7 +19,7 @@ const LFHeaderCanGoBack = (props: LFNavigationBackProps) => {
       <View style={headerStyles.navContainer}>
         <View style={headerStyles.leftNode}>
           <TouchableOpacity onPress={handleGoBack}>
-            <LFIcon.Icon icon={'left'} size={24} />
+            <LFIcon.Icon icon={icon} size={24} />
           </TouchableOpacity>
           <LFText.Text typo="H4" color={NeutralColor.DarkColor}>
             {name}

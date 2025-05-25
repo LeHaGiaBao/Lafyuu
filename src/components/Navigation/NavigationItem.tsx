@@ -19,6 +19,7 @@ const LFNavigationItem = (props: LFNavigationItemProps) => {
     onPress,
     onPressIn,
     onPressOut,
+    isGoBack = false,
     ...rest
   } = props;
   const nav = useLFNavigation();
@@ -28,10 +29,14 @@ const LFNavigationItem = (props: LFNavigationItemProps) => {
 
   const handleOnPress = useCallback(
     (event: GestureResponderEvent) => {
-      nav.navigate(route, navigationParam);
+      if (isGoBack) {
+        nav.goBack();
+      } else {
+        nav.navigate(route, navigationParam);
+      }
       onPress?.(event);
     },
-    [nav, navigationParam, onPress, route],
+    [isGoBack, nav, navigationParam, onPress, route],
   );
 
   const handlePressIn = useCallback(

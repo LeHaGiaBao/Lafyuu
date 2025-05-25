@@ -16,17 +16,16 @@ import {LFSearchInputProps} from '../types';
 
 const LFSearchInput = (props: LFSearchInputProps) => {
   const nav = useLFNavigation();
-  const {value = '', isActive, placeholder, ...rest} = props;
-  const [textValue, setTextValue] = useState(value);
+  const {value = '', isActive, placeholder, onChangeText, ...rest} = props;
   const [focus, setFocus] = useState(false);
 
   const navToSearch = useCallback(() => {
-    nav.navigate(Routes.appScreen);
+    nav.navigate(Routes.searchResult);
   }, [nav]);
 
   const clearTextValue = useCallback(() => {
-    setTextValue('');
-  }, []);
+    onChangeText?.('');
+  }, [onChangeText]);
 
   return (
     <>
@@ -44,24 +43,23 @@ const LFSearchInput = (props: LFSearchInputProps) => {
           <LFIcon.Icon icon={'search-b'} size={16} />
           <TextInput
             autoCapitalize="none"
-            value={textValue}
-            onChangeText={val => setTextValue(val)}
+            value={value}
+            onChangeText={onChangeText}
             style={[
               inputStyles.placeholderText,
               {
                 fontFamily:
-                  textValue === ''
-                    ? FontFamily.FontRegular
-                    : FontFamily.FontBold,
+                  value === '' ? FontFamily.FontRegular : FontFamily.FontBold,
                 height: 44,
-                width: textValue !== '' && isActive ? '85%' : '100%',
+                width: value !== '' && isActive ? '85%' : '100%',
               },
             ]}
             onFocus={() => setFocus(true)}
             onBlur={() => setFocus(false)}
+            placeholder={placeholder}
             {...rest}
           />
-          {textValue !== '' && isActive && (
+          {value !== '' && isActive && (
             <TouchableOpacity onPress={clearTextValue}>
               <LFIcon.Icon icon={'x'} size={20} />
             </TouchableOpacity>

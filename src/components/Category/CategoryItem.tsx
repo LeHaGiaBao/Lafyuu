@@ -3,13 +3,14 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {LFCategoryItemProps, LFIcon, LFText} from '@components';
 import {NeutralColor} from '@constants';
 import {useLFNavigation} from '@hooks';
+import {Routes} from '@routes/routes';
 
 const LFCategoryItem = (props: LFCategoryItemProps) => {
   const {name, icon} = props;
   const nav = useLFNavigation();
 
   const handleNavigateCategory = useCallback(() => {
-    nav.navigate('', {
+    nav.navigate(Routes.appScreen, {
       categoryName: name,
     });
   }, [nav, name]);
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderColor: NeutralColor.LightColor,
-    borderRadius: '100%',
+    borderRadius: 100,
     width: 70,
     height: 70,
   },

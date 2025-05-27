@@ -1,18 +1,29 @@
 import React, {memo, useCallback} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
+import {AuthProvider, useAuth} from '@contexts';
 import AuthNavigator from './AuthNavigator';
 import RootNavigator from './RootNavigator';
 
-function MainRoutes() {
+function MainRoutesContent() {
+  const {isAuthenticated} = useAuth();
+
   const onReady = useCallback(() => {
     BootSplash.hide();
   }, []);
 
   return (
     <NavigationContainer onReady={onReady}>
-      {false ? <AuthNavigator /> : <RootNavigator />}
+      {!isAuthenticated ? <AuthNavigator /> : <RootNavigator />}
     </NavigationContainer>
+  );
+}
+
+function MainRoutes() {
+  return (
+    <AuthProvider>
+      <MainRoutesContent />
+    </AuthProvider>
   );
 }
 

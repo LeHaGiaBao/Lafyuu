@@ -143,7 +143,7 @@ export interface LFDropdownProps
 }
 
 export interface LFCardProps extends TouchableOpacityProps, PropsWithChildren {
-  cardId?: number;
+  cardId?: any;
   cardNumber: number;
   cardHolder: string;
   cardSave: string;
@@ -155,7 +155,7 @@ export interface LFCountdownProps {
 }
 
 export interface BannerItem {
-  id: string;
+  id: any;
   title: string;
   subtitle: string;
   image: ImageSourcePropType;
@@ -186,7 +186,7 @@ export interface LFHorizontalCardProps
 }
 
 export interface LFProductDetailBannerProps {
-  id: string;
+  id: any;
   image: ImageSourcePropType;
 }
 
@@ -212,14 +212,14 @@ export interface LFOrderItemProps
 
 export interface LFOrderProcessProps {
   steps: Array<{
-    id: string | number;
+    id: any;
     label: string;
     completed: boolean;
   }>;
 }
 
 export interface LFReviewItemProps extends PropsWithChildren {
-  id: string | number;
+  id: any;
   imageProfile: any;
   name: string;
   rating: number;

@@ -43,32 +43,32 @@ export const BANNER_DATA: BannerItem[] = [
 
 export const CATEGORY_DATA = [
   {
-    id: 0,
+    id: '0',
     name: 'Man Shirt',
     icon: 'shirt-b',
   },
   {
-    id: 1,
+    id: '1',
     name: 'Dress',
     icon: 'dress-b',
   },
   {
-    id: 2,
+    id: '2',
     name: 'Man Work Equipment',
     icon: 'bag-b',
   },
   {
-    id: 3,
+    id: '3',
     name: 'Woman Bag',
     icon: 'woman-bag-b',
   },
   {
-    id: 4,
+    id: '4',
     name: 'Man Shoes',
     icon: 'man-shoes-b',
   },
   {
-    id: 5,
+    id: '5',
     name: 'High Heels',
     icon: 'woman-shoes-b',
   },
@@ -76,7 +76,7 @@ export const CATEGORY_DATA = [
 
 export const FLASH_SALE = [
   {
-    id: 0,
+    id: '0',
     image: images.flash1,
     name: 'FS - Nike Air Max 270 React...',
     price: 299.43,
@@ -84,7 +84,7 @@ export const FLASH_SALE = [
     percentage: 24,
   },
   {
-    id: 1,
+    id: '1',
     image: images.flash2,
     name: 'FS - QUILTED MAXI CROS...',
     price: 299.43,
@@ -92,7 +92,7 @@ export const FLASH_SALE = [
     percentage: 24,
   },
   {
-    id: 2,
+    id: '2',
     image: images.flash3,
     name: 'FS - Nike Air Max 270 React...',
     price: 299.43,
@@ -103,7 +103,7 @@ export const FLASH_SALE = [
 
 export const MEGA_SALE = [
   {
-    id: 0,
+    id: '0',
     image: images.mega1,
     name: 'MS - Nike Air Max 270 React...',
     price: 299.43,
@@ -111,7 +111,7 @@ export const MEGA_SALE = [
     percentage: 24,
   },
   {
-    id: 1,
+    id: '1',
     image: images.mega2,
     name: 'MS - Nike Air Max 270 React...',
     price: 299.43,
@@ -119,7 +119,7 @@ export const MEGA_SALE = [
     percentage: 24,
   },
   {
-    id: 2,
+    id: '2',
     image: images.mega3,
     name: 'MS - Nike Air Max 270 React...',
     price: 299.43,
@@ -130,7 +130,7 @@ export const MEGA_SALE = [
 
 export const HOME_DATA = [
   {
-    id: 0,
+    id: '0',
     image: images.home1,
     name: 'Nike Air Max 270 React ENG',
     rating: 5,
@@ -139,7 +139,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 1,
+    id: '1',
     image: images.home2,
     name: 'Nike Air Max 270 React ENG',
     rating: 5,
@@ -148,7 +148,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 2,
+    id: '2',
     image: images.home3,
     name: 'Nike Air Max 270 React ENG',
     rating: 4,
@@ -157,7 +157,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 3,
+    id: '3',
     image: images.home4,
     name: 'Nike Air Max 270 React ENG',
     rating: 4,
@@ -166,7 +166,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 4,
+    id: '4',
     image: images.home1,
     name: 'Nike Air Max 270 React ENG',
     rating: 5,
@@ -175,7 +175,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 5,
+    id: '5',
     image: images.home2,
     name: 'Nike Air Max 270 React ENG',
     rating: 5,
@@ -184,7 +184,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 6,
+    id: '6',
     image: images.home3,
     name: 'Nike Air Max 270 React ENG',
     rating: 4,
@@ -193,7 +193,7 @@ export const HOME_DATA = [
     percentage: 24,
   },
   {
-    id: 7,
+    id: '7',
     image: images.home4,
     name: 'Nike Air Max 270 React ENG',
     rating: 4,

@@ -94,6 +94,9 @@ android {
         versionCode 1
         versionName project.env.get("VERSION_STRING")
         resValue "string", "app_name", project.env.get("APP_NAME")
+        
+        // Add this configuration for Reanimated
+        multiDexEnabled true
     }
     signingConfigs {
         debug {
@@ -135,6 +138,9 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+        
+    // Add this for Reanimated
+    implementation 'androidx.multidex:multidex:2.0.1'
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

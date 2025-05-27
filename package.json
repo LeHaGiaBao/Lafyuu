@@ -7,7 +7,7 @@
     "android-staging-release": "react-native run-android --mode=stagingRelease",
     "android-dev-debug": "react-native run-android --mode=developmentDebug",
     "android-dev-release": "react-native run-android --mode=developmentRelease",
-    "android-prod-debug": "react-native run-android ---mode=productionDebug",
+    "android-prod-debug": "react-native run-android --mode=productionDebug",
     "android-prod-release": "react-native run-android --mode=productionRelease",
     "ios-staging": "react-native run-ios --scheme LafyuuStaging",
     "ios-dev": "react-native run-ios --scheme LafyuuDevelopment",

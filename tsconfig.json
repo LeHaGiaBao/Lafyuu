@@ -10,6 +10,8 @@
       "@components/*": ["src/components/*"],
       "@constants": ["src/constants"],
       "@constants/*": ["src/constants/*"],
+      "@contexts": ["src/contexts"],
+      "@contexts/*": ["src/contexts/*"],
       "@database": ["src/database"],
       "@database/*": ["src/database/*"],
       "@hooks": ["src/hooks"],

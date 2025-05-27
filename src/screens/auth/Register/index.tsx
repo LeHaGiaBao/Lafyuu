@@ -4,6 +4,7 @@ import {Controller, useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {LFButton, LFForm, LFIcon, LFText} from '@components';
 import {Devices, NeutralColor, PrimaryColor} from '@constants';
+import {useAuth} from '@contexts';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
@@ -19,6 +20,7 @@ interface RegisterFormInputs {
 
 function RegisterScreen() {
   const nav = useLFNavigation();
+  const {login} = useAuth();
 
   const {
     control,
@@ -30,7 +32,7 @@ function RegisterScreen() {
   });
 
   const handleRegister = () => {
-    nav.navigate(Routes.appScreen);
+    login();
   };
 
   const handleLogin = () => {

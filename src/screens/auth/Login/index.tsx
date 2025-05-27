@@ -4,6 +4,7 @@ import {Controller, useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {LFButton, LFForm, LFIcon, LFText} from '@components';
 import {Devices, NeutralColor, PrimaryColor} from '@constants';
+import {useAuth} from '@contexts';
 import {useLFNavigation} from '@hooks';
 import {Routes} from '@routes/routes';
 import translate from '@translations/i18n';
@@ -17,6 +18,7 @@ interface LoginFormInputs {
 
 function LoginScreen() {
   const nav = useLFNavigation();
+  const {login} = useAuth();
 
   const {
     control,
@@ -28,8 +30,8 @@ function LoginScreen() {
   });
 
   const handleLogin = useCallback(() => {
-    nav.navigate(Routes.appScreen);
-  }, [nav]);
+    login();
+  }, [login]);
 
   const handleRegister = useCallback(() => {
     nav.navigate(Routes.registerScreen);
